@@ -47,7 +47,7 @@ const DefaultSettings = {
 			"templateId": 2045,
 			"huntingZoneId": 183
 		},
-		"vg": {
+		"vng": {
 			"type": 49,
 			"value": 609,
 			"gameId": null,

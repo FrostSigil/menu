@@ -55,7 +55,7 @@ module.exports.categories = {
 		{ command: "ssstore", name: "Бижа", color: c.lg },
 		{ command: "bel", name: "Белликариум", color: c.v },
 		{},
-		{ command: "vg", name: "Авангард", color: c.b },
+		{ command: "vng", name: "Авангард", color: c.b },
 		{ command: "vgc", name: "Кристалы", color: c.b },
 		{ command: "guard", name: "Хранитель", color: c.lb },
 		{ command: "ffstore", name: "Рыба", color: c.w },
@@ -104,12 +104,9 @@ module.exports.categories = {
 		{ command: "sorc automb", name: "Усилок", color: c.o, ifcmd: "sorc", class: "sorcerer" },
 		{ command: "sorc autoimp", name: "Колапс", color: c.o, ifcmd: "sorc", class: "sorcerer" },
 		{ command: "sorc usebrooch", name: "Брошь", color: c.o, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc autolances", name: "АвтоКопья", color: c.g, ifcmd: "sorc", class: "sorcerer" },
 		{ ifcmd: "sorc" },
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
 		{ifcmd: "sp", ifcmd: "fps"},
-		{ command: "sp", name: "NGSP", color: c.v, ifcmd: "sp" },
-		{ command: "sp ui", name: "ngsp settings", color: c.o, ifcmd: "sp" },
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
 	],
 	"Разное": [
@@ -118,8 +115,7 @@ module.exports.categories = {
 		{ command: "m lobby", name: "Выбор Персонажей", color: c.p },
 		{ command: "m exit", name: "Fast Exit Game", color: c.r },
 		{},		
-		{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},		
-		{ command: "m $loger", name: "Loger", color: c.r, ifcmd: "logc" },	
+		{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},	
 		{ command: "invg", name: "Автоприем в ги", color: c.lg, ifcmd: "invg" },
 		{ command: "lfg", name: "Автоприем в лфг", color: c.lg, ifcmd: "lfg" },
 		
@@ -163,23 +159,6 @@ module.exports.pages = {
 		{ command: "m et 2101 9809", name: "Мясницкие Катакомбы (Macellarius Catacombs)", color: c.g },
 	]
 },
-"loger": {
-"PacketsLogger": [
-	{ command: "proxy reload packetslogger", name: "Logger reload", color: c.p, ifcmd: "logs" },
-	{ifcmd: "logs"},
-	{ command: "logc", name: "LOG C", color: c.bl, ifcmd: "logc" },
-	{ command: "logs", name: "LOG S", color: c.o, ifcmd: "logs" },
-	{ifcmd: "logs"},
-	{ command: "lograw 1", name: "Raw on ", color: c.g, ifcmd: "logs" },
-	{ command: "lograw 0", name: "Raw off", color: c.r, ifcmd: "logs" },
-//	{ command: "logpaste", name: "Paste", color: c.y, ifcmd: "logs" },
-	{ifcmd: "logs"},
-	{ command: "sr r", name: "Skil Main reload", color: c.p, ifcmd: "sr" },
-	{ifcmd: "sr"},		
-	{ command: "npcsummoner", name: "NPC_Debug", color: c.y, ifcmd: "npcsummoner" },
-	{},
-    ]
- },
  "Merchant": {
 	"Окрестности": [		
 		{ command: "veracun", name: "Веракун (Окресности Велики)", color: c.y },

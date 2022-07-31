@@ -118,6 +118,8 @@ module.exports.categories = {
 		{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},	
 		{ command: "invg", name: "Автоприем в ги", color: c.lg, ifcmd: "invg" },
 		{ command: "lfg", name: "Автоприем в лфг", color: c.lg, ifcmd: "lfg" },
+		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" },
+
 		
 	],	
 	"Гайд (tera-guide)": [

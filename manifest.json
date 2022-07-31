@@ -1,9 +1,9 @@
 {
     "files": {
-        "README.md": "3b196913c40dc662866b08df8a13dae3672561f06593e0b460175aa3d9ab954f",       
+        "README.md": "3b196913c40dc662866b08df8a13dae3672561f06593e0b460175aa3d9ab954f",      
         "config.json": {
                 "overwrite": false,
-                "hash": "4c8c9eae443221f077c7241acd1ba95b19f289b19a05acfd1cd5c9c09fdfd78a"},
+                "hash": "3cd0534763eb86f09bb96ceceacddf08e19bc4efd7821c736604ca0da89878e0"},
         "index.js": "d1fec67a7df50f02a90d3f3061086d8cc6a44907b09ad394a9bdb053c90f76b2",
         "menu.js": "60e52d79cbe73e9c097b518d849e1ac7d9cf6d3058b4b21fb71cbc426c6218fd",
         "module.config.json": "c0a16dfca2dc00eb2f4c5670a98fcc163fd4f85c34b04fe825e6c3e79de88ca1",
@@ -13,6 +13,6 @@
         "node_modules/moment-timezone/index.js": "b93bc1a0ab15d56e12f0e281bf005d39166952d9208b828e8d056563f3ff1fd1",
         "node_modules/moment-timezone/moment-timezone.js": "183f03352f1e65da2130b89bced0e02d59bdff8a20eb844d98a803462ec99b4c",
         "node_modules/moment/index.js": "f0075677245792b113c801a56bd36682461596ac3830e1d1eac2499ad1460184",
-        "settings_migrator.js": "e5a35518f886731ab45794f526e44fcb361a4a49d3e39a3c28d589240b0b3ac6"
+        "settings_migrator.js": "817416708c84b7f84a6d5d02b2c1960a6a1e757d7c7b68b777577504c5e4314e"
     }
 }

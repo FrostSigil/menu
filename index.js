@@ -288,7 +288,7 @@ module.exports = function ProxyMenu(mod) {
 
 		debugData = [];
 	});
-/*
+
 	mod.hook("S_VISIT_NEW_SECTION", 1, () => {
 		if (!mod.game.me.abnormalities ["5020006"] ) {
 	    mod.send('C_START_SKILL', 7,
@@ -301,7 +301,7 @@ module.exports = function ProxyMenu(mod) {
             "unk": true,}
 	)}
 	});
-*/
+
 	function show(page = null) {
 		const categories = menu.pages !== undefined && menu.pages[page] ? menu.pages[page] : menu.categories;
 		const tmpData = [];

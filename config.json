@@ -40,7 +40,7 @@
                 "templateId": 2045,
                 "huntingZoneId": 183
             },
-            "vng": {
+            "vg": {
                 "type": 49,
                 "value": 609,
                 "gameId": 3518437209207951,
@@ -127,14 +127,14 @@
             "veracun": {
                 "type": 20,
                 "value": 10010,
-                "gameId": null,
+                "gameId": 3518437209242213,
                 "templateId": 1278,
                 "huntingZoneId": 63
             },
             "alluman": {
                 "type": 20,
                 "value": 10020,
-                "gameId": null,
+                "gameId": 3518437209635045,
                 "templateId": 1278,
                 "huntingZoneId": 72
             },
@@ -169,14 +169,14 @@
             "varrek3": {
                 "type": 20,
                 "value": 10040,
-                "gameId": null,
+                "gameId": 3518437209619026,
                 "templateId": 1271,
                 "huntingZoneId": 182
             },
             "varrek4": {
                 "type": 20,
                 "value": 10040,
-                "gameId": null,
+                "gameId": 3518437209195465,
                 "templateId": 1271,
                 "huntingZoneId": 183
             },
@@ -218,7 +218,7 @@
             "arcun5": {
                 "type": 20,
                 "value": 0,
-                "gameId": null,
+                "gameId": 3518437209449379,
                 "templateId": 1271,
                 "huntingZoneId": 7
             },
@@ -252,35 +252,35 @@
             },
             "eteral1": {
                 "type": 20,
-                "value": 0,
-                "gameId": null,
+                "value": 10013,
+                "gameId": 3518437209614795,
                 "templateId": 1271,
                 "huntingZoneId": 4
             },
             "eteral2": {
                 "type": 20,
-                "value": 0,
+                "value": 10013,
                 "gameId": null,
                 "templateId": 1271,
                 "huntingZoneId": 9
             },
             "eteral3": {
                 "type": 20,
-                "value": 0,
+                "value": 10013,
                 "gameId": null,
                 "templateId": 1271,
                 "huntingZoneId": 10
             },
             "eteral4": {
                 "type": 20,
-                "value": 0,
-                "gameId": null,
+                "value": 10013,
+                "gameId": 3518437209839973,
                 "templateId": 1271,
                 "huntingZoneId": 11
             },
             "eteral5": {
                 "type": 20,
-                "value": 0,
+                "value": 10013,
                 "gameId": null,
                 "templateId": 1271,
                 "huntingZoneId": 12
@@ -351,7 +351,7 @@
             "storan1": {
                 "type": 20,
                 "value": 10022,
-                "gameId": null,
+                "gameId": 3518437209381111,
                 "templateId": 1271,
                 "huntingZoneId": 31
             },
@@ -407,7 +407,7 @@
             "vaneva2": {
                 "type": 20,
                 "value": 0,
-                "gameId": null,
+                "gameId": 3518437209428762,
                 "templateId": 1271,
                 "huntingZoneId": 41
             },
@@ -484,7 +484,7 @@
             "locarnum2": {
                 "type": 20,
                 "value": 0,
-                "gameId": null,
+                "gameId": 3518437209441233,
                 "templateId": 1271,
                 "huntingZoneId": 50
             }

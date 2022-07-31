@@ -47,7 +47,7 @@ const DefaultSettings = {
 			"templateId": 2045,
 			"huntingZoneId": 183
 		},
-		"vng": {
+		"vg": {
 			"type": 49,
 			"value": 609,
 			"gameId": null,
@@ -204,42 +204,42 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 191
 		},
-		// Merchant Arcadia
+		// Merchant Arcadia +
 		"arcun1": {
 			"type": 20,
-			"value": 0,
+			"value": 10011,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 2
 		},
-		// Merchant Arcadia
+		// Merchant Arcadia +
 		"arcun2": {
 			"type": 20,
-			"value": 0,
+			"value": 10011,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 3
 		},
-		// Merchant Arcadia
+		// Merchant Arcadia +
 		"arcun3": {
 			"type": 20,
-			"value": 0,
+			"value": 10011,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 5
 		},
-		// Merchant Arcadia
+		// Merchant Arcadia +
 		"arcun4": {
 			"type": 20,
-			"value": 0,
+			"value": 10011,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 6
 		},
-		// Merchant Arcadia
+		// Merchant Arcadia +
 		"arcun5": {
 			"type": 20,
-			"value": 0,
+			"value": 10011,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 7
@@ -276,42 +276,42 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 24
 		},
-		// Merchant Ostgarath 
+		// Merchant Ostgarath +
 		"eteral1": {
 			"type": 20,
-			"value": 0,
+			"value": 10013,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 4
 		},
-		// Merchant Ostgarath 
+		// Merchant Ostgarath +
 		"eteral2": {
 			"type": 20,
-			"value": 0,
+			"value": 10013,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 9
 		},
-		// Merchant Ostgarath 
+		// Merchant Ostgarath +
 		"eteral3": {
 			"type": 20,
-			"value": 0,
+			"value": 10013,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 10
 		},
-		// Merchant Ostgarath 
+		// Merchant Ostgarath +
 		"eteral4": {
 			"type": 20,
-			"value": 0,
+			"value": 10013,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 11
 		},
-		// Merchant Ostgarath 
+		// Merchant Ostgarath +
 		"eteral5": {
 			"type": 20,
-			"value": 0,
+			"value": 10013,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 12
@@ -444,18 +444,18 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 38
 		},
-		// Merchant Val Palrada 
+		// Merchant Val Palrada +
 		"vaneva1": {
 			"type": 20,
-			"value": 0,
+			"value": 10023,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 40
 		},
-		// Merchant Val Palrada 
+		// Merchant Val Palrada +
 		"vaneva2": {
 			"type": 20,
-			"value": 0,
+			"value": 10023,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 41
@@ -535,7 +535,7 @@ const DefaultSettings = {
 		// Merchant Val Kaeli
 		"locarnum1": {
 			"type": 20,
-			"value": 0,
+			"value": 10034,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 49
@@ -543,12 +543,12 @@ const DefaultSettings = {
 		// Merchant Val Kaeli
 		"locarnum2": {
 			"type": 20,
-			"value": 0,
+			"value": 10034,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 50
 		}
-		
+		//  Эссения Сильванот Бастион Зульфикарская крепость
 	}
 	
 };

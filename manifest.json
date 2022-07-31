@@ -1,11 +1,9 @@
 {
     "files": {
-        "README.md": "3b196913c40dc662866b08df8a13dae3672561f06593e0b460175aa3d9ab954f",      
-        "config.json": {
-                "overwrite": false,
-                "hash": "3cd0534763eb86f09bb96ceceacddf08e19bc4efd7821c736604ca0da89878e0"},
+        "README.md": "3b196913c40dc662866b08df8a13dae3672561f06593e0b460175aa3d9ab954f",
+        "config.json": "aa86ce242eaeb36e6f816793ef67db7a7501565149060291130cb2ab44595240",
         "index.js": "d1fec67a7df50f02a90d3f3061086d8cc6a44907b09ad394a9bdb053c90f76b2",
-        "menu.js": "60e52d79cbe73e9c097b518d849e1ac7d9cf6d3058b4b21fb71cbc426c6218fd",
+        "menu.js": "7167a43cdfc3989081ed21e28f87c1257dc55d9917a722fe4e8695934727e902",
         "module.config.json": "c0a16dfca2dc00eb2f4c5670a98fcc163fd4f85c34b04fe825e6c3e79de88ca1",
         "module.json": "a36fb1a62db50ca2d4f45241833db813aad80f4eff0116003066b0b759a74208",
         "node_modules/moment-timezone/data/meta/latest.json": "1574fc70d8fd2554031aed90b1424371d6775bd9c0cab5cbd20e04753984f501",

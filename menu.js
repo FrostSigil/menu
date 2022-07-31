@@ -106,7 +106,7 @@ module.exports.categories = {
 		{ command: "sorc usebrooch", name: "Брошь", color: c.o, ifcmd: "sorc", class: "sorcerer" },
 		{ ifcmd: "sorc" },
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
-		{ifcmd: "sp", ifcmd: "fps"},
+		{ifcmd: "fps"},
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
 	],
 	"Разное": [
@@ -118,6 +118,7 @@ module.exports.categories = {
 		{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},	
 		{ command: "invg", name: "Автоприем в ги", color: c.lg, ifcmd: "invg" },
 		{ command: "lfg", name: "Автоприем в лфг", color: c.lg, ifcmd: "lfg" },
+		{ifcmd: "drk"},		
 		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" },
 
 		
@@ -162,7 +163,7 @@ module.exports.pages = {
 	]
 },
  "Merchant": {
-	"Окрестности": [		
+	"Окрестности": [
 		{ command: "veracun", name: "Веракун (Окресности Велики)", color: c.y },
 		{},
 		{ command: "alluman", name: "Аллума (Окрестности Аллемантеи)", color: c.y },

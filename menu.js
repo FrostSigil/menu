@@ -98,15 +98,9 @@ module.exports.categories = {
 		{ command: "wb stop", name: "Стоп", color: c.r, ifcmd: "bh" },
 		{ command: "wb loc", name: "Позиции", color: c.b, ifcmd: "bh" },
 		],
-	"Mod": [
-        { command: "valkyrie", name: "Fast-Valk", color: c.o, ifcmd: "valkyrie", class: "glaiver" },
-		{ command: "sorc ui", name: "Сорк", color: c.lb, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc automb", name: "Усилок", color: c.o, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc autoimp", name: "Колапс", color: c.o, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc usebrooch", name: "Брошь", color: c.o, ifcmd: "sorc", class: "sorcerer" },
-		{ ifcmd: "sorc" },
+	"Mod": [		
+		{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "valkyrie", ifcmd: "sorc", ifcmd: "aoe", ifcmd: "logc" },
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
-		{ifcmd: "fps"},
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
 	],
 	"Разное": [
@@ -119,9 +113,7 @@ module.exports.categories = {
 		{ command: "invg", name: "Автоприем в ги", color: c.lg, ifcmd: "invg" },
 		{ command: "lfg", name: "Автоприем в лфг", color: c.lg, ifcmd: "lfg" },
 		{ifcmd: "drk"},		
-		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" },
-
-		
+		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" },		
 	],	
 	"Гайд (tera-guide)": [
 		{ command: "guide", name: "Вкл/Выкл", color: c.o },
@@ -282,5 +274,36 @@ module.exports.pages = {
 		{},
 		{ command: "locarnum2", name: "Тезлуар (Гранаркус)", color: c.o },
 	],
- }
+ },
+ "Loger":{
+	"$Mod$": [
+		{ command: "sorc", name: "Сорк on/off", color: c.r, ifcmd: "sorc", class: "sorcerer" },
+		{ command: "sorc ui", name: "Сорк", color: c.lb, ifcmd: "sorc", class: "sorcerer" },
+		{ command: "sorc automb", name: "Усилок", color: c.o, ifcmd: "sorc", class: "sorcerer" },
+		{ command: "sorc autoimp", name: "Колапс", color: c.o, ifcmd: "sorc", class: "sorcerer" },
+		{ command: "sorc usebrooch", name: "Брошь", color: c.o, ifcmd: "sorc", class: "sorcerer" },
+		{ ifcmd: "sorc" },
+		{ command: "rod", name: "Rod", color: c.g, ifcmd: "rog", class: "priest" },
+		{ command: "aoe", name: "AOE", color: c.o, ifcmd: "aoe", class: "priest" },
+		{ command: "aoe distance 20", name: "AOE 20", color: c.v, ifcmd: "aoe", class: "priest" },
+		{ command: "aoe distance 100", name: "AOE 100", color: c.v, ifcmd: "aoe", class: "priest" },
+		{ifcmd: "aoe", ifcmd: "rod"},
+		{ command: "valkyrie", name: "Fast-Valk", color: c.o, ifcmd: "valkyrie", class: "glaiver" },
+	],
+ "Loger": [
+	{ command: "proxy reload packetslogger", name: "Logger reload", color: c.p, ifcmd: "logs" },
+	{ifcmd: "logs"},
+	{ command: "logc", name: "LOG C", color: c.bl, ifcmd: "logc" },
+	{ command: "logs", name: "LOG S", color: c.o, ifcmd: "logs" },
+	{ifcmd: "logs"},
+	{ command: "lograw 1", name: "Raw on ", color: c.g, ifcmd: "logs" },
+	{ command: "lograw 0", name: "Raw off", color: c.r, ifcmd: "logs" },
+//	{ command: "logpaste", name: "Paste", color: c.y, ifcmd: "logs" },
+	{ifcmd: "logs"},
+	{ command: "sr", name: "Skil Main on/off", color: c.g, ifcmd: "sr" },
+	{ command: "sr r", name: "Skil Main reload", color: c.r, ifcmd: "sr" },
+	{ifcmd: "sr"},		
+	{ command: "npcsummoner", name: "NPC_Debug", color: c.y, ifcmd: "npcsummoner" },
+	 ]
+}
 };

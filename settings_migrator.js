@@ -348,42 +348,42 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 23
 		},
-		// Merchant Essenia 
+		// Merchant Essenia +
 		"ezart1": {
 			"type": 20,
-			"value": 0,
+			"value": 10021,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 26
 		},
-		// Merchant Essenia 
+		// Merchant Essenia +
 		"ezart2": {
 			"type": 20,
-			"value": 0,
+			"value": 10021,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 27
 		},
-		// Merchant Essenia 
+		// Merchant Essenia +
 		"ezart3": {
 			"type": 20,
-			"value": 0,
+			"value": 10021,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 28
 		},
-		// Merchant Essenia 
+		// Merchant Essenia +
 		"ezart4": {
 			"type": 20,
-			"value": 0,
+			"value": 10021,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 29
 		},
-		// Merchant Essenia 
+		// Merchant Essenia +
 		"ezart5": {
 			"type": 20,
-			"value": 0,
+			"value": 10021,
 			"gameId": null,
 			"templateId": 1272,
 			"huntingZoneId": 29
@@ -412,10 +412,10 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 34
 		},
-		// Merchant Veritas District 
+		// Merchant Veritas District +
 		"versa1": {
 			"type": 20,
-			"value": 0,
+			"value": 10025,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 30
@@ -460,7 +460,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 41
 		},
-		// Merchant Лоакун +
+		// Merchant Lorcada +
 		"loacun1": {
 			"type": 20,
 			"value": 10032,
@@ -468,7 +468,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 51
 		},
-		// Merchant Лоакун +
+		// Merchant Lorcada +
 		"loacun2": {
 			"type": 20,
 			"value": 10032,
@@ -476,34 +476,34 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 52
 		},
-		// Merchant Сильванот
+		// Merchant Sylvanoth +
 		"silvette1": {
 			"type": 20,
-			"value": 0,
+			"value": 10031,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 54
 		},
-		// Merchant Сильванот
+		// Merchant Sylvanoth +
 		"silvette2": {
 			"type": 20,
-			"value": 0,
+			"value": 10031,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 55
 		},
-		// Merchant Сильванот
+		// Merchant Sylvanoth +
 		"silvette3": {
 			"type": 20,
-			"value": 0,
+			"value": 10031,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 56
 		},
-		// Merchant Сильванот
+		// Merchant Sylvanoth +
 		"silvette4": {
 			"type": 20,
-			"value": 0,
+			"value": 10031,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 57
@@ -527,12 +527,12 @@ const DefaultSettings = {
 		// Merchant Helkan District  
 		"hecurn": {
 			"type": 20,
-			"value": 0,
+			"value": 10035,
 			"gameId": null,
 			"templateId": 1271,
 			"huntingZoneId": 48
 		},
-		// Merchant Val Kaeli
+		// Merchant Val Kaeli +
 		"locarnum1": {
 			"type": 20,
 			"value": 10034,
@@ -540,7 +540,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 49
 		},
-		// Merchant Val Kaeli
+		// Merchant Val Kaeli +
 		"locarnum2": {
 			"type": 20,
 			"value": 10034,
@@ -548,7 +548,6 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 50
 		}
-		//  Эссения Сильванот Бастион Зульфикарская крепость
 	}
 	
 };

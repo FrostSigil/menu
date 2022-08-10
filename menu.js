@@ -99,7 +99,7 @@ module.exports.categories = {
 		{ command: "wb loc", name: "Позиции", color: c.b, ifcmd: "bh" },
 		],
 	"Mod": [		
-		{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: ["valkyrie", "sorc", "aoe", "logc", "arcane"] },
+		{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "valkyrie", ifcmd: "sorc", ifcmd: "mb", ifcmd: "logc", ifcmd: "arcane" },
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
 	],

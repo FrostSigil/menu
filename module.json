@@ -12,5 +12,5 @@
     },
     "servers": ["https://raw.githubusercontent.com/FrostSigil/menu/master/"],
     "version": "13/8/2022",
-    "disableAutoUpdate": false
+    "disableAutoUpdate": true
 }

@@ -285,22 +285,6 @@ module.exports.pages = {
  },
  "Loger":{
 	"$Mod$": [
-		{ command: "sorc", name: "Сорк on/off", color: c.r, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc ui", name: "Сорк", color: c.lb, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc automb", name: "Усилок", color: c.o, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc autoimp", name: "Колапс", color: c.o, ifcmd: "sorc", class: "sorcerer" },
-		{ command: "sorc usebrooch", name: "Брошь", color: c.o, ifcmd: "sorc", class: "sorcerer" },
-		{ ifcmd: "sorc", class: "sorcerer" },		
-		{ command: "arcane", name: "Сюрикана on/off", color: c.w, ifcmd: "arcane", class: "assassin" },
-		{ command: "arcane ui", name: "Сюрикана", color: c.lb, ifcmd: "arcane", class: "assassin" },
-		{ ifcmd: "mb", class: "elementalist" },		
-		{ command: "mb", name: "Мистк-бот on/off", color: c.lb, ifcmd: "mb", class: "elementalist" },		
-		{ command: "mb ui", name: "Мистк-бот", color: c.lb, ifcmd: "mb", class: "elementalist" },
-		{ ifcmd: ["aoe", "rod"], class: "priest" },
-		{ command: "rod", name: "Rod", color: c.g, ifcmd: "rog", class: "priest" },
-		{ command: "aoe", name: "AOE", color: c.o, ifcmd: "aoe", class: "priest" },
-		{ command: "aoe distance 20", name: "AOE 20", color: c.v, ifcmd: "aoe", class: "priest" },
-		{ command: "aoe distance 100", name: "AOE 100", color: c.v, ifcmd: "aoe", class: "priest" },
 		{ command: "valkyrie", name: "Fast-Valk", color: c.o, ifcmd: "valkyrie", class: "glaiver" },
 	],
  "Loger": [

@@ -8,5 +8,4 @@
 Toolbox(/8) | Command description
 --- | ---
 **m** | Open menu (also you can use **Ctrl+Shift+M** by default)
---- | ---
 **m $dang** | Vanguard teleport (also you can use **Ctrl+H** by default)

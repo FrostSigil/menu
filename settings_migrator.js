@@ -3,7 +3,7 @@
 
 const DefaultSettings = {
 
-	"hotkey": "Ctrl+Shift+M",
+	"hotkey": "Ctrl+Shift+S",
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.
@@ -26,6 +26,20 @@ const DefaultSettings = {
 		},
 		// For other NPCs.
 		// You can use "npcsummoner" command to enable debug for get values.
+        "bstore": {
+			"type": 9,
+			"value": 1007,
+			"gameId": null,
+			"templateId": 210000,
+			"huntingZoneId": 183
+		},
+		"dstore": {
+			"type": 9,
+			"value": 1006,
+			"gameId": null,
+			"templateId": 200000,
+			"huntingZoneId": 183
+		},
 		"store": {
 			"type": 9,
 			"value": 70310,
@@ -193,7 +207,7 @@ const DefaultSettings = {
 			"type": 20,
 			"value": 10040,
 			"gameId": null,
-			"templateId": 1271,
+			"templateId": 1278,
 			"huntingZoneId": 183
 		},
 		// Merchant Val Oriyn +
@@ -460,7 +474,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 41
 		},
-		// Merchant Lorcada +
+		// Merchant Лоакун +
 		"loacun1": {
 			"type": 20,
 			"value": 10032,
@@ -468,7 +482,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 51
 		},
-		// Merchant Lorcada +
+		// Merchant Лоакун +
 		"loacun2": {
 			"type": 20,
 			"value": 10032,
@@ -476,7 +490,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 52
 		},
-		// Merchant Sylvanoth +
+		// Merchant Сильванот +
 		"silvette1": {
 			"type": 20,
 			"value": 10031,
@@ -484,7 +498,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 54
 		},
-		// Merchant Sylvanoth +
+		// Merchant Сильванот +
 		"silvette2": {
 			"type": 20,
 			"value": 10031,
@@ -492,7 +506,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 55
 		},
-		// Merchant Sylvanoth +
+		// Merchant Сильванот +
 		"silvette3": {
 			"type": 20,
 			"value": 10031,
@@ -500,7 +514,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 56
 		},
-		// Merchant Sylvanoth +
+		// Merchant Сильванот +
 		"silvette4": {
 			"type": 20,
 			"value": 10031,
@@ -548,6 +562,7 @@ const DefaultSettings = {
 			"templateId": 1271,
 			"huntingZoneId": 50
 		}
+		//    Зульфикарская крепость
 	}
 	
 };

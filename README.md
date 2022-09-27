@@ -4,6 +4,9 @@
 (Если торгаши в менюшке не работают видимо был рестарт сервера, нужно значит проведать их в дозоре
 возле авангарда и кузницу дозора и велика площадь свободы)
 просто рядом с нпс оказаться и они заработают).
-
+## Commands
+Toolbox(/8) | Command description
+--- | ---
 **m** | Open menu (also you can use **Ctrl+Shift+M** by default)
-**m $dang** | Open menu teleportation Vanguard (also you can use **Ctrl+H** by default)
+--- | ---
+**m $dang** | Vanguard teleport (also you can use **Ctrl+H** by default)

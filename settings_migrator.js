@@ -3,7 +3,7 @@
 
 const DefaultSettings = {
 
-	"hotkey": "Ctrl+Shift+S",
+	"hotkey": "Ctrl+Shift+M",
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

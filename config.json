@@ -1,7 +1,7 @@
 {
     "version": 3,
     "data": {
-        "hotkey": "Ctrl+Shift+S",
+        "hotkey": "Ctrl+Shift+M",
         "npc": {
             "bank": {
                 "type": 26,

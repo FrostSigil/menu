@@ -1,7 +1,7 @@
 {
     "files": {
-        "README.md": "3b196913c40dc662866b08df8a13dae3672561f06593e0b460175aa3d9ab954f",
-        "config.json": "37ca24345e56c4d40285cafd2b97b2b4004145411cab28b16adb1e57903bb921",
+        "README.md": "79a7da514d401fe98c47555691ef6c421d738002e3c3d9de5037f037ae63d015",
+        "config.json": "09668e331966aff064e40d9e95de3d9bd26d20bd28cbb1a1e592e9a4af8acc7f",
         "index.js": "8dcf14ec48241190bf8717177b0c150dd0235d2038b045316af1eaac6ca9f2fa",
         "menu.js": "af13a80e6217c4df72e15e26ac05a65582802768c701557f602f386ea8d84060",
         "module.json": "05178b414360ab7da7f3347e444c8edeb09f9d47f13bdcf97ca418ba0a3e0b87",
@@ -10,6 +10,6 @@
         "node_modules/moment-timezone/index.js": "b93bc1a0ab15d56e12f0e281bf005d39166952d9208b828e8d056563f3ff1fd1",
         "node_modules/moment-timezone/moment-timezone.js": "183f03352f1e65da2130b89bced0e02d59bdff8a20eb844d98a803462ec99b4c",
         "node_modules/moment/index.js": "f0075677245792b113c801a56bd36682461596ac3830e1d1eac2499ad1460184",
-        "settings_migrator.js": "b301a94e7a39b4a388783feb1d46ee617048f24cc614b3864443bd17940f9fb9"
+        "settings_migrator.js": "2d81d3c6f9b4f3f4be1afe85701aadebf2f826390b956d67928ad3ebbb543247"
     }
 }

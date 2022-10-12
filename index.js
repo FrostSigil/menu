@@ -273,6 +273,13 @@ module.exports = function ProxyMenu(mod) {
 		}
 	});
 
+	mod.hook("S_REQUEST_CONTRACT", 1, event => { //fix enter dundeon
+		if (event.type === 15) {
+			event.data = Buffer.from([1, 0, 0, 0, 103, 245, 28, 0]);
+			return true;
+		}
+	});
+
 	mod.hook('S_START_ACTION_SCRIPT', 3, event => {
 		if (event.script == 60029801) return false
 	});

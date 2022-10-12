@@ -121,6 +121,8 @@ module.exports.pages = {
 			{},
 			{ command: "m et 2171 3027", name: "Арена Безумия (Forbidden Arena)", color: c.v },
 			{},
+			{ command: "m et 2152 9735", name: "RK-9 (RK-9 Kennel)", color: c.g },
+			{},
 			{ command: "m et 2168 3023", name: "Крепость Берарк (Akalath Quarantine)", color: c.y },
 			{},
 			{ command: "m et 2181 9757", name: "Акероново пекло (Akeron's Inferno)", color: c.lv },	
@@ -189,8 +191,6 @@ module.exports.pages = {
 			{ command: "m et 2175 9053", name: "Ущелье Кеззела (Kezzel Gorge)", color: c.lb },
 			{},
 			{ command: "m et 2154 9739", name: "Лагерь Повстанцев (Red Refuge)", color: c.o },
-			{},
-			{ command: "m et 2152 9735", name: "RK-9 (RK-9 Kennel)", color: c.g },
 		],
 },
  "Merchant": {

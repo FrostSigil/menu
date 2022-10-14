@@ -273,11 +273,12 @@ module.exports = function ProxyMenu(mod) {
 		}
 	});
 
-	mod.hook("S_REQUEST_CONTRACT", 1, event => { //fix enter dundeon
-		if (event.type === 15) {
-			event.data = Buffer.from([1, 0, 0, 0, 103, 245, 28, 0]);
-			return true;
-		}
+	mod.hook('S_DIALOG', '*', (e) => { // автовход в данж без подтверждения
+		if (!e.buttons.length) return
+		for (let i = 0; i < e.buttons.length; i++) { 
+		if ([1, 2, 3, 4, 5, 51, 53, 54, 55, 56, 63].includes(e.buttons[i].type)) e.buttons[i].type = 43 }
+		e.type = 1
+		return true
 	});
 
 	mod.hook('S_START_ACTION_SCRIPT', 3, event => {

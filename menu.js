@@ -32,7 +32,9 @@ const c = {
 //   mm use [id предмета]      -- Использовать предмет из инвентаря
 
 // Настройка премиум-слотов
-module.exports.premium = [
+module.exports.premium = [ 
+	{ command: "m", id: 45381 },
+	// { command: "m $dang", id: 154901 },
 	// { command: "bank", id: 60264 },
 	// { command: "broker", id: 60265 },
 	// { command: "store", id: 60262 },
@@ -202,6 +204,23 @@ module.exports.pages = {
 		{ command: "mm scan", name: "Поиск", color: c.g, ifcmd: "bh" },
 		{ command: "mm stop", name: "Стоп", color: c.r, ifcmd: "bh" },
 		{ command: "mm loc", name: "Позиции", color: c.b, ifcmd: "bh" },
+		{},
+		{ command: "mm to 1", name: "1", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 2", name: "2", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 3", name: "3", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 4", name: "4", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 5", name: "5", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 6", name: "6", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 7", name: "7", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 8", name: "8", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 9", name: "9", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 10", name: "10", color: c.r, ifcmd: "bh" },		
+		{ command: "mm to 11", name: "11", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 12", name: "12", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 13", name: "13", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 14", name: "14", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 15", name: "15", color: c.r, ifcmd: "bh" },
+		{ command: "mm to 16", name: "16", color: c.r, ifcmd: "bh" },
 	],
 	"Окрестности": [
 		{ command: "veracun", name: "Веракун (Окресности Велики)", color: c.y },
@@ -324,10 +343,7 @@ module.exports.pages = {
 	],
  },
  "Loger":{
-	"$Mod$": [
-		{ command: "valkyrie", name: "Fast-Valk", color: c.o, ifcmd: "valkyrie", class: "glaiver" },
-	],
- "Loger": [
+	"Loger": [
 		{ command: "proxy reload packetslogger", name: "Logger reload", color: c.p, ifcmd: "logs" },
 		{ ifcmd: "logs"},
 		{ command: "logc", name: "LOG C", color: c.bl, ifcmd: "logc" },
@@ -339,7 +355,7 @@ module.exports.pages = {
 		{ ifcmd: "logs"},
 		{ command: "sr", name: "Replacer on/off", color: c.g, ifcmd: "sr" },
 		{ command: "rs", name: "Replacer on/off", color: c.g, ifcmd: "rs" },
-		{},		
+		{ ifcmd: "logs"},		
 		{ command: "npcsummoner", name: "NPC_Debug", color: c.y, ifcmd: "npcsummoner" },
 		{},		
 		{ command: "m", name: "Menu", color: c.r, keybind: "ctrl+shift+m", ifcmd: "log"},

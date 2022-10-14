@@ -364,6 +364,8 @@ module.exports = function ProxyMenu(mod) {
 			{ "text": "<br>" },
 			{ "text": "<font color=\"#9966cc\" size=\"+15\">[Reload]</font>", "command": `proxy reload proxy-menu; ${command}` },
 			{ "text": "&nbsp;&nbsp;&nbsp;&nbsp;" },
+			{ "text": "<font color=\"#fdff00\" size=\"+15\">[Premium]</font>", "command": `m premium; ${command}` },
+			{ "text": "&nbsp;&nbsp;&nbsp;&nbsp;" },
 			{ "text": `<font color="#dddddd" size="+18">${moment().tz("Europe/Berlin").format("HH:mm z")} / ${moment().tz("Europe/Moscow").format("HH:mm z")}</font>` }
 		);
 		parse(tmpData, `<font>Menu [${mod.settings.hotkey}]</font>`);

@@ -1,7 +1,10 @@
 {
-    "version": 3,
+    "version": 4,
     "data": {
         "hotkey": "Ctrl+Shift+M",
+        "premiumSlotEnabled": true,
+        "spawnBuildEnabled": true,
+        "blockscene": true,
         "npc": {
             "bank": {
                 "type": 26,

@@ -1,3 +1,5 @@
+String.prototype.clr = function(hexColor) { return `<font color='#${hexColor}'>${this}</font>` ;};
+
 const OPCODES = {
 	"C_REQUEST_EVENT_MATCHING_TELEPORT": {
 		"366226": 23975, // GF v92.03
@@ -30,12 +32,18 @@ module.exports = function ProxyMenu(mod) {
 	const COMMAND = "m";
 	const menu = require("./menu");
 	const keybinds = new Set();
+	
 	let baha;
 	let player = null;
 	let debug = false;
 	let debugData = [];
 	let premiumAvailable = false;
-	
+	let currentChannel = 0;
+	let locationEvent = null;
+	let isDrop = false;
+	let curHp = 0;
+	let maxHp = 0;
+		
 	mod.dispatch.addDefinition("C_REQUEST_CONTRACT", 50, [
 		["name", "refString"],
 		["data", "refBytes"],
@@ -45,8 +53,10 @@ module.exports = function ProxyMenu(mod) {
 		["name", "string"],
 		["data", "bytes"]
 	]);
+
 	mod.game.initialize("inventory");
-	mod.game.initialize("me.abnormalities");
+	mod.game.initialize("me.abnormalities");	
+	mod.game.initialize(["me"]);
 
 	Object.keys(mod.settings.npc).forEach(name => {
 		mod.command.add(name, () => {
@@ -71,7 +81,6 @@ module.exports = function ProxyMenu(mod) {
 	}
 
 	bindHotkeys(menu.categories);
-
 	keybinds.add(mod.settings.hotkey);
 	globalShortcut.register(mod.settings.hotkey, () => show());
 
@@ -82,8 +91,9 @@ module.exports = function ProxyMenu(mod) {
 		["unk2", "uint32"],
 		["unk3", "uint32"]
 	]);
-
+		
 	mod.hook("C_CONFIRM_UPDATE_NOTIFICATION", 1, { "order": 100010 }, () => false);
+
 	mod.hook("C_ADMIN", 1, { "order": 100010, "filter": { "fake": false, "silenced": false, "modified": null } }, event => {
 		if (event.command.includes(";")) {
 			event.command.split(";").forEach(cmd => {
@@ -97,9 +107,24 @@ module.exports = function ProxyMenu(mod) {
 		}
 	});
 
+	mod.hook("S_PLAYER_STAT_UPDATE", mod.majorPatchVersion === 92 ? 13 : 14, e => {
+		curHp = e.hp;
+		maxHp = e.maxHp;
+	});
+
+	mod.hook("S_CREATURE_CHANGE_HP", 6, e => {
+		if (e.target !== mod.game.me.gameId) return;
+		curHp = e.curHp;
+		maxHp = e.maxHp;
+	});
+
 	mod.hook("S_SPAWN_ME", 3, event => { player = event; });
 
-	mod.hook("C_PLAYER_LOCATION", 5, event => { player = event; });
+	mod.hook("C_PLAYER_LOCATION", 5, event => { 
+		player = event;
+		locationEvent = event;
+		if (!isDrop && (event.type === 2 || event.type === 10)) return false;
+	});
 
 	mod.hook("C_REQUEST_EVENT_MATCHING_TELEPORT", 0, event => {
 		if (debug) console.log("C_REQUEST_EVENT_MATCHING_TELEPORT:", event);
@@ -180,7 +205,6 @@ module.exports = function ProxyMenu(mod) {
 
 	mod.hook("S_DIALOG", 2, event => {
 		if (!debug) return;
-
 		debugData = [
 			"Detected NPC:",
 			`   "value": ${event.options[0]?.type}`,
@@ -211,6 +235,22 @@ module.exports = function ProxyMenu(mod) {
 		"exit": () => {
 			mod.toClient('S_EXIT', 3, { category: 0, code: 0 });
 		},
+		"journal": () => {
+			mod.send('C_USE_PREMIUM_SLOT', 1, {
+				    set: 433,
+				    slot: 3,
+					type: 1,
+					id: 181117
+				 });
+		},
+		"build": () => {
+			mod.settings.spawnBuildEnabled = !mod.settings.spawnBuildEnabled;
+			mod.command.message(`Spawn build: ${mod.settings.spawnBuildEnabled ? "enabled" : "disabled"}`);
+		},
+		"scene": () => {
+			mod.settings.blockscene = !mod.settings.blockscene;
+			mod.command.message(`Block scene: ${mod.settings.blockscene ? "enabled" : "disabled"}`);
+		},
 		"hotkey": arg => {
 			if (!arg) {
 				mod.command.message(`Current hotkey: ${mod.settings.hotkey}`);
@@ -240,31 +280,86 @@ module.exports = function ProxyMenu(mod) {
 			if (arg[0] === "$") {
 				show(arg.slice(1));
 			}
-		}
+		},
+		"cha": (meow) => {
+			if (!isNaN(meow)) changeChannel(meow)
+		else if (['n'].includes(meow)) changeChannel(currentChannel.channel + 1)
+		else if (['b'].includes(meow)) changeChannel(currentChannel.channel - 1)
+		else console.log('invalid parameter. Usage : ch (Channel number)');
+		},
+		"broker": () => {
+	    mod.send("S_NPC_MENU_SELECT", 1, { "type": 28 })
+		},
+		"npcsummoner": () => {
+	    debug = !debug;
+		mod.command.message(`Module debug ${debug ? "enabled" : "disabled"}`)
+		},
+		"sla": percent => {	
+			if (!percent || isDrop) return;
+			percent = (parseInt(curHp) * 100 / parseInt(maxHp)) - Number(percent);
+			if (percent <= 0) {
+				return mod.command.message("Cannot drop to a value above or equal to your current HP.");
+			}			
+				dropHp(percent);			
+		},
 	});
 
-	mod.command.add("broker", () =>
-	    mod.send("S_NPC_MENU_SELECT", 1, { "type": 28 })
-    );
+/*--------------------Custom Hook----------------------*/
+	
+	function dropHp(percent) {
+		if (!locationEvent) return;
+			isDrop = true;
+		mod.send("C_PLAYER_LOCATION", 5, { ...locationEvent, "loc": locationEvent.loc.addN({ "z": 400 + percent * (mod.game.me.race === "castanic" ? 20 : 10) }), "type": 2 });
+		mod.send("C_PLAYER_LOCATION", 5, Object.assign(locationEvent, { "type": 7 }));
+			isDrop = false;
+	};
 
-    mod.command.add("npcsummoner", () => {
-	    debug = !debug;
-	mod.command.message(`Module debug ${debug ? "enabled" : "disabled"}`);
+	mod.hook('S_CURRENT_CHANNEL', 2, (event) => { currentChannel = event }); 	/*  смена каналов */
+
+	function changeChannel(newChannel) {
+	if (currentChannel.channel > 20) return
+	if (newChannel == 0) newChannel = 10;
+	if (newChannel == currentChannel.channel) {
+		console.log('You already on this channel.');
+		return
+	}
+	newChannel -= 1;
+	mod.send('C_SELECT_CHANNEL', 1, {
+		unk: 1,
+		zone: currentChannel.zone,
+		channel: newChannel
+		})
+	};
+
+	mod.hook('S_DIALOG', '*', (e) => { /* автовход в данж без подтверждения */
+		if (!e.buttons.length) return
+		for (let i = 0; i < e.buttons.length; i++) { // 1, 2, 3, 4, 5, 51, 53, 54, 55, 56, 63
+		if ([2].includes(e.buttons[i].type)) e.buttons[i].type = 43 }
+		e.type = 1
+		return true
+	});
+
+	mod.hook("S_EVENT_GUIDE", 4, () => { /* Скрытие открывания календаря */
+	return false; 
+    }); 
+	
+	mod.hook("S_SPAWN_BUILD_OBJECT", 2, () => {	 /* Скрытие знаков 6-12-24 часов */	
+		if (mod.settings.spawnBuildEnabled)
+		return false; 
     });
 
-	mod.hook("S_EXIT", "raw", () => false);
-/*
-	mod.hook('S_PREPARE_EXIT', 1, event => {
-	   mod.send('S_EXIT', 3, {
-            category: 0,
-            code: 0
-        	});
-  	  });
-*/
-	mod.hook('S_LOAD_TOPO', 3, event => {
-		baha = (event.zone === 7004)
-	});
+	mod.hook('S_PLAY_MOVIE', 1, (event) => { /* Пропуск видео заставок*/
+        if (mod.settings.blockscene) {
+            mod.send('C_END_MOVIE', 1, Object.assign({unk: 1}, event));
+            return false;
+        }
+    });
 	
+	mod.hook("S_EXIT", "raw", () => false); /* Антизакрытие клиента */
+
+	mod.hook('S_LOAD_TOPO', 3, event => {  /*Bahara redirect*/
+		baha = (event.zone === 7004)
+	});	
 	mod.hook('S_SPAWN_ME', 3, event => {
 		if(baha && bahaar.dist3D(event.loc) <= 5) {
 			event.loc = new Vec3(115371, 96969, 7195)
@@ -273,27 +368,19 @@ module.exports = function ProxyMenu(mod) {
 		}
 	});
 
-	mod.hook('S_DIALOG', '*', (e) => {
-		if (!e.buttons.length) return
-		for (let i = 0; i < e.buttons.length; i++) { 
-		if ([2].includes(e.buttons[i].type)) e.buttons[i].type = 43 }
-		e.type = 1
-		return true
-	});
-
-	mod.hook('S_START_ACTION_SCRIPT', 3, event => {
+	mod.hook('S_START_ACTION_SCRIPT', 3, event => { /* Мут Дуриона */
 		if (event.script == 60029801) return false
 	});
+		
+ /*--------------------End Custom Hook----------------------*/
 	
-	mod.hook("S_REQUEST_CONTRACT", 1, event => {
+	 mod.hook("S_REQUEST_CONTRACT", 1, event => {
 		if (!debug) return;
-
 		debugData.push(`   "type": ${event.type}`);
 		debugData.forEach(data => {
 			console.log(data);
 			mod.command.message(data);
 		});
-
 		debugData = [];
 	});
 
@@ -364,7 +451,7 @@ module.exports = function ProxyMenu(mod) {
 			{ "text": "<br>" },
 			{ "text": "<font color=\"#9966cc\" size=\"+15\">[Reload]</font>", "command": `proxy reload proxy-menu; ${command}` },
 			{ "text": "&nbsp;&nbsp;&nbsp;&nbsp;" },
-			{ "text": "<font color=\"#fdff00\" size=\"+15\">[Premium]</font>", "command": `m premium; ${command}` },
+		//	{ "text": "<font color=\"#fdff00\" size=\"+15\">[Premium]</font>", "command": `m premium; ${command}` },
 			{ "text": "&nbsp;&nbsp;&nbsp;&nbsp;" },
 			{ "text": `<font color="#dddddd" size="+18">${moment().tz("Europe/Berlin").format("HH:mm z")} / ${moment().tz("Europe/Moscow").format("HH:mm z")}</font>` }
 		);

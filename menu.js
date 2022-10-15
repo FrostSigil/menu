@@ -49,7 +49,7 @@ module.exports.categories = {
 		{ command: "gbank", name: "Банк гильдии", color: c.lp },
 		{ command: "ab", name: "Авто Банк", color: c.p, ifcmd: "ab" },
 		{},
-		{ command: "broker", name: "Брокер", color: c.lb },
+		{ command: "m broker", name: "Брокер", color: c.lb },
 		{ command: "store", name: "Торговец", color: c.g },
 		{ command: "sstore", name: "Редкости", color: c.g },
 		{ command: "ssstore", name: "Бижа", color: c.lg },
@@ -93,6 +93,7 @@ module.exports.categories = {
 		{},			
 		{ command: "invg", name: "Автоприем в ги", color: c.lg, ifcmd: "invg" },
 		{ command: "lfg", name: "Автоприем в лфг", color: c.lg, ifcmd: "lfg" },
+		{ command: "auto gq", name: "Авто Гильд Квест", color: c.lv, ifcmd: "auto" },
 		{ifcmd: "cc", ifcmd: "ar"},
 		{ command: "cc", name: "Антиоткид", color: c.lp, ifcmd: "cc" },
 		{ command: "ar", name: "Антиопрокид", color: c.lp, ifcmd: "ar" },
@@ -106,11 +107,16 @@ module.exports.categories = {
 		{ command: "guide spawnObject", name: "Объекты", color: c.y, ifcmd: "guide" },
 		{ command: "guide stream", name: "Стрим", color: c.lb, ifcmd: "guide" },
 		// { command: "guide debug ui", name: "Отладка", color: c.b, ifcmd: "guide" },
+		{},
+		{},
+		{ command: "m $setting", name: "Прочие настройки", color: c.gr},
 	],
 };
 module.exports.pages = {
     "dang": {		
 		"Телепорт к Данжам": [
+			{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},
+			{},
 			{ command: "m et 1106 9027", name: "Обитель Манайи (Manaya's Core)", color: c.r },
 			{},
 			{ command: "m et 2149 9716", name: "Небесный крейсер (Sky Cruiser )", color: c.lb },
@@ -356,7 +362,7 @@ module.exports.pages = {
 		{ command: "sr", name: "Replacer on/off", color: c.g, ifcmd: "sr" },
 		{ command: "rs", name: "Replacer on/off", color: c.g, ifcmd: "rs" },
 		{ ifcmd: "logs"},		
-		{ command: "npcsummoner", name: "NPC_Debug", color: c.y, ifcmd: "npcsummoner" },
+		{ command: "m npcsummoner", name: "NPC_Debug", color: c.y},
 		{},		
 		{ command: "m", name: "Menu", color: c.r, keybind: "ctrl+shift+m", ifcmd: "log"},
 		{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "log", keybind: "ctrl+n" },
@@ -383,5 +389,15 @@ module.exports.pages = {
 		{ command: "wb stop", name: "Стоп", color: c.r, ifcmd: "bh" },
 		{ command: "wb loc", name: "Позиции", color: c.b, ifcmd: "bh" },
 	 ],
+},
+"setting": {
+		"Настройки": [			
+	   { command: "m premium", name: "Доп. кнопки VIP панели", color: c.y},
+	   {},		
+	   { command: "m scene", name: "Скипать видео заставки", color: c.lp},
+	   {},
+	   { command: "m build", name: "Скрытие знаков на 6-12-24 часов", color: c.g},
+	   {},
+		],
 }
 };

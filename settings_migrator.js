@@ -5,6 +5,8 @@ const DefaultSettings = {
 
 	"hotkey": "Ctrl+Shift+M",	
 	"premiumSlotEnabled": true,
+	"spawnBuildEnabled": true,
+	"blockscene": true,
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

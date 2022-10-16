@@ -251,6 +251,10 @@ module.exports = function ProxyMenu(mod) {
 			mod.settings.blockscene = !mod.settings.blockscene;
 			mod.command.message(`Block scene: ${mod.settings.blockscene ? "enabled" : "disabled"}`);
 		},
+		"fix": () => {
+			mod.settings.fix = !mod.settings.fix;
+			mod.command.message(`Bug fix : ${mod.settings.fix ? "enabled" : "disabled"}`);
+		},
 		"hotkey": arg => {
 			if (!arg) {
 				mod.command.message(`Current hotkey: ${mod.settings.hotkey}`);
@@ -332,6 +336,7 @@ module.exports = function ProxyMenu(mod) {
 	};
 
 	mod.hook('S_DIALOG', '*', (e) => { /* автовход в данж без подтверждения */
+	    if (!mod.settings.fix) return
 		if (!e.buttons.length) return
 		for (let i = 0; i < e.buttons.length; i++) { // 1, 2, 3, 4, 5, 51, 53, 54, 55, 56, 63
 		if ([2].includes(e.buttons[i].type)) e.buttons[i].type = 43 }

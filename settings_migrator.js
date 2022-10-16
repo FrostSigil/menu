@@ -7,6 +7,7 @@ const DefaultSettings = {
 	"premiumSlotEnabled": true,
 	"spawnBuildEnabled": true,
 	"blockscene": true,
+	"fix": false,
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

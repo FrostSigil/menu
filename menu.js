@@ -68,7 +68,7 @@ module.exports.categories = {
 		{ command: "fstore", name: "Еда", color: c.y },		
 		{ command: "m $Merchant", name: "Merchant", color: c.o, ifcmd: "bh", keybind: "ctrl+m" },
 	],
-		"Основное": [
+	"Основное": [
 		{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},
 		{ command: "m $dang", name: "Данжы", color: c.y, keybind: "ctrl+h" },
 		{},
@@ -366,7 +366,7 @@ module.exports.pages = {
 		{},		
 		{ command: "m", name: "Menu", color: c.r, keybind: "ctrl+shift+m", ifcmd: "log"},
 		{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "log", keybind: "ctrl+n" },
-	 ],
+	],
 	 "Teleport": [
 		{ command: "tp zone", name: "Телепорт", color: c.b, ifcmd: "tp" },
 		{ command: "tp to", name: "Зона", color: c.r, ifcmd: "tp" },
@@ -377,7 +377,7 @@ module.exports.pages = {
 		{ command: "tp down 250", name: "Блинк вниз", ifcmd: "tp" },
 		{},
 		{ command: "tp drop -1", name: "Убить себя", color: c.r, ifcmd: "tp" },
-		],
+	],
 		"Boss-Helper": [
 		{ command: "mm", name: "Торговцы", color: c.y, ifcmd: "bh" },
 		{ command: "mm scan", name: "Поиск", color: c.o, ifcmd: "bh" },
@@ -388,7 +388,7 @@ module.exports.pages = {
 		{ command: "wb scan", name: "Поиск", color: c.o, ifcmd: "bh" },
 		{ command: "wb stop", name: "Стоп", color: c.r, ifcmd: "bh" },
 		{ command: "wb loc", name: "Позиции", color: c.b, ifcmd: "bh" },
-	 ],
+	],
 },
 "setting": {
 		"Настройки": [			
@@ -398,6 +398,7 @@ module.exports.pages = {
 	   {},
 	   { command: "m build", name: "Скрытие знаков на 6-12-24 часов", color: c.g},
 	   {},
-		],
+	   { command: "m fix", name: "BugFix диалогов телепорта и квестов", color: c.lv},
+	],
 }
 };

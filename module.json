@@ -5,7 +5,7 @@
     "options": {
         "cliName": "Proxy Menu",
         "guiName": "Proxy Menu",
-        "settingsVersion": 5,
+        "settingsVersion": 6,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
         "reloadable": true

@@ -8,6 +8,7 @@ const DefaultSettings = {
 	"spawnBuildEnabled": true,
 	"blockscene": true,
 	"fix": false,
+	"lobby": true,
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

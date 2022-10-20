@@ -1,5 +1,4 @@
 String.prototype.clr = function(hexColor) { return `<font color='#${hexColor}'>${this}</font>` ;};
-
 const OPCODES = {
 	"C_REQUEST_EVENT_MATCHING_TELEPORT": {
 		"366226": 23975, // GF v92.03
@@ -255,6 +254,10 @@ module.exports = function ProxyMenu(mod) {
 			mod.settings.fix = !mod.settings.fix;
 			mod.command.message(`Bug fix : ${mod.settings.fix ? "enabled" : "disabled"}`);
 		},
+		"tolobby": () => {
+			mod.settings.lobby = !mod.settings.lobby;
+			mod.command.message(`fast relog: ${mod.settings.lobby ? "enabled" : "disabled"}`);
+		},
 		"hotkey": arg => {
 			if (!arg) {
 				mod.command.message(`Current hotkey: ${mod.settings.hotkey}`);
@@ -305,8 +308,9 @@ module.exports = function ProxyMenu(mod) {
 				return mod.command.message("Cannot drop to a value above or equal to your current HP.");
 			}			
 				dropHp(percent);			
-		},
+		}
 	});
+
 
 /*--------------------Custom Hook----------------------*/
 	
@@ -317,6 +321,15 @@ module.exports = function ProxyMenu(mod) {
 		mod.send("C_PLAYER_LOCATION", 5, Object.assign(locationEvent, { "type": 7 }));
 			isDrop = false;
 	};
+
+
+	mod.hook('S_PREPARE_RETURN_TO_LOBBY', 1, () => { // Релог на персов без таймера
+		if (mod.settings.lobby)
+			mod.send('S_RETURN_TO_LOBBY', 1, {})
+	});
+	mod.hook('S_RETURN_TO_LOBBY', 1, () => {		
+		if (mod.settings.lobby) return false
+	});
 
 	mod.hook('S_CURRENT_CHANNEL', 2, (event) => { currentChannel = event }); 	/*  смена каналов */
 
@@ -335,7 +348,7 @@ module.exports = function ProxyMenu(mod) {
 		})
 	};
 
-	mod.hook('S_DIALOG', '*', (e) => { /* автовход в данж без подтверждения */
+	mod.hook('S_DIALOG', '*', (e) => { // автовход в данж без подтверждения
 	    if (!mod.settings.fix) return
 		if (!e.buttons.length) return
 		for (let i = 0; i < e.buttons.length; i++) { // 1, 2, 3, 4, 5, 51, 53, 54, 55, 56, 63

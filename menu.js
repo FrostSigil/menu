@@ -397,6 +397,8 @@ module.exports.pages = {
 	   { command: "m scene", name: "Скипать видео заставки", color: c.lp},
 	   {},
 	   { command: "m build", name: "Скрытие знаков на 6-12-24 часов", color: c.g},
+	   {},		
+	   { command: "m tolobby", name: "Отключение таймера при выходе на выбор персонажей", color: c.y},
 	   {},
 	   { command: "m fix", name: "BugFix диалогов телепорта и квестов", color: c.lv},
 	],

@@ -5,10 +5,12 @@ const DefaultSettings = {
 
 	"hotkey": "Ctrl+Shift+M",	
 	"premiumSlotEnabled": true,
-	"spawnBuildEnabled": true,
+	"spawnBuild": true,
 	"blockscene": true,
-	"fix": false,
 	"lobby": true,
+	"drunk": true,
+	"fix": false,
+	"ngng": false,
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.
@@ -37,6 +39,13 @@ const DefaultSettings = {
 			"gameId": null,
 			"templateId": 210000,
 			"huntingZoneId": 183
+		},
+		"qstore": {
+			"type": 9,
+			"value": 70013,
+			"gameId": null,
+			"templateId": 7012,
+			"huntingZoneId": 219
 		},
 		"dstore": {
 			"type": 9,
@@ -601,7 +610,7 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 	}
 }
 
-function MigrateOption(option, oldoption, excludes) {
+function MigrateOption(option, oldoption, excludes = []) {
 	if (oldoption === undefined) {
 		oldoption = option;
 	}
@@ -610,9 +619,7 @@ function MigrateOption(option, oldoption, excludes) {
 		for (const key of Object.keys(option)) {
 			option[key] = MigrateOption(option[key], oldoption[key], excludes);
 		}
-	}
-
-	if (Object.getPrototypeOf(option) === Object.prototype) {
+	} else if (Object.getPrototypeOf(option) === Object.prototype) {
 		for (const key of Object.keys(option)) {
 			if (excludes.includes(key)) {
 				option[key] = oldoption[key] || null;
@@ -620,6 +627,8 @@ function MigrateOption(option, oldoption, excludes) {
 				option[key] = MigrateOption(option[key], oldoption[key], excludes);
 			}
 		}
+	} else {
+		option = oldoption;
 	}
 
 	return option;

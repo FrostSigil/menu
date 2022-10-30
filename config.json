@@ -1,5 +1,5 @@
 {
-    "version": 8,
+    "version": 9,
     "data": {
         "hotkey": "Ctrl+Shift+M",
         "premiumSlotEnabled": true,
@@ -9,6 +9,7 @@
         "drunk": true,
         "fix": false,
         "ngng": false,
+        "height": 250,
         "npc": {
             "bank": {
                 "type": 26,

@@ -11,6 +11,7 @@ const DefaultSettings = {
 	"drunk": true,
 	"fix": false,
 	"ngng": false,
+	"height": 250,
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

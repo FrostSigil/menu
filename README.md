@@ -14,17 +14,17 @@ Toolbox(/8) | Hotkey | Command description | Описание
 Mod | | URL
 --- | --- | --- 
 Boss Helper | Поиск торговцев монетками амадюак | https://github.com/hsdn/Boss-Helper
-Tera Guide | | https://github.com/hsdn/tera-guide
+Tera Guide | Подсказки в подземельях | https://github.com/hsdn/tera-guide
 Translate chat | Автоперевод чата | https://github.com/hsdn/translate-chat
-Box-opener | | https://github.com/tera-private-mods/generic-box-opener-item-user
-Rootbeer | | https://github.com/hsdn/rootbeer
+Box-opener | Автооткрытие ящиков | https://github.com/tera-private-mods/generic-box-opener-item-user
+Rootbeer | Автодобыча пива из ящиков Бамарама | https://github.com/hsdn/rootbeer
 Auto accept lfg | Автоприем в пати с лфг | https://github.com/hsdn/auto-lfg-accept
 Auto guild invite | Автоприглашение в гильдию | https://github.com/hsdn/auto-guild-invite
 Anti cc | Анти откид | https://github.com/hsdn/anti-cc
-Unicast | | https://github.com/tera-private-mods/unicast-100
-Auto pet | | https://github.com/tera-private-mods/auto-pet
+Unicast | Внешки и прочие аксессуары | https://github.com/tera-private-mods/unicast-100
+Auto pet | Авто призыв и кормежка питомца с автоматическим юзанием бафа | https://github.com/tera-private-mods/auto-pet
 Auto Bank | Автоскладывание вещей в банк | https://github.com/tera-private-mods/auto-bank
 Fps Utils | | https://github.com/tera-private-mods/fps-utils
 Auto Loot | | https://github.com/tera-private-mods/auto-loot
 Auto Guildquest | Автосдача квестов гильдии | https://github.com/tera-private-mods/Auto-Guildquest
-Wings of Darkan | | https://github.com/FrostSigil/Darkhan-Wings
+Wings of Darkan | Авто призывание крыльев даркана | https://github.com/FrostSigil/Darkhan-Wings

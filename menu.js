@@ -109,7 +109,7 @@ module.exports.categories = {
 		// { command: "guide debug ui", name: "Отладка", color: c.b, ifcmd: "guide" },
 		{},
 		{},
-		{ command: "m $setting", name: "Прочие настройки", color: c.gr},
+		{ command: "m $setting", name: "Прочие настройки (Ctrl+Alt+S)", color: c.gr, keybind: "ctrl+alt+s"},
 	],
 };
 module.exports.pages = {
@@ -419,6 +419,13 @@ module.exports.pages = {
 			{ command: "m fix", name: "BugFix диалогов телепорта и квестов", color: c.lv},
 			{},		
 			{ command: "m tolobby", name: "Отключение таймера при выходе на выбор персонажей", color: c.y},
+			{ifcmd: "fast"},
+			{ifcmd: "fast"},
+			{ command: "fast", name: "Fast On/off", color: c.v, ifcmd: "fast" },
+			{ command: "fast ui", name: "Fast ui", color: c.lv, ifcmd: "fast" },
+			{ command: "fast reload", name: "Fast reload config", color: c.g, ifcmd: "fast" },
+			{class: "priest", ifcmd: "fast"},		
+			{ command: "m dbe", name: "Автосброс КД эвейда Прист", color: c.p, class: "priest", ifcmd: "fast"},
 	],
 }
 };

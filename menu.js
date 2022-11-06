@@ -4,17 +4,19 @@ const c = {
 	"w": "#ffffff", // белый
 	"br": "#bc8f8f", // коричневый
 	"o": "#ffc6d00", // оранжевый
-	"p": "#ed5d92", // розовый
-	"lp": "#ffb7c5", // светло-розовый
-	"r": "#ff0606", // красный
+	"p": "#FF1493", // розовый
+	"lp": "#FF69B4", // светло-розовый
+	"r": "#FF0000", // красный
+	"lr": "#FA8072", // светло-красный
 	"g": "#f04ff1c", // зеленый
 	"lg": "#f4ee35d", // светло-зеленый
-	"v": "#f8f127e", // фиолетовый
-	"lv": "#f9f00d4", // светло-фиолетовый
+	"v": "#f9f00d4", // фиолетовый
+	"lv": "#BA55D3", // светло-фиолетовый
 	"b": "#f004eff", // синий
 	"lb": "#08b3e5", // светло-синий
 	"gr": "#778899", // серый
 	"y": "#fdff00", // желтый
+	"ly": "#FFFDFF20", // светло-желтый
 };
 
 // Доступные ключи записи:
@@ -90,10 +92,13 @@ module.exports.categories = {
 		{ command: "translate send", name: "Автоперевод", color: c.lb, ifcmd: "translate" },
 		{ command: "food", name: "АвтоЕда", color: c.p, ifcmd: "food" },
 		{ command: "loot auto", name: "Автолут", color: c.lp, ifcmd: "loot" },
-		{},			
+		{ifcmd: "auto"},			
+		{ command: "auto gq", name: "Авто Гильд Квест", color: c.lv, ifcmd: "auto" },
+		{ command: "auto vq", name: "Авто Авангард", color: c.lv, ifcmd: "auto" },
+		{ command: "auto gl", name: "Авто Хранитель", color: c.lv, ifcmd: "auto" },
+		{ifcmd: "invg", ifcmd: "lfg"},
 		{ command: "invg", name: "Автоприем в ги", color: c.lg, ifcmd: "invg" },
 		{ command: "lfg", name: "Автоприем в лфг", color: c.lg, ifcmd: "lfg" },
-		{ command: "auto gq", name: "Авто Гильд Квест", color: c.lv, ifcmd: "auto" },
 		{ifcmd: "cc", ifcmd: "ar"},
 		{ command: "cc", name: "Антиоткид", color: c.lp, ifcmd: "cc" },
 		{ command: "ar", name: "Антиопрокид", color: c.lp, ifcmd: "ar" },
@@ -130,6 +135,8 @@ module.exports.pages = {
 			{ command: "m et 2171 3027", name: "Арена Безумия (Forbidden Arena)", color: c.v },
 			{},
 			{ command: "m et 2182 3034", name: "RK-9 (RK-9 Kennel)", color: c.lg },
+			{},
+			{ command: "m et 2124 9767", name: "Лаборатория Берна (Demokron Factory)", color: c.ly },
 			{},
 			{ command: "m et 2168 3023", name: "Крепость Берарк (Akalath Quarantine)", color: c.y },
 			{},
@@ -173,6 +180,8 @@ module.exports.pages = {
 			{ command: "m et 98356 2050", name: "Резиденция (Commander Residence)", color: c.y },
 			{},
 			{ command: "m et 2189 3105", name: "Лаборатория Слияния (Fusion Laboratory)", color: c.lv },
+			{},
+			{ command: "m et 2124 9067", name: "Лаборатория Берна (Demokron Factory)", color: c.ly },
 			{},
 			{ command: "m et 2185 3106", name: "Место казни (Killing Grounds)", color: c.g },
 			{},
@@ -417,8 +426,10 @@ module.exports.pages = {
 			{ command: "m build", name: "Скрытие знаков на 6-12-24 часов", color: c.g},
 			{},
 			{ command: "m fix", name: "BugFix диалогов телепорта и квестов", color: c.lv},
-			{},		
+			{},
 			{ command: "m tolobby", name: "Отключение таймера при выходе на выбор персонажей", color: c.y},
+			{},
+			{ command: "m ggreset", name: "Автосброс Поляны древней", color: c.lp},
 			{ifcmd: "fast"},
 			{ifcmd: "fast"},
 			{ command: "fast", name: "Fast On/off", color: c.v, ifcmd: "fast" },

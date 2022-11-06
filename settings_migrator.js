@@ -10,8 +10,10 @@ const DefaultSettings = {
 	"lobby": true,
 	"drunk": true,
 	"fix": false,
+	"backstep": false,
 	"ngng": false,
-	"height": 250,
+	"ggreset": true,
+	"height": 400,
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

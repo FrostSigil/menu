@@ -122,6 +122,8 @@ module.exports.pages = {
 		"Телепорт к Данжам": [
 			{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},
 			{},
+			{ command: "m et 98356 2050", name: "Резиденция (Commander Residence)", color: c.y },
+			{},
 			{ command: "m et 1106 9027", name: "Обитель Манайи (Manaya's Core)", color: c.r },
 			{},
 			{ command: "m et 2149 9716", name: "Небесный крейсер (Sky Cruiser )", color: c.lb },
@@ -177,8 +179,6 @@ module.exports.pages = {
 			{ command: "m et 7003 210", name: "Пляжная Вечеринка (Beach Party)", color: c.o },			
 		],
 		"Прочие": [
-			{ command: "m et 98356 2050", name: "Резиденция (Commander Residence)", color: c.y },
-			{},
 			{ command: "m et 2189 3105", name: "Лаборатория Слияния (Fusion Laboratory)", color: c.lv },
 			{},
 			{ command: "m et 2124 9067", name: "Лаборатория Берна (Demokron Factory)", color: c.ly },

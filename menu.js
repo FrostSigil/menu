@@ -120,7 +120,7 @@ module.exports.categories = {
 module.exports.pages = {
     "dang": {
 		"Телепорт к Данжам": [
-			{ command: "m et 98356 2050", name: "Резиденция (Commander Residence)", color: c.y },
+			{ command: "m et 2176 3030", name: "Резиденция (Commander Residence)", color: c.y },
 			{},
 			{ command: "m et 1106 9027", name: "Обитель Манайи (Manaya's Core)", color: c.r },
 			{},

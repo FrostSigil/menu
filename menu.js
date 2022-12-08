@@ -74,6 +74,8 @@ module.exports.categories = {
 		{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o,},
 		{ command: "m $dang", name: "Данжы", color: c.y, keybind: "ctrl+h" },
 		{},
+		{ command: "tp zone", name: "Телепорт", color: c.b, ifcmd: "tp" },
+		{ command: "tp to", name: "Зона", color: c.r, ifcmd: "tp" },
 		{},
 		{ command: "m drop", name: "Покинуть групу", color: c.y },
 		{ command: "m reset", name: "Сброс", color: c.g },

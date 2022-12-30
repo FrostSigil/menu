@@ -5,8 +5,9 @@ const DefaultSettings = {
 
 	"hotkey": "Ctrl+Shift+M",	
 	"premiumSlotEnabled": true,
-	"spawnBuild": true,
+	"spawnBuild": false,
 	"blockscene": true,
+	"autoaccept": false,
 	"lobby": true,
 	"drunk": true,
 	"fix": false,

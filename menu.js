@@ -81,7 +81,7 @@ module.exports.categories = {
 		{ command: "m reset", name: "Сброс", color: c.g },
 		{ command: "m lobby", name: "Выбор Персонажей", color: c.p },
 		{ command: "m exit", name: "Fast Exit Game", color: c.r },
-		],
+	],
 	"Mod": [		
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
@@ -425,7 +425,7 @@ module.exports.pages = {
 			{},		
 			{ command: "m drunk", name: "Отключение пьяного экрана", color: c.lg},
 			{},
-			{ command: "m build", name: "Скрытие знаков на 6-12-24 часов", color: c.g},
+			{ command: "m build", name: "Скрытие Ёлок. Таблиц. Календаря", color: c.g},
 			{},
 			{ command: "m fix", name: "BugFix диалогов телепорта и квестов", color: c.lv},
 			{},

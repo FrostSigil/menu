@@ -156,6 +156,13 @@ const DefaultSettings = {
 			"templateId": 2011,
 			"huntingZoneId": 183
 		},
+		"jcraft": {
+			"type": 9,
+			"value": 195,
+			"gameId": null,
+			"templateId": 20090,
+			"huntingZoneId": 183
+		},
 		"muhrak": {
 			"type": 20,
 			"value": 6115,

@@ -6,7 +6,7 @@
 Toolbox(/8) | Hotkey | Command description | Описание
 --- | --- | --- | ---
 **m** |**Ctrl+Shift+M** |Open menu, also you can use  | Для вызова меню используйте сочитание
-**m $dang** |**Ctrl+H** | Vanguard teleport, also you can use | Для вызова телепорта по авангарду к данжам
+**m $dang** |**Ctrl+Alt+H** | Vanguard teleport, also you can use | Для вызова телепорта по авангарду к данжам
 **m $Merchant** |**Ctrl+M** | Boss-Helper (Mystery Merchant Helper) also you can use | Для вызова меню торгашей
 
 ## Supports mods

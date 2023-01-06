@@ -501,7 +501,7 @@ module.exports.pages = {
 			{},
 			{ command: "m fix", name: "JustSpam F", color: c.lv},
 			{},
-			{ command: "m autoaccept", name: "Автопринятие пати / сброса данжа", color: c.lv},
+			{ command: "m autoaccept", name: "Автопринятие пати", color: c.lv},
 			{},
 			{ command: "m tolobby", name: "Отключение таймера при выходе на выбор персонажей", color: c.y},
 			{},

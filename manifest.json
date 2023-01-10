@@ -8,9 +8,8 @@
             "overwrite": false,
             "hash": "b2d2518af709a306fbf552d46f62186181bddc1428922bf3da54c20b30a570e6"
         },
-        "index.js": "ae64bd8a3f3412c5e6792dba192247eb55247b7ccaea0e5184f89046b467ef59",
+        "index.js": "dc4fd235814db93734ff8433589186247a5637b48ddca4157de3716c44d714a1",
         "menu.js": "50feafe35fb664e925e2f30dcd14433179a547218b59edf7e2c9c1e3ebd35d5a",
-        "menu.zip": "51d1d35099f25c66ef36b827e14eb0eac01f735b82fe1c22d112f5c1213c86c9",
         "module.json": "ffe8e963f70f3c5f375b6b7cbed0d68b1353e4cb0bb61b59866e9bf6acd471d2",
         "node_modules/moment-timezone/data/meta/latest.json": "1574fc70d8fd2554031aed90b1424371d6775bd9c0cab5cbd20e04753984f501",
         "node_modules/moment-timezone/data/packed/latest.json": "ccdc6aa04df161122e948b89e0629618094a55fe7e03a70cf88952f823273b2b",

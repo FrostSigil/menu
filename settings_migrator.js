@@ -170,6 +170,13 @@ const DefaultSettings = {
 			"templateId": 7002,
 			"huntingZoneId": 411
 		},
+		varraz: {
+			type: 20,
+			value: 3038000,
+			gameId: 3518437208925200,
+			templateId: 1000,
+			huntingZoneId: 3038
+		},
 		//--------------------------------------- Merchant -----------------------------------------//
 		// Merchant Velika + 
 		"veracun": {

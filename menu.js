@@ -77,7 +77,7 @@ module.exports.categories = {
 		{ command: "seller sell", name: "Продать", color: c.p, ifcmd: "seller" },
 		{ command: "seller del", name: "Удалить мусор", color: c.lr, ifcmd: "seller" },
 		{ ifcmd: "seller" },
-		{ command: "m $Battered", name: "Синтезы (Ctrl+S)", color: c.y, ifcmd: "seller", keybind: "ctrl+s" },
+		{ command: "m $Battered", name: "Синтезы (Ctrl+S)", color: c.y, ifcmd: "seller" },
 		{ command: "m $autogather", name: "Автосбор", color: c.g, ifcmd: "autogather" },
 	],
 	"Основное": [

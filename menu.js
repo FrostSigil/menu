@@ -69,6 +69,7 @@ module.exports.categories = {
 		{ command: "ecraft", name: "Грава", color: c.y },
 		{ command: "fstore", name: "Еда", color: c.y },
 		{ command: "jcraft", name: "Внешки", color: c.y },
+		{ command: "varraz", name: "Varraz", color: c.v },
 		{ifcmd: "bh"},	
 		{ command: "m $Merchant", name: "Merchant", color: c.o, ifcmd: "bh", keybind: "ctrl+m" },
 		{ ifcmd: "seller" },

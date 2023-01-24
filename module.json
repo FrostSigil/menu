@@ -3,8 +3,8 @@
     "author": "HSDN / FrostSigil",
     "description": "Proxy Menu",
     "options": {
-        "cliName": "Proxy Menu",
-        "guiName": "Proxy Menu",
+        "cliName": "Proxy Menu Standart",
+        "guiName": "Proxy Menu Standart",
         "settingsVersion": 13,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",

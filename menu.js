@@ -79,7 +79,7 @@ module.exports.categories = {
 		{ command: "seller sell", name: "Продать", color: c.p, ifcmd: "seller" },
 		{ command: "seller del", name: "Удалить мусор", color: c.lr, ifcmd: "seller" },
 		{ ifcmd: "seller" },
-		{ command: "m $Battered", name: "Синтезы (Ctrl+Alt+S)", color: c.y, ifcmd: "seller" },
+		{ command: "seller show", name: "Синтезы (Ctrl+Shift+S)", color: c.y, ifcmd: "seller" },
 		{ command: "m $autogather", name: "Автосбор", color: c.g, ifcmd: "autogather" },
 	],
 	"Основное": [
@@ -524,59 +524,6 @@ module.exports.pages = {
 			{class: "priest", ifcmd: "fast"},		
 			{ command: "m dbe", name: "Автосброс КД эвейда Прист", color: c.p, class: "priest", ifcmd: "fast"},
 		],
-	},
-	"Battered": {
-		Оружие: [
-			{ command: "seller buys 88958", name: "Парные Клинки", color: c.o },
-			{ command: "seller buys 88959", name: "Копье", color: c.o },
-			{ command: "seller buys 88960", name: "Меч", color: c.o },
-			{ command: "seller buys 88961", name: "Топор", color: c.o },
-			{ command: "seller buys 88963", name: "Лук", color: c.o },
-			{ command: "seller buys 88968", name: "Кулаки", color: c.o },
-			{ command: "seller buys 88970", name: "Глефа", color: c.o },
-			{},
-			{ command: "seller buys 88962", name: "Диск", color: c.lb },
-			{ command: "seller buys 88964", name: "Посох", color: c.lb },
-			{ command: "seller buys 88965", name: "Жезл", color: c.lb },
-			{ command: "seller buys 88966", name: "Косы", color: c.lb },
-			{ command: "seller buys 88967", name: "Мегапушка", color: c.lb },
-			{ command: "seller buys 88969", name: "Сюрикен", color: c.lb }
-		],
-		Ткань: [
-			{ command: "seller buys 88976", name: "Руки", color: c.g },
-			{ command: "seller buys 88973", name: "Тело", color: c.y },
-			{ command: "seller buys 88979", name: "Ноги", color: c.v }
-		],
-		Кожа: [
-			{ command: "seller buys 88975", name: "Руки", color: c.g },
-			{ command: "seller buys 88972", name: "Тело", color: c.y },
-			{ command: "seller buys 88978", name: "Ноги", color: c.v }
-		],
-		Латы: [
-			{ command: "seller buys 88974", name: "Руки", color: c.g },
-			{ command: "seller buys 88971", name: "Тело", color: c.y },
-			{ command: "seller buys 88977", name: "Ноги", color: c.v },
-			{},
-			{},
-			{ command: "seller open", name: "Открыть Karas's Box", color: c.y },
-			{ command: "seller sell", name: "Продать", color: c.lg },
-			{ command: "seller del", name: "Удалить мусор", color: c.p },
-			{},
-			{ command: "seller stop", name: "Остановить покупку | продажу", color: c.r }
-		],
-		NPC: [
-			{ command: "merchant_stor", name: "Торговец", color: c.lg },
-			{ command: "seller bank", name: "Банкир", color: c.lp },
-			{ command: "seller brok", name: "Брокер", color: c.lb },
-			{ command: "gbank", name: "Банк гильдии", color: c.lp },
-			{ command: "pbank", name: "Пет. хранилище", color: c.p },
-		],
-		"Количевство статов оставляемое в вещах": [
-			{ command: "seller stats 1", name: "_1_", color: c.v },
-			{ command: "seller stats 2", name: "_2_", color: c.v },
-			{ command: "seller stats 3", name: "_3_", color: c.v },
-			{ command: "seller stats 4", name: "_4_", color: c.v }
-		]
 	},
 	"autogather": {
 		"Команды": [

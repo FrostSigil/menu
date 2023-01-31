@@ -516,6 +516,8 @@ module.exports.pages = {
 			{ command: "m tolobby", name: "Отключение таймера при выходе на выбор персонажей", color: c.y},
 			{},
 			{ command: "m ggreset", name: "Автосброс Поляны древней", color: c.lp},
+			{},
+			{ command: "m backwalk", name: "Ходить спиной вперёд (видят только другие)", color: c.y},
 			{ifcmd: "fast"},
 			{ifcmd: "fast"},
 			{ command: "fast", name: "Fast On/off", color: c.v, ifcmd: "fast" },

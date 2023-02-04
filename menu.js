@@ -518,6 +518,8 @@ module.exports.pages = {
 			{ command: "m ggreset", name: "Автосброс Поляны древней", color: c.lp},
 			{},
 			{ command: "m backwalk", name: "Ходить спиной вперёд (видят только другие)", color: c.y},
+			{},
+			{ command: "m dielols", name: "Писать после смерти ахинею", color: c.r},
 			{ifcmd: "fast"},
 			{ifcmd: "fast"},
 			{ command: "fast", name: "Fast On/off", color: c.v, ifcmd: "fast" },

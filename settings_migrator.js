@@ -16,6 +16,7 @@ const DefaultSettings = {
 	"ggreset": true,
 	"height": 400,
 	"backwalk": false,
+	"dielols": false,
 	"npc": {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

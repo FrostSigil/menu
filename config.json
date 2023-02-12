@@ -1,15 +1,20 @@
 {
-    "version": 9,
+    "version": 15,
     "data": {
         "hotkey": "Ctrl+Shift+M",
         "premiumSlotEnabled": true,
         "spawnBuild": true,
         "blockscene": true,
+        "autoaccept": false,
         "lobby": true,
         "drunk": true,
         "fix": false,
+        "backstep": false,
         "ngng": false,
-        "height": 250,
+        "ggreset": true,
+        "height": 400,
+        "backwalk": false,
+        "dielols": false,
         "npc": {
             "bank": {
                 "type": 26,
@@ -37,7 +42,7 @@
             "qstore": {
                 "type": 9,
                 "value": 70013,
-                "gameId": 3518437209609721,
+                "gameId": null,
                 "templateId": 7012,
                 "huntingZoneId": 219
             },
@@ -51,107 +56,121 @@
             "store": {
                 "type": 9,
                 "value": 70310,
-                "gameId": 3518437209219358,
+                "gameId": 3518437209168641,
                 "templateId": 2019,
                 "huntingZoneId": 183
             },
             "sstore": {
                 "type": 9,
                 "value": 250,
-                "gameId": 3518437209203637,
+                "gameId": 3518437209159374,
                 "templateId": 2109,
                 "huntingZoneId": 183
             },
             "bel": {
                 "type": 50,
                 "value": 141,
-                "gameId": 3518437209217448,
+                "gameId": 3518437209221230,
                 "templateId": 2045,
                 "huntingZoneId": 183
             },
             "vng": {
                 "type": 49,
                 "value": 609,
-                "gameId": 3518437209198340,
+                "gameId": 3518437209208563,
                 "templateId": 2058,
                 "huntingZoneId": 183
             },
             "vgc": {
                 "type": 49,
                 "value": 6090,
-                "gameId": 3518437209209584,
+                "gameId": 3518437209215345,
                 "templateId": 2059,
                 "huntingZoneId": 183
             },
             "guard": {
                 "type": 49,
                 "value": 6112,
-                "gameId": 3518437209085488,
+                "gameId": 3518437209094887,
                 "templateId": 6112,
                 "huntingZoneId": 63
             },
             "ssstore": {
                 "type": 9,
                 "value": 111,
-                "gameId": 3518437209217482,
+                "gameId": 3518437209221236,
                 "templateId": 2005,
                 "huntingZoneId": 183
             },
             "fstore": {
                 "type": 9,
                 "value": 16094,
-                "gameId": 3518437209212835,
+                "gameId": 3518437209222031,
                 "templateId": 2063,
                 "huntingZoneId": 183
             },
             "ffstore": {
                 "type": 20,
                 "value": 16095,
-                "gameId": 3518437209217464,
+                "gameId": 3518437209221234,
                 "templateId": 2061,
                 "huntingZoneId": 183
             },
             "vstore": {
                 "type": 9,
                 "value": 600,
-                "gameId": 3518437209091913,
+                "gameId": 3518437209101061,
                 "templateId": 1146,
                 "huntingZoneId": 63
             },
             "acraft": {
                 "type": 9,
                 "value": 193,
-                "gameId": 3518437209201242,
+                "gameId": 3518437209212997,
                 "templateId": 2013,
                 "huntingZoneId": 183
             },
             "scraft": {
                 "type": 9,
                 "value": 190,
-                "gameId": 3518437209203058,
+                "gameId": 3518437209211146,
                 "templateId": 2006,
                 "huntingZoneId": 183
             },
             "pcraft": {
                 "type": 9,
                 "value": 191,
-                "gameId": 3518437209209356,
+                "gameId": 3518437209215238,
                 "templateId": 2008,
                 "huntingZoneId": 183
             },
             "ecraft": {
                 "type": 9,
                 "value": 192,
-                "gameId": 3518437209198158,
+                "gameId": 3518437209208372,
                 "templateId": 2011,
+                "huntingZoneId": 183
+            },
+            "jcraft": {
+                "type": 9,
+                "value": 195,
+                "gameId": 3518437209216466,
+                "templateId": 20090,
                 "huntingZoneId": 183
             },
             "muhrak": {
                 "type": 20,
                 "value": 6115,
-                "gameId": 3518437209574018,
+                "gameId": null,
                 "templateId": 7002,
                 "huntingZoneId": 411
+            },
+            "varraz": {
+                "type": 20,
+                "value": 3038000,
+                "gameId": 3518437208973139,
+                "templateId": 1000,
+                "huntingZoneId": 3038
             },
             "veracun": {
                 "type": 20,

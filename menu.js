@@ -83,7 +83,9 @@ module.exports.categories = {
 		{ command: "m drop", name: "Покинуть групу", color: c.y },
 		{ command: "m reset", name: "Сброс", color: c.g },
 		{ command: "m lobby", name: "Выбор Персонажей", color: c.p },
-		{ command: "m exit", name: "Fast Exit Game", color: c.r }
+		{ command: "m exit", name: "Fast Exit Game", color: c.r },
+		{},
+		{ command: "clear", name: "Очистить чат", color: c.w },
 	],
 	Mod: [
 		{ command: "fish", name: "Рыбачить", color: c.w, ifcmd: "fish" },
@@ -96,7 +98,6 @@ module.exports.categories = {
 		{ ifcmd: "seller" },
 		{ command: "seller show", name: "Синтезы (Ctrl+Shift+S)", color: c.y, ifcmd: "seller" },
 		{ command: "m $autogather", name: "Автосбор", color: c.g, ifcmd: "autogather" },
-		{ ifcmd: "seller" },
 		{},
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
@@ -120,13 +121,7 @@ module.exports.categories = {
 		{ command: "cc", name: "Антиоткид", color: c.lp, ifcmd: "cc" },
 		{ command: "ar", name: "Антиопрокид", color: c.lp, ifcmd: "ar" },
 		{ ifcmd: "drk" },
-		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" },
-		{ ifcmd: "tp" },
-		{ command: "tp 4234 63354 5910 7022", name: "Карта Scorched Snowfield (Хабере)", color: c.b, ifcmd: "tp" },
-		{ ifcmd: "tp" },
-		{ command: "tp -68680 -74749 -489 7012", name: "Карта Howling Glacier (Блеклый Камень)", color: c.b, ifcmd: "tp" },
-		{ ifcmd: "tp" },
-		{ command: "tp -21809 -81997 3863 7012", name: "Карта Mount Tyrannas (Акарум)", color: c.b, ifcmd: "tp" }
+		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" }
 	],
 	"Гайд (tera-guide)": [
 		{ command: "guide", name: "Вкл/Выкл", color: c.o },

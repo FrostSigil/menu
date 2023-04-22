@@ -121,7 +121,8 @@ module.exports.categories = {
 		{ command: "cc", name: "Антиоткид", color: c.lp, ifcmd: "cc" },
 		{ command: "ar", name: "Антиопрокид", color: c.lp, ifcmd: "ar" },
 		{ ifcmd: "drk" },
-		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" }
+		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" },
+		{ command: "tp jaunt", name: "Вкл/Выкл jaunt", color: c.o, ifcmd: "tp" }
 	],
 	"Гайд (tera-guide)": [
 		{ command: "guide", name: "Вкл/Выкл", color: c.o },

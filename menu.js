@@ -77,7 +77,8 @@ module.exports.categories = {
 	Основное: [
 		{ command: "tp zone", name: "Телепорт", color: c.b, ifcmd: "tp" },
 		{ command: "tp to", name: "Зона", color: c.r, ifcmd: "tp" },
-		{ command: "m et 98311 9069", name: "Верхний Дозор", color: c.o },
+		{ command: "tp party", name: "Группа", color: c.lg, ifcmd: "tp" },
+		{ command: "m tohw", name: "Верхний Дозор", color: c.o },
 		{ command: "m $dang", name: "Данжы (Ctrl+Alt+H)", color: c.y, keybind: "ctrl+alt+h" },
 		{ ifcmd: "tp" },
 		{ command: "m drop", name: "Покинуть групу", color: c.y },
@@ -447,6 +448,7 @@ module.exports.pages = {
 			{ command: "m invi 90", name: "90", color: c.y },
 			{ command: "m invi 150", name: "150", color: c.y },
 			{ command: "m invi 250", name: "250", color: c.y },
+			{ command: "m invi 250", name: "280", color: c.y },
 			{ command: "m invi 350", name: "350", color: c.y },
 			{ command: "m invi 400", name: "400", color: c.y },
 			{ ifcmd: "logs" },
@@ -463,7 +465,7 @@ module.exports.pages = {
 			{ command: "just to", name: "Телепорт в локации", color: c.r },
 			{ ifcmd: "tp" },
 			{ command: "just blink 100", name: "Блинк вперед" },
-			{ command: "just up 250", name: "Блинк вверх" },
+			{ command: "just up 500", name: "Блинк вверх" },
 			{ command: "just down 250", name: "Блинк вниз" }
 		],
 		Каналы: [

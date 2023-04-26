@@ -527,6 +527,8 @@ module.exports.pages = {
 			{},
 			{ command: "m backwalk", name: "Ходить спиной вперёд (видят только другие)", color: c.y },
 			{},
+			{ command: "m circlewalk", name: "Ходить вращаясь (видят только другие)", color: c.o },
+			{},
 			{ command: "m dielols", name: "Писать после смерти ахинею", color: c.r },
 			{ ifcmd: "fast" },
 			{ ifcmd: "fast" },

@@ -16,6 +16,8 @@ const DefaultSettings = {
 	"ggreset": true,
 	"height": 400,
 	"backwalk": false,
+	"circlewalk": false,
+	"circle": 1.57,
 	"dielols": false,
 	"npc": {
 		// For bank NPC.

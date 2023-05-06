@@ -460,7 +460,7 @@ module.exports.pages = {
 			{ command: "logc", name: "LOG C", color: c.bl, ifcmd: "logc" },
 			{ command: "logs", name: "LOG S", color: c.o, ifcmd: "logs" },
 			{ ifcmd: "logc" },
-			{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "log", keybind: "ctrl+shift+n" }
+			{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "logc", keybind: "ctrl+shift+n" }
 		],
 		Teleport: [
 			{ command: "tp zone", name: "Телепорт", color: c.b, ifcmd: "tp" },
@@ -541,53 +541,53 @@ module.exports.pages = {
 	},
 	autogather: {
 		Команды: [
-			{ command: "autogather", name: "Запустить | Остановить  Автосбор", color: c.p, ifcmd: "autogather" },
-			{ command: "autogather channel", name: "Смена канала при сборе", color: c.lb }
+			{ command: "ag", name: "Запустить | Остановить  Автосбор", color: c.p, ifcmd: "autogather" },
+			{ command: "ag ui", name: "Открыть меню", color: c.lb, ifcmd: "autogather" }
 		],
 		Растения: [
-			{ command: "autogather setid 1", name: "Густой кустарник   |   Harmony Grass", color: c.g },
+			{ command: "ag setid 1", name: "Густой кустарник   |   Harmony Grass", color: c.g },
 			{},
-			{ command: "autogather setid 2", name: "Дикая кукуруза   |   Wild Cobseed", color: c.g },
+			{ command: "ag setid 2", name: "Дикая кукуруза   |   Wild Cobseed", color: c.g },
 			{},
-			{ command: "autogather setid 3", name: "Дикая морковка   |   Veridia Root", color: c.g },
+			{ command: "ag setid 3", name: "Дикая морковка   |   Veridia Root", color: c.g },
 			{},
-			{ command: "autogather setid 4", name: "Кадмильский гриб   |   Mushroom Cap", color: c.g },
+			{ command: "ag setid 4", name: "Кадмильский гриб   |   Mushroom Cap", color: c.g },
 			{},
-			{ command: "autogather setid 5", name: "Лунная тыква   |   Moongourd", color: c.g },
+			{ command: "ag setid 5", name: "Лунная тыква   |   Moongourd", color: c.g },
 			{},
-			{ command: "autogather setid 6", name: "Яблоня   |   Apple", color: c.g }
+			{ command: "ag setid 6", name: "Яблоня   |   Apple", color: c.g }
 		],
 		Руда: [
-			{ command: "autogather setid 101", name: "Валун   |   Plain Stone", color: c.o },
+			{ command: "ag setid 101", name: "Валун   |   Plain Stone", color: c.o },
 			{},
-			{ command: "autogather setid 102", name: "Кобаловая руда   |   Cobala Ore", color: c.o },
+			{ command: "ag setid 102", name: "Кобаловая руда   |   Cobala Ore", color: c.o },
 			{},
-			{ command: "autogather setid 103", name: "Шадметаллический камень   |   Shadmetal Ore", color: c.o },
+			{ command: "ag setid 103", name: "Шадметаллический камень   |   Shadmetal Ore", color: c.o },
 			{},
-			{ command: "autogather setid 104", name: "Зерметаллическая руда   |   Xermetal Ore", color: c.o },
+			{ command: "ag setid 104", name: "Зерметаллическая руда   |   Xermetal Ore", color: c.o },
 			{},
-			{ command: "autogather setid 105", name: "Норметаллическая руда   |   Normetal Ore", color: c.o },
+			{ command: "ag setid 105", name: "Норметаллическая руда   |   Normetal Ore", color: c.o },
 			{},
-			{ command: "autogather setid 106", name: "Галенит   |   Galborne Ore", color: c.o },
+			{ command: "ag setid 106", name: "Галенит   |   Galborne Ore", color: c.o },
 			{},
-			{ command: "autogather setid 301", name: "Руда Дураниума   |   Duranium Ore", color: c.o },
+			{ command: "ag setid 301", name: "Руда Дураниума   |   Duranium Ore", color: c.o },
 			{},
-			{ command: "autogather setid 814", name: "Руда Эксодора   |   Exodor Ore", color: c.lv }
+			{ command: "ag setid 814", name: "Руда Эксодора   |   Exodor Ore", color: c.lv }
 		],
 		Эссенция: [
-			{ command: "autogather setid 201", name: "Бесцветный кристалл   |   Achoromic Essence", color: c.lb },
+			{ command: "ag setid 201", name: "Бесцветный кристалл   |   Achoromic Essence", color: c.lb },
 			{},
-			{ command: "autogather setid 202", name: "Красный кристалл   |   Crimson Essence", color: c.lb },
+			{ command: "ag setid 202", name: "Красный кристалл   |   Crimson Essence", color: c.lb },
 			{},
-			{ command: "autogather setid 203", name: "Зеленый кристалл   |   Earth Essence", color: c.lb },
+			{ command: "ag setid 203", name: "Зеленый кристалл   |   Earth Essence", color: c.lb },
 			{},
-			{ command: "autogather setid 204", name: "Голубой кристалл   |   Azure Essence", color: c.lb },
+			{ command: "ag setid 204", name: "Голубой кристалл   |   Azure Essence", color: c.lb },
 			{},
-			{ command: "autogather setid 205", name: "Белый кристалл   |   Opal Essence", color: c.lb },
+			{ command: "ag setid 205", name: "Белый кристалл   |   Opal Essence", color: c.lb },
 			{},
-			{ command: "autogather setid 206", name: "Зараженный цветок   |   Obsidian Essence", color: c.lb },
+			{ command: "ag setid 206", name: "Зараженный цветок   |   Obsidian Essence", color: c.lb },
 			{},
-			{ command: "autogather setid 601", name: "Кристал Дураниума   |   Duranium Essence", color: c.lb }
+			{ command: "ag setid 601", name: "Кристал Дураниума   |   Duranium Essence", color: c.lb }
 		]
 	}
 };

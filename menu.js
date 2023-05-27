@@ -443,18 +443,6 @@ module.exports.pages = {
 	},
 	Loger: {
 		Mods: [
-			{ command: "m inviss", name: "Банка On/Off", color: c.lb },
-			{ command: "m invis", name: "Вкл/Выкл", color: c.v },
-			{},
-			{ command: "m invi 90", name: "90", color: c.y },
-			{ command: "m invi 100", name: "100", color: c.y },
-			{ command: "m invi 120", name: "120", color: c.y },
-			{ command: "m invi 150", name: "150", color: c.y },
-			{ command: "m invi 250", name: "250", color: c.y },
-			{ command: "m invi 280", name: "280", color: c.y },
-			{ command: "m invi 350", name: "350", color: c.y },
-			{ command: "m invi 400", name: "400", color: c.y },
-			{ ifcmd: "logs" },
 			{ command: "proxy reload packetslogger", name: "Logger reload", color: c.p, ifcmd: "logs" },
 			{ ifcmd: "logs" },
 			{ command: "logc", name: "LOG C", color: c.bl, ifcmd: "logc" },

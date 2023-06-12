@@ -1,16 +1,16 @@
 {
     "name": "proxy-menu",
-    "author": "HSDN",
+    "author": "HSDN / FrostSigil",
     "description": "Proxy Menu",
     "options": {
-        "cliName": "Proxy Menu",
-        "guiName": "Proxy Menu",
-        "settingsVersion": 8,
+        "cliName": "Proxy Menu Standart",
+        "guiName": "Proxy Menu Standart",
+        "settingsVersion": 16,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
         "reloadable": true
     },
     "servers": ["https://raw.githubusercontent.com/FrostSigil/menu/master/"],
-    "version": "28/10/2022",
+    "version": "26/04/2023",
     "disableAutoUpdate": false
 }

@@ -62,110 +62,110 @@ const DefaultSettings = {
 			"templateId": 200000,
 			"huntingZoneId": 183
 		},
-		"store": {
-			"type": 9,
-			"value": 70310,
-			"gameId": null,
-			"templateId": 2019,
-			"huntingZoneId": 183
+		store: {
+			type: 9,
+			value: 58001,
+			gameId: null,
+			templateId: 2022,
+			huntingZoneId: 58
 		},
-		"sstore": {
-			"type": 9,
-			"value": 250,
-			"gameId": null,
-			"templateId": 2109,
-			"huntingZoneId": 183
+		sstore: {
+			type: 9,
+			value: 58002,
+			gameId: null,
+			templateId: 2010,
+			huntingZoneId: 58
 		},
-		"bel": {
-			"type": 50,
-			"value": 141,
-			"gameId": null,
-			"templateId": 2045,
-			"huntingZoneId": 183
+		bel: {
+			type: 50,
+			value: 141,
+			gameId: null,
+			templateId: 2036,
+			huntingZoneId: 58
 		},
-		"vng": {
-			"type": 49,
-			"value": 609,
-			"gameId": null,
-			"templateId": 2058,
-			"huntingZoneId": 183
+		vng: {
+			type: 49,
+			value: 609,
+			gameId: null,
+			templateId: 2009,
+			huntingZoneId: 58
 		},
-		"vgc": {
-			"type": 49,
-			"value": 6090,
-			"gameId": null,
-			"templateId": 2059,
-			"huntingZoneId": 183
+		vgc: {
+			type: 49,
+			value: 6090,
+			gameId: null,
+			templateId: 2094,
+			huntingZoneId: 58
 		},
-		"guard": {
-			"type": 49,
-			"value": 6112,
-			"gameId": null,
-			"templateId": 6112,
-			"huntingZoneId": 63
+		guard: {
+			type: 49,
+			value: 6112,
+			gameId: null,
+			templateId: 6112,
+			huntingZoneId: 63
 		},
-		"ssstore": {
-			"type": 9,
-			"value": 111,
-			"gameId": null,
-			"templateId": 2005,
-			"huntingZoneId": 183
+		ssstore: {
+			type: 9,
+			value: 111,
+			gameId: null,
+			templateId: 2015,
+			huntingZoneId: 58
 		},
-		"fstore": {
-			"type": 9,
-			"value": 16094,
-			"gameId": null,
-			"templateId": 2063,
-			"huntingZoneId": 183
+		fstore: {
+			type: 9,
+			value: 16094,
+			gameId: null,
+			templateId: 2006,
+			huntingZoneId: 58
 		},
-		"ffstore": {
-			"type": 20,
-			"value":16095,
-			"gameId": null,
-			"templateId": 2061,
-			"huntingZoneId": 183
+		ffstore: {
+			type: 20,
+			value: 16095,
+			gameId: null,
+			templateId: 2008,
+			huntingZoneId: 58
 		},
-		"vstore": {
-			"type": 9,
-			"value": 600,
-			"gameId": null,
-			"templateId": 1146,
-			"huntingZoneId": 63
+		vstore: {
+			type: 9,
+			value: 600,
+			gameId: null,
+			templateId: 1146,
+			huntingZoneId: 63
 		},
-		"acraft": {
-			"type": 9,
-			"value": 193,
-			"gameId": null,
-			"templateId": 2013,
-			"huntingZoneId": 183
+		acraft: {
+			type: 9,
+			value: 193,
+			gameId: null,
+			templateId: 2026,
+			huntingZoneId: 58
 		},
-		"scraft": {
-			"type": 9,
-			"value": 190,
-			"gameId": null,
-			"templateId": 2006,
-			"huntingZoneId": 183
+		scraft: {
+			type: 9,
+			value: 190,
+			gameId: null,
+			templateId: 2027,
+			huntingZoneId: 58
 		},
-		"pcraft": {
-			"type": 9,
-			"value": 191,
-			"gameId": null,
-			"templateId": 2008,
-			"huntingZoneId": 183
+		pcraft: {
+			type: 9,
+			value: 191,
+			gameId: null,
+			templateId: 2024,
+			huntingZoneId: 58
 		},
-		"ecraft": {
-			"type": 9,
-			"value": 192,
-			"gameId": null,
-			"templateId": 2011,
-			"huntingZoneId": 183
+		ecraft: {
+			type: 9,
+			value: 192,
+			gameId: null,
+			templateId: 2025,
+			huntingZoneId: 58
 		},
-		"jcraft": {
-			"type": 9,
-			"value": 195,
-			"gameId": null,
-			"templateId": 20090,
-			"huntingZoneId": 183
+		jcraft: {
+			type: 9,
+			value: 195,
+			gameId: null,
+			templateId: 2037,
+			huntingZoneId: 58
 		},
 		"muhrak": {
 			"type": 20,

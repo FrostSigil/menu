@@ -4,10 +4,7 @@
         "bookmark/3034.json": "97c950a1f41040d7bb533add165f7f23d4f5c78f062ee049264678cdd51627da",
         "bookmark/9067.json": "f55ba19341179251c9b670e0d04e24372e4c3f198b9ed4e2fa6b233cc127bab5",
         "bookmark/9916.json": "80149159dc27ec7b00906406840091c7c8ed60370c11daf704f4f5589d062d1d",
-        "config.json": {
-            "overwrite": false,
-            "hash": "8e1e3ba8d792a3e6d8450dab8636273c89c07be44ebd237a95235416a2bbb07b"
-        },
+        "config.json": "640d80e8eaf171929c94771919810fa281545963bd56a5242183b33bdf90589c",
         "index.js": "366f35b974941ae9cba548308a2d15941bfd04f1d379d37c2a295aebfb57c3de",
         "menu.js": "2ed562ae9d9289dfc9e22d65be551403c7c9b0fb1e2f3b9142d5ca0a15a2fb9c",
         "module.json": "01e2de0d5140f221c068a773cb0d28f383266cc9e9c4734bd6d38e8df805d2c5",

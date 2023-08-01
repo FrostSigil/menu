@@ -3,64 +3,65 @@
 
 const DefaultSettings = {
 
-	"hotkey": "Ctrl+Shift+M",	
-	"premiumSlotEnabled": true,
-	"spawnBuild": false,
-	"blockscene": true,
-	"autoaccept": false,
-	"lobby": true,
-	"drunk": true,
-	"fix": false,
-	"backstep": false,
-	"ngng": false,
-	"ggreset": true,
-	"height": 400,
-	"backwalk": false,
-	"circlewalk": false,
-	"circle": 1.57,
-	"dielols": false,
-	"npc": {
+	hotkey: "Ctrl+Shift+M",
+	premiumSlotEnabled: true,
+	spawnBuild: false,
+	blockscene: true,
+	autoaccept: false,
+	lobby: true,
+	drunk: true,
+	fix: false,
+	backstep: false,
+	ngng: false,
+	ggreset: true,
+	height: 400,
+	backwalk: false,
+	circlewalk: false,
+	circle: 1.57,
+	dielols: false,
+	rebuffp: true,
+	npc: {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.
 		// The "value" is a "container" from S_VIEW_WARE_EX packet.
-		"bank": {
-			"type": 26,
-			"value": 1
+		bank: {
+			type: 26,
+			value: 1
 		},
-		"gbank": {
-			"type": 26,
-			"value": 3
+		gbank: {
+			type: 26,
+			value: 3
 		},
-		"pbank": {
-			"type": 26,
-			"value": 9
+		pbank: {
+			type: 26,
+			value: 9
 		},
-		"cbank": {
-			"type": 26,
-			"value": 12
+		cbank: {
+			type: 26,
+			value: 12
 		},
 		// For other NPCs.
 		// You can use "npcsummoner" command to enable debug for get values.
-        "bstore": {
-			"type": 9,
-			"value": 1007,
-			"gameId": null,
-			"templateId": 210000,
-			"huntingZoneId": 183
+		bstore: {
+			type: 9,
+			value: 1007,
+			gameId: null,
+			templateId: 210000,
+			huntingZoneId: 183
 		},
-		"qstore": {
-			"type": 9,
-			"value": 70013,
-			"gameId": null,
-			"templateId": 7012,
-			"huntingZoneId": 219
+		qstore: {
+			type: 9,
+			value: 70013,
+			gameId: null,
+			templateId: 7012,
+			huntingZoneId: 219
 		},
-		"dstore": {
-			"type": 9,
-			"value": 1006,
-			"gameId": null,
-			"templateId": 200000,
-			"huntingZoneId": 183
+		dstore: {
+			type: 9,
+			value: 1006,
+			gameId: null,
+			templateId: 200000,
+			huntingZoneId: 183
 		},
 		store: {
 			type: 9,
@@ -167,12 +168,12 @@ const DefaultSettings = {
 			templateId: 2037,
 			huntingZoneId: 58
 		},
-		"muhrak": {
-			"type": 20,
-			"value": 6115,
-			"gameId": null,
-			"templateId": 7002,
-			"huntingZoneId": 411
+		muhrak: {
+			type: 20,
+			value: 6115,
+			gameId: null,
+			templateId: 7002,
+			huntingZoneId: 411
 		},
 		varraz: {
 			type: 20,
@@ -181,426 +182,426 @@ const DefaultSettings = {
 			templateId: 1000,
 			huntingZoneId: 3038
 		},
-		//--------------------------------------- Merchant -----------------------------------------//
-		// Merchant Velika + 
-		"veracun": {
-			"type": 20,
-			"value": 10010,
-			"gameId": null,
-			"templateId": 1278,
-			"huntingZoneId": 63
+		// --------------------------------------- Merchant -----------------------------------------//
+		// Merchant Velika +
+		veracun: {
+			type: 20,
+			value: 10010,
+			gameId: null,
+			templateId: 1278,
+			huntingZoneId: 63
 		},
 		// Merchant Allemantheia +
-		"alluman": {
-			"type": 20,
-			"value": 10020,
-			"gameId": null,
-			"templateId": 1278,
-			"huntingZoneId": 72
+		alluman: {
+			type: 20,
+			value: 10020,
+			gameId: null,
+			templateId: 1278,
+			huntingZoneId: 72
 		},
 		// Merchant Kaiator +
-		"kaidera": {
-			"type": 20,
-			"value": 10030,
-			"gameId": null,
-			"templateId": 1278,
-			"huntingZoneId": 84
+		kaidera: {
+			type: 20,
+			value: 10030,
+			gameId: null,
+			templateId: 1278,
+			huntingZoneId: 84
 		},
 		// Merchant Island of Dawn +
-		"vardung": {
-			"type": 20,
-			"value": 10050,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 13
+		vardung: {
+			type: 20,
+			value: 10050,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 13
 		},
 		// Merchant Val Oriyn +
-		"varrek1": {
-			"type": 20,
-			"value": 10040,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 172
+		varrek1: {
+			type: 20,
+			value: 10040,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 172
 		},
 		// Merchant Val Oriyn +
-		"varrek2": {
-			"type": 20,
-			"value": 10040,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 181
+		varrek2: {
+			type: 20,
+			value: 10040,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 181
 		},
 		// Merchant Val Oriyn +
-		"varrek3": {
-			"type": 20,
-			"value": 10040,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 182
+		varrek3: {
+			type: 20,
+			value: 10040,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 182
 		},
 		// Merchant Val Oriyn +
-		"varrek4": {
-			"type": 20,
-			"value": 10040,
-			"gameId": null,
-			"templateId": 1278,
-			"huntingZoneId": 183
+		varrek4: {
+			type: 20,
+			value: 10040,
+			gameId: null,
+			templateId: 1278,
+			huntingZoneId: 183
 		},
 		// Merchant Val Oriyn +
-		"varrek5": {
-			"type": 20,
-			"value": 10040,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 191
+		varrek5: {
+			type: 20,
+			value: 10040,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 191
 		},
 		// Merchant Arcadia +
-		"arcun1": {
-			"type": 20,
-			"value": 10011,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 2
+		arcun1: {
+			type: 20,
+			value: 10011,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 2
 		},
 		// Merchant Arcadia +
-		"arcun2": {
-			"type": 20,
-			"value": 10011,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 3
+		arcun2: {
+			type: 20,
+			value: 10011,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 3
 		},
 		// Merchant Arcadia +
-		"arcun3": {
-			"type": 20,
-			"value": 10011,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 5
+		arcun3: {
+			type: 20,
+			value: 10011,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 5
 		},
 		// Merchant Arcadia +
-		"arcun4": {
-			"type": 20,
-			"value": 10011,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 6
+		arcun4: {
+			type: 20,
+			value: 10011,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 6
 		},
 		// Merchant Arcadia +
-		"arcun5": {
-			"type": 20,
-			"value": 10011,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 7
+		arcun5: {
+			type: 20,
+			value: 10011,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 7
 		},
 		// Merchant "Val Aureum +
-		"viady1": {
-			"type": 20,
-			"value": 10012,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 18
+		viady1: {
+			type: 20,
+			value: 10012,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 18
 		},
 		// Merchant "Val Aureum +
-		"viady2": {
-			"type": 20,
-			"value": 10012,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 19
+		viady2: {
+			type: 20,
+			value: 10012,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 19
 		},
 		// Merchant "Val Aureum +
-		"viady3": {
-			"type": 20,
-			"value": 10012,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 21
+		viady3: {
+			type: 20,
+			value: 10012,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 21
 		},
 		// Merchant "Val Aureum +
-		"viady4": {
-			"type": 20,
-			"value": 10012,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 24
+		viady4: {
+			type: 20,
+			value: 10012,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 24
 		},
 		// Merchant Ostgarath +
-		"eteral1": {
-			"type": 20,
-			"value": 10013,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 4
+		eteral1: {
+			type: 20,
+			value: 10013,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 4
 		},
 		// Merchant Ostgarath +
-		"eteral2": {
-			"type": 20,
-			"value": 10013,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 9
+		eteral2: {
+			type: 20,
+			value: 10013,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 9
 		},
 		// Merchant Ostgarath +
-		"eteral3": {
-			"type": 20,
-			"value": 10013,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 10
+		eteral3: {
+			type: 20,
+			value: 10013,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 10
 		},
 		// Merchant Ostgarath +
-		"eteral4": {
-			"type": 20,
-			"value": 10013,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 11
+		eteral4: {
+			type: 20,
+			value: 10013,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 11
 		},
 		// Merchant Ostgarath +
-		"eteral5": {
-			"type": 20,
-			"value": 10013,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 12
+		eteral5: {
+			type: 20,
+			value: 10013,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 12
 		},
 		// Merchant Poporia +
-		"foretta1": {
-			"type": 20,
-			"value": 10014,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 15
+		foretta1: {
+			type: 20,
+			value: 10014,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 15
 		},
 		// Merchant Poporia +
-		"foretta2": {
-			"type": 20,
-			"value": 10014,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 16
+		foretta2: {
+			type: 20,
+			value: 10014,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 16
 		},
 		// Merchant Poporia +
-		"foretta3": {
-			"type": 20,
-			"value": 10014,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 17
+		foretta3: {
+			type: 20,
+			value: 10014,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 17
 		},
 		// Merchant Poporia +
-		"foretta4": {
-			"type": 20,
-			"value": 10014,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 23
+		foretta4: {
+			type: 20,
+			value: 10014,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 23
 		},
 		// Merchant Essenia +
-		"ezart1": {
-			"type": 20,
-			"value": 10021,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 26
+		ezart1: {
+			type: 20,
+			value: 10021,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 26
 		},
 		// Merchant Essenia +
-		"ezart2": {
-			"type": 20,
-			"value": 10021,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 27
+		ezart2: {
+			type: 20,
+			value: 10021,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 27
 		},
 		// Merchant Essenia +
-		"ezart3": {
-			"type": 20,
-			"value": 10021,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 28
+		ezart3: {
+			type: 20,
+			value: 10021,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 28
 		},
 		// Merchant Essenia +
-		"ezart4": {
-			"type": 20,
-			"value": 10021,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 29
+		ezart4: {
+			type: 20,
+			value: 10021,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 29
 		},
 		// Merchant Essenia +
-		"ezart5": {
-			"type": 20,
-			"value": 10021,
-			"gameId": null,
-			"templateId": 1272,
-			"huntingZoneId": 29
+		ezart5: {
+			type: 20,
+			value: 10021,
+			gameId: null,
+			templateId: 1272,
+			huntingZoneId: 29
 		},
 		// Merchant Westonia +
-		"storan1": {
-			"type": 20,
-			"value": 10022,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 31
+		storan1: {
+			type: 20,
+			value: 10022,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 31
 		},
 		// Merchant Westonia +
-		"storan2": {
-			"type": 20,
-			"value": 10022,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 32
+		storan2: {
+			type: 20,
+			value: 10022,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 32
 		},
 		// Merchant Westonia +
-		"storan3": {
-			"type": 20,
-			"value": 10022,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 34
+		storan3: {
+			type: 20,
+			value: 10022,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 34
 		},
 		// Merchant Veritas District +
-		"versa1": {
-			"type": 20,
-			"value": 10025,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 30
+		versa1: {
+			type: 20,
+			value: 10025,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 30
 		},
 		// Merchant Val Elenium +
-		"viace1": {
-			"type": 20,
-			"value": 10024,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 35
+		viace1: {
+			type: 20,
+			value: 10024,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 35
 		},
 		// Merchant Val Elenium +
-		"viace2": {
-			"type": 20,
-			"value": 10024,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 36
+		viace2: {
+			type: 20,
+			value: 10024,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 36
 		},
 		// Merchant Val Elenium +
-		"viace3": {
-			"type": 20,
-			"value": 10024,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 38
+		viace3: {
+			type: 20,
+			value: 10024,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 38
 		},
 		// Merchant Val Palrada +
-		"vaneva1": {
-			"type": 20,
-			"value": 10023,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 40
+		vaneva1: {
+			type: 20,
+			value: 10023,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 40
 		},
 		// Merchant Val Palrada +
-		"vaneva2": {
-			"type": 20,
-			"value": 10023,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 41
+		vaneva2: {
+			type: 20,
+			value: 10023,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 41
 		},
 		// Merchant Лоакун +
-		"loacun1": {
-			"type": 20,
-			"value": 10032,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 51
+		loacun1: {
+			type: 20,
+			value: 10032,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 51
 		},
 		// Merchant Лоакун +
-		"loacun2": {
-			"type": 20,
-			"value": 10032,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 52
+		loacun2: {
+			type: 20,
+			value: 10032,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 52
 		},
 		// Merchant Сильванот +
-		"silvette1": {
-			"type": 20,
-			"value": 10031,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 54
+		silvette1: {
+			type: 20,
+			value: 10031,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 54
 		},
 		// Merchant Сильванот +
-		"silvette2": {
-			"type": 20,
-			"value": 10031,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 55
+		silvette2: {
+			type: 20,
+			value: 10031,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 55
 		},
 		// Merchant Сильванот +
-		"silvette3": {
-			"type": 20,
-			"value": 10031,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 56
+		silvette3: {
+			type: 20,
+			value: 10031,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 56
 		},
 		// Merchant Сильванот +
-		"silvette4": {
-			"type": 20,
-			"value": 10031,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 57
+		silvette4: {
+			type: 20,
+			value: 10031,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 57
 		},
 		// Merchant Val Tirkai +
-		"lotica1": {
-			"type": 20,
-			"value": 10033,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 45
+		lotica1: {
+			type: 20,
+			value: 10033,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 45
 		},
 		// Merchant Val Tirkai +
-		"lotica2": {
-			"type": 20,
-			"value": 10033,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 47
+		lotica2: {
+			type: 20,
+			value: 10033,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 47
 		},
-		// Merchant Helkan District  
-		"hecurn": {
-			"type": 20,
-			"value": 10035,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 48
-		},
-		// Merchant Val Kaeli +
-		"locarnum1": {
-			"type": 20,
-			"value": 10034,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 49
+		// Merchant Helkan District
+		hecurn: {
+			type: 20,
+			value: 10035,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 48
 		},
 		// Merchant Val Kaeli +
-		"locarnum2": {
-			"type": 20,
-			"value": 10034,
-			"gameId": null,
-			"templateId": 1271,
-			"huntingZoneId": 50
+		locarnum1: {
+			type: 20,
+			value: 10034,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 49
+		},
+		// Merchant Val Kaeli +
+		locarnum2: {
+			type: 20,
+			value: 10034,
+			gameId: null,
+			templateId: 1271,
+			huntingZoneId: 50
 		}
 		//    Зульфикарская крепость
 	}
-	
+
 };
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {
@@ -630,7 +631,7 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 
 		return settings;
 	}
-}
+};
 
 function MigrateOption(option, oldoption, excludes = []) {
 	if (oldoption === undefined) {

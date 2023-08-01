@@ -531,6 +531,8 @@ module.exports.pages = {
 			{},
 			{ command: "m ggreset", name: "Автосброс Поляны древней", color: c.lp },
 			{},
+			{ command: "m rebuff", name: "Авто ребаф самореса и бафа после бомбочки сброса(priest)", color: c.g },
+			{},
 			{ command: "m backwalk", name: "Ходить спиной вперёд (видят только другие)", color: c.y },
 			{},
 			{ command: "m circlewalk", name: "Ходить вращаясь (видят только другие)", color: c.o },

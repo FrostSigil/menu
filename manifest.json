@@ -8,14 +8,14 @@
             "overwrite": false,
             "hash": "640d80e8eaf171929c94771919810fa281545963bd56a5242183b33bdf90589c"
         },
-        "index.js": "ee2b619978e5c2e77696e6232c3cb782ff193c77b82a69796ebc50e0f4424799",
-        "menu.js": "2ed562ae9d9289dfc9e22d65be551403c7c9b0fb1e2f3b9142d5ca0a15a2fb9c",
-        "module.json": "01e2de0d5140f221c068a773cb0d28f383266cc9e9c4734bd6d38e8df805d2c5",
+        "index.js": "482e936316394c6879032e410da60b1880dcd4e35f857c7e05250d195785762a",
+        "menu.js": "06376e55f59f5077ffdbee41403d930b4e9ce0fec89951645ba16081f9d3d258",
+        "module.json": "78ab5a24bd3041b60d2a09c17f6f13502e08fe58f2b8c2bc2d4e95816ff9d7ad",
         "node_modules/moment-timezone/data/meta/latest.json": "1574fc70d8fd2554031aed90b1424371d6775bd9c0cab5cbd20e04753984f501",
         "node_modules/moment-timezone/data/packed/latest.json": "ccdc6aa04df161122e948b89e0629618094a55fe7e03a70cf88952f823273b2b",
         "node_modules/moment-timezone/index.js": "b93bc1a0ab15d56e12f0e281bf005d39166952d9208b828e8d056563f3ff1fd1",
         "node_modules/moment-timezone/moment-timezone.js": "183f03352f1e65da2130b89bced0e02d59bdff8a20eb844d98a803462ec99b4c",
         "node_modules/moment/index.js": "f0075677245792b113c801a56bd36682461596ac3830e1d1eac2499ad1460184",
-        "settings_migrator.js": "ac0f0e9d81589660c4f00947265160ee00aac03115bfe674d63dfa8ce7f6e6f3"
+        "settings_migrator.js": "ac2739ac51c07e43f49899a44fdeee40f836059afc2156ba828f435d95c113e7"
     }
 }

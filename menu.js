@@ -544,7 +544,7 @@ module.exports.pages = {
 			{ command: "fast ui", name: "Fast ui", color: c.lv, ifcmd: "fast" },
 			{ command: "fast reload", name: "Fast reload config", color: c.g, ifcmd: "fast" },
 			{ class: "priest", ifcmd: "fast" },
-			{ command: "m dbe", name: "Автосброс КД эвейда Прист", color: c.p, class: "priest", ifcmd: "fast" }
+			{ command: "m dbe", name: "Автосброс КД эвейда Прист", color: c.p, class: "priest" }
 		]
 	},
 	autogather: {

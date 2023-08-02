@@ -1,15 +1,15 @@
 {
-    "version": 17,
+    "version": 18,
     "data": {
         "hotkey": "Ctrl+Shift+M",
         "premiumSlotEnabled": true,
-        "spawnBuild": true,
+        "spawnBuild": false,
         "blockscene": true,
         "autoaccept": true,
         "lobby": true,
         "drunk": true,
         "fix": false,
-        "backstep": true,
+        "backstep": false,
         "ngng": false,
         "ggreset": true,
         "height": 400,

@@ -7,7 +7,7 @@ Toolbox(/8) | Hotkey | Command description | Описание
 --- | --- | --- | ---
 **m** |**Ctrl+Shift+M** |Open menu, also you can use  | Для вызова меню используйте сочитание
 **m $dang** |**Ctrl+Alt+H** | Vanguard teleport, also you can use | Для вызова телепорта по авангарду к данжам
-**m $Merchant** |**Ctrl+M** | Boss-Helper (Mystery Merchant Helper) also you can use | Для вызова меню торгашей
+**m $setting** | **Ctrl+Alt+S** | Other settings menu | Управляет доп. функциями и настройками меню
 
 ## Supports mods
 Поддерживает частичное управление следующими модулями: 
@@ -28,3 +28,9 @@ Fps Utils | | https://github.com/tera-private-mods/fps-utils
 Auto Loot | | https://github.com/tera-private-mods/auto-loot
 Auto Guildquest | Автосдача квестов гильдии | https://github.com/tera-private-mods/Auto-Guildquest
 Wings of Darkan | Авто призывание крыльев даркана | https://github.com/FrostSigil/Darkhan-Wings
+
+## Update
+23.08.23
+- Добавлена возможность подтягивания торгашей из Балдерона или Дозора. Проще говоря достаточно побывать в Дозоре или Балдероне чтобы торгаши заработали(кроме спец. таких как "Хранитель" и "Знаки" они есть только в Велике, а также "Варраз" из Гортензии) (В дальнейшем будут добавлены все города а также блокпосты где есть торгаши).
+- Добавлена функция авто открывания коробок в один клик. Включается в прочих настройках либо командой `m autobox` а также есть команда настройки задержки открытия между коробками `m boxdelay [время в милисекундах]` например: `m boxdelay 150`.
+- Дополнены и актуализированы телепорты по авангардам к данжам и ивентам под менму (Работает даже в данжах и когда персонаж в бою, в отличии от окна авангарда).

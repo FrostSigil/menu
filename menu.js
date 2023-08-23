@@ -83,11 +83,6 @@ module.exports.categories = {
 		{ command: "m tohw", name: "Балдерон", color: c.o },
 		{ command: "m $dang", name: "Данжы (Ctrl+Alt+H)", color: c.y, keybind: "ctrl+alt+h" },
 		{},
-		{ command: "m drop", name: "Покинуть групу", color: c.y },
-		{ command: "m reset", name: "Сброс", color: c.g },
-		{ command: "m lobby", name: "Выбор Персонажей", color: c.p },
-		{ command: "m exit", name: "Fast Exit Game", color: c.r },
-		{},
 		{ command: "clear", name: "Очистить чат", color: c.w }
 	],
 	Mod: [
@@ -141,7 +136,12 @@ module.exports.categories = {
 		{ command: "ar", name: "Антиопрокид", color: c.lp, ifcmd: "ar" },
 		{ ifcmd: "drk" },
 		{ command: "drk", name: "Крылья Даркана", color: c.p, ifcmd: "drk" },
-		{ command: "tp jaunt", name: "Вкл/Выкл jaunt", color: c.o, ifcmd: "tp" }
+		{ command: "tp jaunt", name: "Вкл/Выкл jaunt", color: c.o, ifcmd: "tp" },
+		{},
+		{ command: "m drop", name: "Покинуть групу", color: c.y },
+		{ command: "m reset", name: "Сброс", color: c.g },
+		{ command: "m lobby", name: "Выбор Персонажей", color: c.p },
+		{ command: "m exit", name: "Fast Exit Game", color: c.r }
 	],
 	"Гайд (tera-guide)": [
 		{ command: "guide", name: "Вкл/Выкл", color: c.o },

@@ -73,15 +73,13 @@ module.exports = function ProxyMenu(mod) {
 	let isDrop = false;
 	let curHp = 0;
 	let maxHp = 0;
-	let	wLoc = 0;
-	let aLoc = {};
 	let blockselectuser = false;
 	let blockselectusertimer = null;
 	let walkW = 0;
 	let lasttimemoved = Date.now();
 	let contract = null;
 	let contractType = null;
-	let isOpenning = false;
+	let opening = false;
 	let gachaId = null;
 
 	if (mod.majorPatchVersion >= 94) {
@@ -183,13 +181,9 @@ module.exports = function ProxyMenu(mod) {
 
 	mod.hook("S_SPAWN_ME", 3, event => {
 		player = event;
-		aLoc = event;
-		wLoc = event.w;
 	});
 	mod.hook("C_PLAYER_LOCATION", 5, { order: -Infinity }, event => {
 		player = event;
-		aLoc = event;
-		wLoc = event.w;
 	});
 
 	mod.hook("C_PLAYER_LOCATION", 5, { filter: { fake: null } }, (event, fake) => {
@@ -304,19 +298,19 @@ module.exports = function ProxyMenu(mod) {
 		},
 		premium: () => {
 			mod.settings.premiumSlotEnabled = !mod.settings.premiumSlotEnabled;
-			mod.command.message(`Add item to premium panel: ${mod.settings.premiumSlotEnabled ? "enabled" : "disabled"}`);
+			mod.command.message(`Доп. иконки меню на премиум панели: ${mod.settings.premiumSlotEnabled ? "Включено" : "Выключено"}`);
 		},
 		lobby: () => {
-			mod.toServer("C_RETURN_TO_LOBBY", 1);
+			mod.send("C_RETURN_TO_LOBBY", 1);
 		},
 		drop: () => {
-			mod.toServer("C_LEAVE_PARTY", 1);
+			mod.send("C_LEAVE_PARTY", 1);
 		},
 		disband: () => {
-			mod.toServer("C_DISMISS_PARTY", 1);
+			mod.send("C_DISMISS_PARTY", 1);
 		},
 		reset: () => {
-			mod.toServer("C_RESET_ALL_DUNGEON", 1);
+			mod.send("C_RESET_ALL_DUNGEON", 1);
 		},
 		exit: () => {
 			mod.send("S_EXIT", 3, { category: 0, code: 0 });
@@ -339,23 +333,23 @@ module.exports = function ProxyMenu(mod) {
 		},
 		fix: () => {
 			mod.settings.fix = !mod.settings.fix;
-			mod.command.message(`JustSpam F : ${mod.settings.fix ? "enabled" : "disabled"}`);
+			mod.command.message(`JustSpam F: ${mod.settings.fix ? "Включено" : "Выключено"}`);
 		},
 		tolobby: () => {
 			mod.settings.lobby = !mod.settings.lobby;
-			mod.command.message(`Fast relog: ${mod.settings.lobby ? "enabled" : "disabled"}`);
+			mod.command.message(`Быстрый релог на персонажей: ${mod.settings.lobby ? "Включено" : "Выключено"}`);
 		},
 		drunk: () => {
 			mod.settings.drunk = !mod.settings.drunk;
-			mod.command.message(`Скрытие пьяного экрана : ${mod.settings.drunk ? "Скрываю" : "Не скрываю"}`);
+			mod.command.message(`Скрытие пьяного экрана: ${mod.settings.drunk ? "Скрываю" : "Не скрываю"}`);
 		},
 		dbe: () => {
 			mod.settings.backstep = !mod.settings.backstep;
-			mod.command.message(`Auto skip cooldown Evasion : ${mod.settings.backstep ? "enabled" : "disabled"}`);
+			mod.command.message(`Автосброс эвейда (прист): ${mod.settings.backstep ? "Включено" : "Выключено"}`);
 		},
 		ggreset: () => {
 			mod.settings.ggreset = !mod.settings.ggreset;
-			mod.command.message(`Auto reset Ghillieglade : ${mod.settings.ggreset ? "enabled" : "disabled"}`);
+			mod.command.message(`Автосброс Поляны после использования свитка телепортации: ${mod.settings.ggreset ? "Включено" : "Выключено"}`);
 		},
 		autoaccept: () => {
 			mod.settings.autoaccept = !mod.settings.autoaccept;
@@ -745,15 +739,17 @@ module.exports = function ProxyMenu(mod) {
 	mod.hook("C_USE_ITEM", "*", event => {
 		gachaId = event.id;
 		if (!mod.settings.openbox) return;
-		if (!isOpenning) {
+		if (!opening) {
 			mod.hook("S_GACHA_START", "*", () => {
-				isOpenning = true;
+				opening = true;
 				openGacha(gachaId);
-				mod.command.message("Открываю. Для остановки кликните еще раз на предмет.");
+				if (mod.game.inventory.getTotalAmount(gachaId) >= 5) {
+					mod.command.message("Открываю. Для остановки кликните еще раз на предмет.");
+				}
 				return false;
 			});
 		} else {
-			isOpenning = false;
+			opening = false;
 			mod.command.message("Остановка.");
 		}
 	});
@@ -763,7 +759,7 @@ module.exports = function ProxyMenu(mod) {
 	// /////////////////////
 
 	function openGacha(id) {
-		if (isOpenning && mod.game.inventory.getTotalAmount(id) >= 1) {
+		if (opening && mod.game.inventory.getTotalAmount(id) >= 1) {
 			mod.send("C_GACHA_TRY", "*", { id: contract, amount: 1 });
 			mod.hookOnce("S_GACHA_END", "*", () => {
 				mod.setTimeout(() => openGacha(id), mod.settings.boxdelay);
@@ -772,7 +768,7 @@ module.exports = function ProxyMenu(mod) {
 		} else {
 			mod.send("C_GACHA_CANCEL", "*", { id: contract });
 			mod.hookOnce("S_CANCEL_CONTRACT", "*", () => {
-				isOpenning = false;
+				opening = false;
 				if (mod.game.inventory.getTotalAmount(id) < 1) {
 					mod.command.message("Закончил открытие.");
 				}

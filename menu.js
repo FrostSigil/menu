@@ -139,6 +139,7 @@ module.exports.categories = {
 		{ command: "tp jaunt", name: "Вкл/Выкл jaunt", color: c.o, ifcmd: "tp" },
 		{},
 		{ command: "m drop", name: "Покинуть групу", color: c.y },
+		{ command: "m disband", name: "Распустить", color: c.o },
 		{ command: "m reset", name: "Сброс", color: c.g },
 		{ command: "m lobby", name: "Выбор Персонажей", color: c.p },
 		{ command: "m exit", name: "Fast Exit Game", color: c.r }
@@ -157,11 +158,6 @@ module.exports.categories = {
 };
 module.exports.pages = {
 	dang: {
-		Ивенты: [
-			{ command: "m et 7001 230", name: "Фестиваль Солнца (Sun Feslival)", color: c.o },
-			{},
-			{ command: "m et 7003 210", name: "Пляжная Вечеринка (Beach Party)", color: c.o }
-		],
 		"Телепорт к Данжам": [
 			{ command: "m et 2196 9034", name: "Шпиль страха (Dreadspire)", color: c.r },
 			{},
@@ -171,11 +167,7 @@ module.exports.pages = {
 			{},
 			{ command: "m et 2161 9982", name: "Мастерская Леандра (Grotto of Lost Souls) (Hard)", color: c.r },
 			{},
-			{ command: "m et 2157 9920", name: "Омут Антароса (Antaroth's Abyss) (Hard)", color: c.lr },
-			{},
 			{ command: "m et 2185 9068", name: "Убежище Дуриона (Shadow Sanguinary) (Hard)", color: c.p },
-			{},
-			{ command: "m et 1106 9027", name: "Обитель Манайи (Manaya's Core) (Hard)", color: c.lr },
 			{},
 			{ command: "m et 2188 9983", name: "Крепость Тенебриса (Dark Reach Citadel) (Hard)", color: c.p },
 			{},
@@ -229,6 +221,11 @@ module.exports.pages = {
 			{ command: "m et 800003 9979", name: "Логово Сараваша (Saravash's Ascent)", color: c.lb },
 			{},
 			{ command: "m et 800002 9088", name: "Зловещий Особняк (Sinestral Manor)", color: c.lb }
+		],
+		Ивенты: [
+			{ command: "m et 7001 230", name: "Фестиваль Солнца (Sun Feslival)", color: c.o },
+			{},
+			{ command: "m et 7003 210", name: "Пляжная Вечеринка (Beach Party)", color: c.o }
 		]
 	},
 	Merchant: {

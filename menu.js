@@ -83,9 +83,8 @@ module.exports.categories = {
 		{ command: "m tohw", name: "Балдерон", color: c.o },
 		{ command: "m $dang", name: "Данжы (Ctrl+Alt+H)", color: c.y, keybind: "ctrl+alt+h" },
 		{},
-		{ command: "clear", name: "Очистить чат", color: c.w }
-	],
-	Mod: [
+		{ command: "clear", name: "Очистить чат", color: c.w },
+		{},
 		{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "logc", keybind: "ctrl+shift+n" },
 		{ command: "fish", name: "Рыбачить", color: c.w, ifcmd: "fish" },
 		{ command: "fish ui", name: "Меню рыбалки", color: c.w, ifcmd: "fish" },
@@ -142,6 +141,7 @@ module.exports.categories = {
 		{ command: "m disband", name: "Распустить", color: c.o },
 		{ command: "m reset", name: "Сброс", color: c.g },
 		{ command: "m lobby", name: "Выбор Персонажей", color: c.p },
+		{},
 		{ command: "m exit", name: "Fast Exit Game", color: c.r }
 	],
 	"Гайд (tera-guide)": [
@@ -477,9 +477,7 @@ module.exports.pages = {
 			{ command: "m cha 5", name: "(_5_)", color: c.lv },
 			{ command: "m cha 6", name: "(_6_)", color: c.lv },
 			{ command: "m cha 7", name: "(_7_)", color: c.lb },
-			{ command: "m cha 8", name: "(_8_)", color: c.lb },
-			{ command: "m cha 9", name: "(_9_)", color: c.b },
-			{ command: "m cha 10", name: "(_10_)", color: c.b }
+			{ command: "m cha 8", name: "(_8_)", color: c.lb }
 		],
 		"Boss-Helper": [
 			{ command: "m $Merchant", name: "Merchant menu", color: c.o },

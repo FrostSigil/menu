@@ -9,6 +9,9 @@ Toolbox(/8) | Hotkey | Command description | Описание
 **m $dang** |**Ctrl+Alt+H** | Vanguard teleport, also you can use | Для вызова телепорта по авангарду к данжам
 **m $setting** | **Ctrl+Alt+S** | Other settings menu | Управляет доп. функциями и настройками меню
 
+![](https://i.ibb.co/J3qRP07/image.png)
+![](https://i.ibb.co/tHKdkwv/image.png)
+
 ## Supports mods
 Поддерживает частичное управление следующими модулями: 
 Mod | | URL

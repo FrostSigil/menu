@@ -729,7 +729,7 @@ module.exports = function ProxyMenu(mod) {
 	});
 
 	mod.hook("S_START_ACTION_SCRIPT", "*", event => {
-		if (mod.settings.blockscene && [60029801, 9782001, 9783001, 9783003].includes(event.script)) return false;
+		if (mod.settings.blockscene && [40003, 60029801, 9782001, 9783001, 9783003].includes(event.script)) return false;
 	});
 
 	mod.hook("S_CURRENT_CHANNEL", 2, event => {

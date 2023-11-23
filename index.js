@@ -35,6 +35,7 @@ module.exports = function ProxyMenu(mod) {
 	const cmd = mod.command || mod.require.command;
 	const COMMAND = "m";
 	const menu = require("./menu");
+	const { player } = mod.require.library;
 	const keybinds = new Set();
 	const path = jsonRequire("path");
 	const fs = jsonRequire("fs");
@@ -63,7 +64,6 @@ module.exports = function ProxyMenu(mod) {
 	};
 
 	let bookmarks = new Map();
-	let player = null;
 	let debug = false;
 	let debugData = [];
 	let premiumAvailable = false;
@@ -102,6 +102,14 @@ module.exports = function ProxyMenu(mod) {
 	]);
 
 	mod.dispatch.addDefinition("C_REQUEST_REPUTATION_STORE_TELEPORT", 2, [
+	]);
+
+	mod.dispatch.addDefinition("S_VOTE_DISMISS_PARTY", 1, [
+		["accept", "byte"]
+	]);
+
+	mod.dispatch.addDefinition("C_VOTE_DISMISS_PARTY", 1, [
+		["accept", "byte"]
 	]);
 
 	mod.game.initialize(["party", "me.abnormalities", "inventory"]);
@@ -177,13 +185,6 @@ module.exports = function ProxyMenu(mod) {
 		if (e.target !== mod.game.me.gameId) return;
 		curHp = e.curHp;
 		maxHp = e.maxHp;
-	});
-
-	mod.hook("S_SPAWN_ME", 3, event => {
-		player = event;
-	});
-	mod.hook("C_PLAYER_LOCATION", 5, { order: -Infinity }, event => {
-		player = event;
 	});
 
 	mod.hook("C_PLAYER_LOCATION", 5, { filter: { fake: null } }, (event, fake) => {
@@ -690,7 +691,6 @@ module.exports = function ProxyMenu(mod) {
 			return false;
 	});
 
-
 	mod.hook("S_SPAWN_NPC", 11, event => {
 		if (mod.settings.spawnBuild && event.huntingZoneId == 183 && (event.templateId == 9001 || event.templateId == 9002 || event.templateId == 9003)) return false;
 	});
@@ -705,6 +705,13 @@ module.exports = function ProxyMenu(mod) {
 	mod.hook("S_VOTE_RESET_ALL_DUNGEON", 1, () => {
 		mod.setTimeout(() =>
 			mod.send("C_VOTE_RESET_ALL_DUNGEON", 1, {
+				accept: true
+			}), 500);
+	});
+
+	mod.hook("S_VOTE_DISMISS_PARTY", 1, () => {
+		mod.setTimeout(() =>
+			mod.send("C_VOTE_DISMISS_PARTY", 1, {
 				accept: true
 			}), 5000);
 	});
@@ -968,7 +975,7 @@ module.exports = function ProxyMenu(mod) {
 			id: id,
 			amount: 1,
 			loc: player.loc,
-			w: player.w,
+			w: player.loc.w,
 			unk4: true
 		});
 	}
@@ -1038,9 +1045,13 @@ module.exports = function ProxyMenu(mod) {
 		mod.send("S_ANNOUNCE_UPDATE_NOTIFICATION", 1, { id: 0, title, body });
 	}
 
-	this.saveState = () => ({ player });
-	this.loadState = state => player = state.player;
+	this.saveState = () => ({
+		premiumAvailable
+	 });
 
+	this.loadState = state => {
+		premiumAvailable = state.premiumAvailable;
+	}
 
 	this.destructor = () => {
 		keybinds.forEach(keybind => globalShortcut.unregister(keybind));

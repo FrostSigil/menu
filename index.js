@@ -1047,11 +1047,11 @@ module.exports = function ProxyMenu(mod) {
 
 	this.saveState = () => ({
 		premiumAvailable
-	 });
+	});
 
 	this.loadState = state => {
 		premiumAvailable = state.premiumAvailable;
-	}
+	};
 
 	this.destructor = () => {
 		keybinds.forEach(keybind => globalShortcut.unregister(keybind));

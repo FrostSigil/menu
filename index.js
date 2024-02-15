@@ -135,7 +135,6 @@ module.exports = function ProxyMenu(mod) {
 	mod.game.me.on("change_zone", () => {
 		if (mod.game.me.inDungeon) {
 			if (mod.game.inventory.findInEquipment(WhiskerIDs)) {
-				mod.command.message(Message.clr("FF0000"));
 				mod.setTimeout(() => {
 					mod.send("S_CHAT", 3, {
 						channel: 21,
@@ -145,7 +144,6 @@ module.exports = function ProxyMenu(mod) {
 				}, 10000);
 			}
 			if (mod.game.inventory.findInEquipment(NecklaceIDs)) {
-				mod.command.message(Message2.clr("FF0000"));
 				mod.setTimeout(() => {
 					mod.send("S_CHAT", 3, {
 						channel: 21,
@@ -658,11 +656,15 @@ module.exports = function ProxyMenu(mod) {
 		}
 	});
 
-	mod.hook("S_ABNORMALITY_BEGIN", 4, e => {
+	mod.hook("S_ABNORMALITY_BEGIN", "*", e => {
 		if (!mod.game.me.is(e.target)) return;
 		if (drinkAbnormalities.includes(e.id) && mod.settings.drunk) return false; // Отключение пьяного экрана от пива
 	});
 
+	mod.hook("S_ABNORMALITY_BEGIN", "*", { order: Infinity, filter: { fake: null } }, event => {
+		if (!mod.settings.drunk) return;
+		if (event.id === 301806) return false;
+	});
 
 	mod.hook("S_DIALOG", "*", e => {
 		if (!e.buttons.length || !mod.settings.fix) return;

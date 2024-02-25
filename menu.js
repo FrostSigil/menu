@@ -502,6 +502,8 @@ module.exports.pages = {
 			{},
 			{ command: "m drunk", name: "Отключение пьяного экрана", color: c.lg },
 			{},
+			{ command: "m brooch", name: "Отключение анимаций брошки", color: c.lp },
+			{},
 			{ command: "m build", name: "Скрытие Ёлок. Табличек. Календаря", color: c.g },
 			{},
 			{ command: "m fix", name: "JustSpam F", color: c.lv },

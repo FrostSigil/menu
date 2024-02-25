@@ -342,6 +342,10 @@ module.exports = function ProxyMenu(mod) {
 			mod.settings.drunk = !mod.settings.drunk;
 			mod.command.message(`Скрытие пьяного экрана: ${mod.settings.drunk ? "Скрываю" : "Не скрываю"}`);
 		},
+		brooch: () => {
+			mod.settings.brooch = !mod.settings.brooch;
+			mod.command.message(`Скрытие анимации брошки: ${mod.settings.brooch ? "Скрываю" : "Не скрываю"}`);
+		},
 		dbe: () => {
 			mod.settings.backstep = !mod.settings.backstep;
 			mod.command.message(`Автосброс эвейда (прист): ${mod.settings.backstep ? "Включено" : "Выключено"}`);
@@ -656,14 +660,9 @@ module.exports = function ProxyMenu(mod) {
 		}
 	});
 
-	mod.hook("S_ABNORMALITY_BEGIN", "*", e => {
-		if (!mod.game.me.is(e.target)) return;
-		if (drinkAbnormalities.includes(e.id) && mod.settings.drunk) return false; // Отключение пьяного экрана от пива
-	});
-
-	mod.hook("S_ABNORMALITY_BEGIN", "*", { order: Infinity, filter: { fake: null } }, event => {
-		if (!mod.settings.drunk) return;
-		if (event.id === 301806) return false;
+	mod.hook("S_ABNORMALITY_BEGIN", "*", { order: Infinity, filter: { fake: null } }, e => {
+		if (mod.game.me.is(e.target) && drinkAbnormalities.includes(e.id) && mod.settings.drunk) return false; // Отключение пьяного экрана от пива
+		if (mod.settings.brooch && e.id === 301806) return false; // Отключения эффекта новых брошек
 	});
 
 	mod.hook("S_DIALOG", "*", e => {

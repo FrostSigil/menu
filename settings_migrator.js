@@ -10,6 +10,7 @@ const DefaultSettings = {
 	autoaccept: false,
 	lobby: false,
 	drunk: false,
+	brooch: false,
 	fix: false,
 	backstep: false,
 	ggreset: false,
@@ -62,7 +63,9 @@ const DefaultSettings = {
 			gameId: null,
 			opts: [
 				{ templateId: 2019, huntingZoneId: 183, _value: 70310 },
-				{ templateId: 2022, huntingZoneId: 58, _value: 58001 }
+				{ templateId: 2022, huntingZoneId: 58, _value: 58001 },
+				{ templateId: 1103, huntingZoneId: 63, _value: 16063 },
+				{ templateId: 1101, huntingZoneId: 63, _value: 16063 }
 			]
 		},
 		sstore: {
@@ -115,7 +118,9 @@ const DefaultSettings = {
 			gameId: null,
 			opts: [
 				{ templateId: 2005, huntingZoneId: 183, _value: 111 },
-				{ templateId: 2015, huntingZoneId: 58, _value: 111 }
+				{ templateId: 2015, huntingZoneId: 58, _value: 111 },
+				{ templateId: 30002, huntingZoneId: 63, _value: 111 },
+				{ templateId: 30003, huntingZoneId: 63, _value: 111 }
 			]
 		},
 		fstore: {

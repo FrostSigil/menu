@@ -2,7 +2,7 @@
     "files": {
         "README.md": "8e65efd458a691c004decd82faa3f95d964a240246ead5f364cb877f262dc823",
         "index.js": "ca86d300c494af36e26f152fd55a249ff275168f4695e22a8816a688d7e03a37",
-        "menu.js": "95f467b9a7c1117343c39cfc06cd767751aa6820903c20e0c12d40c3204834d6",
+        "menu.js": "74d962469bea5aae8c35c8d189a0f948790240f61e89205c30b9862ea337f151",
         "module.json": "2fbc1ef5e072e833d172c5de70f555940e8fa149eaaef82ace6d68258406ed29",
         "node_modules/moment-timezone/data/meta/latest.json": "1574fc70d8fd2554031aed90b1424371d6775bd9c0cab5cbd20e04753984f501",
         "node_modules/moment-timezone/data/packed/latest.json": "ccdc6aa04df161122e948b89e0629618094a55fe7e03a70cf88952f823273b2b",

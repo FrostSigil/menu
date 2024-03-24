@@ -775,6 +775,7 @@ module.exports = function ProxyMenu(mod) {
 			});
 		} else {
 			mod.send("C_GACHA_CANCEL", "*", { id: contract });
+			mod.send("C_CANCEL_CONTRACT", "*", { type: contractType, id: contract });
 			mod.hookOnce("S_CANCEL_CONTRACT", "*", () => {
 				opening = false;
 				if (mod.game.inventory.getTotalAmount(id) < 1) {

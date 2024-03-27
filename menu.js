@@ -171,7 +171,7 @@ module.exports.pages = {
 			{},
 			{ command: "m et 2166 3101", name: "Гнездо Паркин (Gossamer Vault)", color: c.g },
 			{},
-			{ command: "m et 2173 3102", name: "Лаборатория Сайрекса (Thaumetal Refinery)", color: c.v },
+			{ command: "m et 2147 9794", name: "Лаборатория Сайрекса (Thaumetal Refinery)", color: c.o },
 			{},
 			{ command: "m et 2152 9735", name: "RK-9 (RK-9 Kennel)", color: c.g },
 			{},

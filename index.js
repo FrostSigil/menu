@@ -358,6 +358,10 @@ module.exports = function ProxyMenu(mod) {
 			mod.settings.autoaccept = !mod.settings.autoaccept;
 			mod.command.message(`Авто принятие пати : ${mod.settings.autoaccept ? "Включено" : "Выключено"}`);
 		},
+		autoreset: () => {
+			mod.settings.autoreset = !mod.settings.autoreset;
+			mod.command.message(`Авто приняти сброса / роспуска пати: ${mod.settings.autoreset ? "Включено" : "Выключено"}`);
+		},
 		hotkey: arg => {
 			if (!arg) {
 				mod.command.message(`Current hotkey: ${mod.settings.hotkey}`);
@@ -704,6 +708,7 @@ module.exports = function ProxyMenu(mod) {
 	});
 
 	mod.hook("S_VOTE_RESET_ALL_DUNGEON", 1, () => {
+		if (!mod.settings.autoreset) return;
 		mod.setTimeout(() =>
 			mod.send("C_VOTE_RESET_ALL_DUNGEON", 1, {
 				accept: true
@@ -711,6 +716,7 @@ module.exports = function ProxyMenu(mod) {
 	});
 
 	mod.hook("S_VOTE_DISMISS_PARTY", 1, () => {
+		if (!mod.settings.autoreset) return;
 		mod.setTimeout(() =>
 			mod.send("C_VOTE_DISMISS_PARTY", 1, {
 				accept: true

@@ -8,6 +8,7 @@ const DefaultSettings = {
 	spawnBuild: false,
 	blockscene: false,
 	autoaccept: false,
+	autoreset: false,
 	lobby: false,
 	drunk: false,
 	brooch: false,

@@ -483,6 +483,8 @@ module.exports.pages = {
 			{},
 			{ command: "m autoaccept", name: "Автопринятие пати", color: c.lg },
 			{},
+			{ command: "m autoreset", name: "Автопринятие (сброса подземелья / роспуска пати)", color: c.g },
+			{},
 			{ command: "m tolobby", name: "Отключение таймера при выходе на выбор персонажей", color: c.y },
 			{},
 			{ command: "m ggreset", name: "Автосброс Поляны древней", color: c.lp },

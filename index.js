@@ -752,7 +752,7 @@ module.exports = function ProxyMenu(mod) {
 
 	mod.hook("C_USE_ITEM", "*", event => {
 		gachaId = event.id;
-		if (!mod.settings.openbox) return;
+		if (!mod.settings.openbox || mod.majorPatchVersion < 89) return;
 		if (!opening) {
 			mod.hook("S_GACHA_START", "*", () => {
 				opening = true;

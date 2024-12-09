@@ -34,7 +34,6 @@ function addOpcodeAndDefinition(mod, name, version = null, definition = null) {
 module.exports = function ProxyMenu(mod) {
 	const cmd = mod.command || mod.require.command;
 	const COMMAND = "m";
-	const menu = require("./menu");
 	const { player } = mod.require.library;
 	const keybinds = new Set();
 	const path = jsonRequire("path");
@@ -62,6 +61,21 @@ module.exports = function ProxyMenu(mod) {
 			});
 		}
 	};
+
+	
+	let language = "en";
+
+	try {
+		language = require("../../bin/config").loadConfig()?.uilanguage;
+	} catch (_) { }
+
+	let menu = {};
+
+	try {
+		menu = require(`./menu_${language}`);
+	} catch (_) {
+		menu = require("./menu");
+	}
 
 	let bookmarks = new Map();
 	let debug = false;

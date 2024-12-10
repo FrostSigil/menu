@@ -1,10 +1,13 @@
 **The number of menu items depends on the installed modules | Количество пунктов меню зависит от установленных модулей**
+
 (If the merchants in the menu do not work, apparently there was a server restart, you need to visit them on city
 near the vanguard and the forge and the great square of freedom as well as the balderon)
-just be near the NPC and they will work. | 
+just be near the NPC and they will work.
+
 (Если торгаши в менюшке не работают видимо был рестарт сервера, нужно значит проведать их в дозоре
 возле авангарда и кузницу дозора и велика площадь свободы а также балдерон)
 просто рядом с нпс оказаться и они заработают.
+
 ## Commands
 Toolbox(/8) | Hotkey | Command description | Описание
 --- | --- | --- | ---
@@ -12,8 +15,8 @@ Toolbox(/8) | Hotkey | Command description | Описание
 **m $dang** |**Ctrl+Alt+H** | Vanguard teleport, also you can use | Для вызова телепорта по авангарду к данжам
 **m $setting** | **Ctrl+Alt+S** | Other settings menu | Управляет доп. функциями и настройками меню
 
-![](https://i.ibb.co/dWcCymJ/image.png)
-![](https://i.ibb.co/sFvxs4r/image.png)
+![](https://i.ibb.co/QfQMZHR/image.png)
+![](https://i.ibb.co/55Wps3V/image.png)
 
 ## Supports mods
 Поддерживает частичное управление следующими модулями: 

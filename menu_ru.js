@@ -76,7 +76,7 @@ module.exports.categories = {
 		{ command: "tp to", name: "Зона", color: c.r, ifcmd: "tp" },
 		{ command: "tp party", name: "Группа", color: c.lg, ifcmd: "tp" },
 		{ command: "m tohw", name: "Балдерон", color: c.o },
-		{ command: "m $dang", name: "Данжы (Ctrl+Alt+H)", color: c.y, keybind: "ctrl+alt+h" },
+		{ command: "m $dang", name: "Данжи (Ctrl+Alt+H)", color: c.y, keybind: "ctrl+alt+h" },
 		{ ifcmd: "tp" },
 		{ command: "clear", name: "Очистить чат", color: c.w },
 		{ command: "m $Loger", name: "$$$$$$$$", color: c.r, ifcmd: "logc", keybind: "ctrl+shift+n" },

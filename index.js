@@ -62,7 +62,7 @@ module.exports = function ProxyMenu(mod) {
 		}
 	};
 
-	
+
 	let language = "en";
 
 	try {
@@ -771,10 +771,10 @@ module.exports = function ProxyMenu(mod) {
 			mod.hook("S_GACHA_START", "*", () => {
 				opening = true;
 				openGacha(gachaId);
-			if (mod.game.inventory.getTotalAmount(gachaId) >= 5) {
-				mod.command.message("Открываю. Для остановки кликните еще раз на предмет.");
-			}
-			return false;
+				if (mod.game.inventory.getTotalAmount(gachaId) >= 5) {
+					mod.command.message("Открываю. Для остановки кликните еще раз на предмет.");
+				}
+				return false;
 			});
 		} else {
 			opening = false;
@@ -792,7 +792,7 @@ module.exports = function ProxyMenu(mod) {
 		if (opening && mod.game.inventory.getTotalAmount(id) >= 1) {
 			mod.send("C_GACHA_TRY", mod.majorPatchVersion <= 93 ? 1 : 2, { id: contract, amount: 1 });
 			mod.hookOnce("S_GACHA_END", mod.majorPatchVersion <= 93 ? 1 : "*", () => {
-				mod.setTimeout(() => mod.majorPatchVersion <= 93 ?
+				mod.setTimeout(() => (mod.majorPatchVersion <= 93 ?
 					mod.send("C_USE_ITEM", 3, {
 						gameId: mod.game.me.gameId,
 						id: id,
@@ -801,14 +801,14 @@ module.exports = function ProxyMenu(mod) {
 						w: player.loc.w,
 						unk4: true
 					}) :
-					openGacha(id), mod.settings.boxdelay);
-			return false;
+					openGacha(id)), mod.settings.boxdelay);
+				return false;
 			});
 		} else {
 			mod.send("C_GACHA_CANCEL", "*", { id: contract });
 			mod.send("C_CANCEL_CONTRACT", "*", { type: contractType, id: contract });
 			mod.hookOnce("S_CANCEL_CONTRACT", "*", () => {
-			 	opening = false;
+				opening = false;
 				if (mod.game.inventory.getTotalAmount(id) < 1) {
 					mod.command.message("Закончил открытие.");
 				}

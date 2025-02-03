@@ -1,22 +1,23 @@
+/* eslint-disable no-dupe-keys */
 "use strict";
 // Colors
 const c = {
-    w: "#ffffff", // white
-    br: "#bc8f8f", // brown
-    o: "#ffc6d00", // orange
-    p: "#FF1493", // pink
-    lp: "#FF69B4", // light pink
-    r: "#FF0000", // red
-    lr: "#FA8072", // light red
-    g: "#f04ff1c", // green
-    lg: "#f4ee35d", // light green
-    v: "#f9f00d4", // violet
-    lv: "#BA55D3", // light violet
-    b: "#f004eff", // blue
-    lb: "#08b3e5", // light blue
-    gr: "#778899", // gray
-    y: "#fdff00", // yellow
-    ly: "#FFFDFF20" // light yellow
+	w: "#ffffff", // white
+	br: "#bc8f8f", // brown
+	o: "#ffc6d00", // orange
+	p: "#FF1493", // pink
+	lp: "#FF69B4", // light pink
+	r: "#FF0000", // red
+	lr: "#FA8072", // light red
+	g: "#f04ff1c", // green
+	lg: "#f4ee35d", // light green
+	v: "#f9f00d4", // violet
+	lv: "#BA55D3", // light violet
+	b: "#f004eff", // blue
+	lb: "#08b3e5", // light blue
+	gr: "#778899", // gray
+	y: "#fdff00", // yellow
+	ly: "#FFFDFF20" // light yellow
 };
 
 // Available record keys:
@@ -44,7 +45,7 @@ module.exports.premium = [
 
 // Настройка меню
 module.exports.categories = {
-	"Merchants": [
+	Merchants: [
 		{ command: "m bank", name: "Bank", color: c.lp },
 		{ command: "m pbank", name: "Spec. storage", color: c.lp },
 		{ command: "m cbank", name: "Wardrobe", color: c.lp },
@@ -71,7 +72,7 @@ module.exports.categories = {
 		{ command: "m fstore", name: "Cooking", color: c.y },
 		{ command: "m jcraft", name: "Tailoring", color: c.y }
 	],
-	"Main": [
+	Main: [
 		{ command: "tp zone", name: "Teleport", color: c.b, ifcmd: "tp" },
 		{ command: "tp to", name: "Zone", color: c.r, ifcmd: "tp" },
 		{ command: "tp party", name: "Party", color: c.lg, ifcmd: "tp" },
@@ -112,9 +113,9 @@ module.exports.categories = {
 		{ command: "macro", name: "macro on/off", color: c.y, ifcmd: "macro" },
 		{ command: "proxy reload macro-maker", name: "reload macro", color: c.r, ifcmd: "macro" },
 		{},
-		{ command: "pr", name: "PR on/off", color: c.y, ifcmd: "pr"},		
-		{ command: "pinger toggle", name: "pinger on/off", color: c.y, ifcmd: "pinger"},
-		{ command: "pinger color", name: "pinger color toggle", color: c.y, ifcmd: "pinger"},
+		{ command: "pr", name: "PR on/off", color: c.y, ifcmd: "pr" },
+		{ command: "pinger toggle", name: "pinger on/off", color: c.y, ifcmd: "pinger" },
+		{ command: "pinger color", name: "pinger color toggle", color: c.y, ifcmd: "pinger" },
 		{ ifcmd: "fps" },
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
@@ -127,16 +128,16 @@ module.exports.categories = {
 		{ command: "translate send", name: "Auto translation", color: c.lb, ifcmd: "translate" },
 		{ ifcmd: "auto" },
 		{ command: "auto gq", name: "Auto Guild Quest", color: c.lv, ifcmd: "auto" },
-		{ command: "auto vq", name: "Auto Vanguard", color: c.lv, ifcmd: "auto" },
+		{ command: "auto vg", name: "Auto Vanguard", color: c.lv, ifcmd: "auto" },
 		{ command: "auto gl", name: "Auto Guard", color: c.lv, ifcmd: "auto" },
 		{ ifcmd: "invg", ifcmd: "lfg" },
 		{ command: "invg", name: "Autoaccept guild", color: c.lb, ifcmd: "invg" },
 		{ command: "lfg", name: "Autoaccept LFG", color: c.lb, ifcmd: "lfg" },
 		{},
 		{ command: "loot auto", name: "Autoloot", color: c.p, ifcmd: "loot" },
-		{ command: "bb", name: "BodyBlock", color: c.lp, ifcmd: "bb" },		
+		{ command: "bb", name: "BodyBlock", color: c.lp, ifcmd: "bb" },
 		{ ifcmd: "drk" },
-		{ command: "drk", name: "Darkan Wings", color: c.p, ifcmd: "drk" },		
+		{ command: "drk", name: "Darkan Wings", color: c.p, ifcmd: "drk" },
 		{},
 		{ command: "m drop", name: "Leave party", color: c.y },
 		{ command: "m disband", name: "Disband", color: c.o },
@@ -196,7 +197,7 @@ module.exports.pages = {
 			{},
 			{ command: "m et 800002 9088", name: "Sinestral Manor", color: c.lb }
 		],
-		"Events": [
+		Events: [
 			{ command: "m et 7001 230", name: "Sun Feslival", color: c.o },
 			{},
 			{ command: "m et 7003 210", name: "Beach Party", color: c.o }
@@ -233,7 +234,7 @@ module.exports.pages = {
 			{ command: "tp drop 80", name: "80%", color: c.lg, ifcmd: "tp" },
 			{ command: "tp drop 90", name: "90%", color: c.g, ifcmd: "tp" },
 			{ ifcmd: "tp" },
-			{ command: "tp drop -1", name: "Kill yourself", color: c.r, ifcmd: "tp" },
+			{ command: "tp drop -1", name: "Kill yourself", color: c.r, ifcmd: "tp" }
 		],
 		Channels: [
 			{ command: "m cha 1", name: "(_1_)", color: c.g },
@@ -254,7 +255,7 @@ module.exports.pages = {
 			{ command: "wb", name: "Resp. time world Boss", color: c.y, ifcmd: "bh" },
 			{ command: "wb scan", name: "Scan", color: c.g, ifcmd: "bh" },
 			{ command: "wb stop", name: "Stop", color: c.r, ifcmd: "bh" },
-			{ command: "wb loc", name: "Location", color: c.b, ifcmd: "bh" },
+			{ command: "wb loc", name: "Location", color: c.b, ifcmd: "bh" }
 		]
 	},
 	setting: {

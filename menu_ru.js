@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 "use strict";
 // Цвета
 const c = {
@@ -112,9 +113,9 @@ module.exports.categories = {
 		{ command: "macro", name: "macro on/off", color: c.y, ifcmd: "macro" },
 		{ command: "proxy reload macro-maker", name: "reload macro", color: c.r, ifcmd: "macro" },
 		{},
-		{ command: "pr", name: "PR on/off", color: c.y, ifcmd: "pr"},		
-		{ command: "pinger toggle", name: "pinger on/off", color: c.y, ifcmd: "pinger"},
-		{ command: "pinger color", name: "pinger color toggle", color: c.y, ifcmd: "pinger"},
+		{ command: "pr", name: "PR on/off", color: c.y, ifcmd: "pr" },
+		{ command: "pinger toggle", name: "pinger on/off", color: c.y, ifcmd: "pinger" },
+		{ command: "pinger color", name: "pinger color toggle", color: c.y, ifcmd: "pinger" },
 		{ ifcmd: "fps" },
 		{ command: "u ui", name: "Unicast", color: c.p, ifcmd: "u" },
 		{ command: "fps", name: "FPS Menu", color: c.y, ifcmd: "fps" },
@@ -127,7 +128,7 @@ module.exports.categories = {
 		{ command: "translate send", name: "Автоперевод", color: c.lb, ifcmd: "translate" },
 		{ ifcmd: "auto" },
 		{ command: "auto gq", name: "Авто Гильд Квест", color: c.lv, ifcmd: "auto" },
-		{ command: "auto vq", name: "Авто Авангард", color: c.lv, ifcmd: "auto" },
+		{ command: "auto vg", name: "Авто Авангард", color: c.lv, ifcmd: "auto" },
 		{ command: "auto gl", name: "Авто Хранитель", color: c.lv, ifcmd: "auto" },
 		{ ifcmd: "invg", ifcmd: "lfg", ifcmd: "drk" },
 		{ command: "invg", name: "Автоприем в ги", color: c.lb, ifcmd: "invg" },
@@ -233,7 +234,7 @@ module.exports.pages = {
 			{ command: "tp drop 80", name: "80%", color: c.lg, ifcmd: "tp" },
 			{ command: "tp drop 90", name: "90%", color: c.g, ifcmd: "tp" },
 			{ ifcmd: "tp" },
-			{ command: "tp drop -1", name: "Убить себя", color: c.r, ifcmd: "tp" },
+			{ command: "tp drop -1", name: "Убить себя", color: c.r, ifcmd: "tp" }
 		],
 		Каналы: [
 			{ command: "m cha 1", name: "(_1_)", color: c.g },

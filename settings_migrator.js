@@ -63,10 +63,31 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 135, huntingZoneId: 599, _value: 59901 },
+				{ templateId: 158, huntingZoneId: 599, _value: 59901 },
+				{ templateId: 1001, huntingZoneId: 63, _value: 16063 },
+				{ templateId: 1001, huntingZoneId: 72, _value: 16072 },
+				{ templateId: 1002, huntingZoneId: 81, _value: 16081 },
+				{ templateId: 1015, huntingZoneId: 3051, _value: 2851665 },
+				{ templateId: 1020, huntingZoneId: 72, _value: 16072 },
+				{ templateId: 1037, huntingZoneId: 3051, _value: 2851665 },
+				{ templateId: 1049, huntingZoneId: 84, _value: 16084 },
+				{ templateId: 1055, huntingZoneId: 84, _value: 16084 },
+				{ templateId: 1062, huntingZoneId: 84, _value: 16084 },
+				{ templateId: 1101, huntingZoneId: 63, _value: 16063 },
+				{ templateId: 1103, huntingZoneId: 63, _value: 16063 },
+				{ templateId: 1222, huntingZoneId: 3051, _value: 2851665 },
+				{ templateId: 1303, huntingZoneId: 3051, _value: 2851665 },
+				{ templateId: 1408, huntingZoneId: 3051, _value: 16094 },
+				{ templateId: 2001, huntingZoneId: 183, _value: 70310 },
+				{ templateId: 2018, huntingZoneId: 183, _value: 70310 },
 				{ templateId: 2019, huntingZoneId: 183, _value: 70310 },
 				{ templateId: 2022, huntingZoneId: 58, _value: 58001 },
-				{ templateId: 1103, huntingZoneId: 63, _value: 16063 },
-				{ templateId: 1101, huntingZoneId: 63, _value: 16063 }
+				{ templateId: 2023, huntingZoneId: 58, _value: 58001 },
+				{ templateId: 5001, huntingZoneId: 13, _value: 16091 },
+				{ templateId: 5101, huntingZoneId: 13, _value: 16092 },
+				{ templateId: 5201, huntingZoneId: 13, _value: 16092 },
+				{ templateId: 5301, huntingZoneId: 13, _value: 16092 }
 			]
 		},
 		sstore: {
@@ -74,8 +95,19 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1001, huntingZoneId: 381, _value: 250 },
+				{ templateId: 1385, huntingZoneId: 3051, _value: 58002 },
+				{ templateId: 1600, huntingZoneId: 63, _value: 250 },
+				{ templateId: 1600, huntingZoneId: 72, _value: 250 },
+				{ templateId: 1600, huntingZoneId: 84, _value: 250 },
+				{ templateId: 1601, huntingZoneId: 63, _value: 250 },
+				{ templateId: 1601, huntingZoneId: 72, _value: 250 },
+				{ templateId: 1601, huntingZoneId: 84, _value: 250 },
 				{ templateId: 2050, huntingZoneId: 183, _value: 2109 },
-				{ templateId: 2010, huntingZoneId: 58, _value: 58002 }
+				{ templateId: 2010, huntingZoneId: 58, _value: 58002 },
+				{ templateId: 2014, huntingZoneId: 183, _value: 250 },
+				{ templateId: 2110, huntingZoneId: 183, _value: 250 },
+				{ templateId: 5004, huntingZoneId: 13, _value: 250 }
 			]
 		},
 		bel: {
@@ -83,6 +115,7 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1414, huntingZoneId: 3051, _value: 141 },
 				{ templateId: 2045, huntingZoneId: 183, _value: 141 },
 				{ templateId: 2036, huntingZoneId: 58, _value: 141 }
 			]
@@ -92,8 +125,11 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1382, huntingZoneId: 3051, _value: 609 },
+				{ templateId: 2056, huntingZoneId: 183, _value: 609 },
 				{ templateId: 2058, huntingZoneId: 183, _value: 609 },
-				{ templateId: 2009, huntingZoneId: 58, _value: 609 }
+				{ templateId: 2009, huntingZoneId: 58, _value: 609 },
+				{ templateId: 5006, huntingZoneId: 13, _value: 609 }
 			]
 		},
 		vgc: {
@@ -101,8 +137,11 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1393, huntingZoneId: 3051, _value: 6090 },
+				{ templateId: 2057, huntingZoneId: 183, _value: 6090 },
 				{ templateId: 2059, huntingZoneId: 183, _value: 6090 },
-				{ templateId: 2094, huntingZoneId: 58, _value: 6090 }
+				{ templateId: 2094, huntingZoneId: 58, _value: 6090 },
+				{ templateId: 5005, huntingZoneId: 13, _value: 6090 }
 			]
 		},
 		guard: {
@@ -110,6 +149,8 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1400, huntingZoneId: 3051, _value: 6112 },
+				{ templateId: 2292, huntingZoneId: 58, _value: 6112 },
 				{ templateId: 6112, huntingZoneId: 63, _value: 6112 }
 			]
 		},
@@ -118,8 +159,14 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1097, huntingZoneId: 84, _value: 111 },
+				{ templateId: 1098, huntingZoneId: 84, _value: 111 },
+				{ templateId: 1144, huntingZoneId: 3051, _value: 111 },
+				{ templateId: 1183, huntingZoneId: 72, _value: 111 },
 				{ templateId: 2005, huntingZoneId: 183, _value: 111 },
 				{ templateId: 2015, huntingZoneId: 58, _value: 111 },
+				{ templateId: 2066, huntingZoneId: 183, _value: 111 },
+				{ templateId: 2069, huntingZoneId: 183, _value: 111 },
 				{ templateId: 30002, huntingZoneId: 63, _value: 111 },
 				{ templateId: 30003, huntingZoneId: 63, _value: 111 }
 			]
@@ -129,8 +176,16 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1003, huntingZoneId: 2010, _value: 16096 },
+				{ templateId: 1269, huntingZoneId: 63, _value: 16094 },
+				{ templateId: 2003, huntingZoneId: 2011, _value: 16096 },
 				{ templateId: 2063, huntingZoneId: 183, _value: 16094 },
-				{ templateId: 2006, huntingZoneId: 58, _value: 16094 }
+				{ templateId: 2006, huntingZoneId: 58, _value: 16094 },
+				{ templateId: 3003, huntingZoneId: 2012, _value: 16096 },
+				{ templateId: 4003, huntingZoneId: 2013, _value: 16096 },
+				{ templateId: 5003, huntingZoneId: 2014, _value: 16096 },
+				{ templateId: 6003, huntingZoneId: 2015, _value: 16096 },
+				{ templateId: 9903, huntingZoneId: 207, _value: 16094 }
 			]
 		},
 		ffstore: {
@@ -138,8 +193,10 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1267, huntingZoneId: 63, _value: 16095 },
+				{ templateId: 2008, huntingZoneId: 58, _value: 16095 },
 				{ templateId: 2061, huntingZoneId: 183, _value: 16095 },
-				{ templateId: 2008, huntingZoneId: 58, _value: 16095 }
+				{ templateId: 9904, huntingZoneId: 207, _value: 16095 }
 			]
 		},
 		vstore: {
@@ -156,6 +213,12 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1155, huntingZoneId: 72, _value: 193 },
+				{ templateId: 1198, huntingZoneId: 84, _value: 193 },
+				{ templateId: 1215, huntingZoneId: 63, _value: 193 },
+				{ templateId: 1254, huntingZoneId: 63, _value: 193 },
+				{ templateId: 1403, huntingZoneId: 3051, _value: 193 },
+				{ templateId: 1600, huntingZoneId: 81, _value: 193 },
 				{ templateId: 2013, huntingZoneId: 183, _value: 193 },
 				{ templateId: 2026, huntingZoneId: 58, _value: 193 }
 			]
@@ -165,6 +228,12 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1102, huntingZoneId: 84, _value: 190 },
+				{ templateId: 1103, huntingZoneId: 84, _value: 190 },
+				{ templateId: 1137, huntingZoneId: 72, _value: 190 },
+				{ templateId: 1191, huntingZoneId: 63, _value: 190 },
+				{ templateId: 1195, huntingZoneId: 63, _value: 190 },
+				{ templateId: 1404, huntingZoneId: 3051, _value: 190 },
 				{ templateId: 2006, huntingZoneId: 183, _value: 190 },
 				{ templateId: 2027, huntingZoneId: 58, _value: 190 }
 			]
@@ -174,6 +243,12 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1105, huntingZoneId: 84, _value: 191 },
+				{ templateId: 1126, huntingZoneId: 84, _value: 191 },
+				{ templateId: 1151, huntingZoneId: 72, _value: 191 },
+				{ templateId: 1200, huntingZoneId: 63, _value: 191 },
+				{ templateId: 1203, huntingZoneId: 63, _value: 191 },
+				{ templateId: 1402, huntingZoneId: 3051, _value: 191 },
 				{ templateId: 2008, huntingZoneId: 183, _value: 191 },
 				{ templateId: 2024, huntingZoneId: 58, _value: 191 }
 			]
@@ -192,6 +267,7 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1405, huntingZoneId: 3051, _value: 195 },
 				{ templateId: 20090, huntingZoneId: 183, _value: 195 },
 				{ templateId: 2037, huntingZoneId: 58, _value: 195 }
 			]
@@ -209,6 +285,7 @@ const DefaultSettings = {
 			value: null,
 			gameId: null,
 			opts: [
+				{ templateId: 1416, huntingZoneId: 3051, _value: 3038000 },
 				{ templateId: 1000, huntingZoneId: 3038, _value: 3038000 }
 			]
 		},

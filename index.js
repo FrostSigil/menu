@@ -39,9 +39,9 @@ module.exports = function ProxyMenu(mod) {
 	const path = jsonRequire("path");
 	const fs = jsonRequire("fs");
 	const NecklaceIDs = [20715, 20716, 20717, 20752];
-	const Message2 = "На вас надет Амулет на сбор ресурсов!";
+	const Message2 = "You are wearing the Resource Gathering Amulet! На вас надет Амулет на сбор ресурсов!";
 	const WhiskerIDs = [206100, 206101, 206102, 206103, 206104, 206105, 206106, 206107, 206108, 206109];
-	const Message = "На вас надеты усы рыбака!";
+	const Message = "You're wearing a fisherman's moustache! На вас надеты усы рыбака!";
 
 	const gui = {
 		parse(array, title, d = "") {
@@ -113,18 +113,18 @@ module.exports = function ProxyMenu(mod) {
 		["value", "int32"],
 		["name", "string"],
 		["data", "bytes"]
-	]);
+	], true);
 
 	mod.dispatch.addDefinition("C_REQUEST_REPUTATION_STORE_TELEPORT", 2, [
-	]);
+	], true);
 
 	mod.dispatch.addDefinition("S_VOTE_DISMISS_PARTY", 1, [
 		["accept", "byte"]
-	]);
+	], true);
 
 	mod.dispatch.addDefinition("C_VOTE_DISMISS_PARTY", 1, [
 		["accept", "byte"]
-	]);
+	], true);
 
 	mod.game.initialize(["party", "me.abnormalities", "inventory"]);
 

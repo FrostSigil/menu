@@ -20,6 +20,8 @@ const DefaultSettings = {
 	circle: 1.57,
 	openbox: false,
 	boxdelay: 110,
+	aeromanual: false,
+	aero: "normal",
 	npc: {
 		// For bank NPC.
 		// The "type" is a "type" from S_REQUEST_CONTRACT packet.

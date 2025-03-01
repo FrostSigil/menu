@@ -42,6 +42,12 @@ module.exports = function ProxyMenu(mod) {
 	const Message2 = "You are wearing the Resource Gathering Amulet! На вас надет Амулет на сбор ресурсов!";
 	const WhiskerIDs = [206100, 206101, 206102, 206103, 206104, 206105, 206106, 206107, 206108, 206109];
 	const Message = "You're wearing a fisherman's moustache! На вас надеты усы рыбака!";
+	const weather = {
+		normal: "acn_aeroset.AERO.SPR_Corruption_AERO",
+		snow: "BF_snowBattle_aeroset.AERO.BF_snowBattle_renew_AERO",
+		night: "EX_Halloween_T42_AEROSet.AERO.EX_Halloween_Inside_Aeroset",
+		dark: "Kubel_Fortress_Pegasus_AERO.AERO.Kubel_Fortress_Pegasus_AERO"
+	};
 
 	const gui = {
 		parse(array, title, d = "") {
@@ -447,6 +453,30 @@ module.exports = function ProxyMenu(mod) {
 				mod.settings.boxdelay = parseInt(arg);
 				mod.command.message(`Задержка открытия: ${ mod.settings.boxdelay / 1000 } сек`);
 			}
+		},
+		aero: (arg) => {
+			if (mod.settings.aeromanual) {
+				if (weather[arg]) {
+					if (mod.settings.aero === arg) {
+						mod.settings.aeromanual = false;
+						mod.settings.aero = "normal";
+						mod.command.message("Погода отключена.");
+					} else {
+						mod.settings.aero = arg;
+						mod.command.message(`Погода сменилась на: ${arg}`);
+					}
+					meteo();
+				} else {
+					mod.command.message("Некорректная погода. Доступные варианты: normal, snow, dark, night.");
+				}
+			} else if (weather[arg]) {
+				mod.settings.aeromanual = true;
+				mod.settings.aero = arg;
+				mod.command.message(`Погода включена: ${arg}`);
+				meteo();
+			} else {
+				mod.command.message("Некорректная погода. Доступные варианты: normal, snow, dark, night.");
+			}
 		}
 	};
 
@@ -754,6 +784,9 @@ module.exports = function ProxyMenu(mod) {
 		if (mod.settings.ggreset && e.zone === 9714) {
 			mod.send("C_RESET_ALL_DUNGEON", 1, {});
 		}
+		if (mod.settings.aeromanual) {
+			meteo();
+		}
 	});
 
 	mod.hook("S_START_ACTION_SCRIPT", "*", event => {
@@ -787,6 +820,15 @@ module.exports = function ProxyMenu(mod) {
 	// /////////////////////
 	// //// FUNCTION ///////
 	// /////////////////////
+
+	function meteo() {
+		const aeroSet = weather[mod.settings.aero] || weather.normal;
+		mod.send("S_AERO", "*", {
+			enabled: true,
+			blendTime: 1,
+			aeroSet: aeroSet
+		});
+	}
 
 	function openGacha(id) {
 		if (opening && mod.game.inventory.getTotalAmount(id) >= 1) {

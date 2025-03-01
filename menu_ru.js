@@ -259,6 +259,12 @@ module.exports.pages = {
 		]
 	},
 	setting: {
+		"Погода": [
+			{ command: "m aero normal", name: "Нормально", color: c.g },
+			{ command: "m aero snow", name: "Снег", color: c.lb },
+			{ command: "m aero night", name: "Ночь", color: c.o },
+			{ command: "m aero dark", name: "Темно капец", color: c.v },
+		],
 		Настройки: [
 			{ command: "m premium", name: "Доп. кнопки VIP панели", color: c.y },
 			{},

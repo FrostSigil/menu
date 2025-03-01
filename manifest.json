@@ -1,21 +1,21 @@
 {
     "files": {
         "README.md": "d840a1c77ada8312cd281f83eaf8e47cd8e39d423a676f1616cd1ef57fd827da",
-        "index.js": "4f9ed94fc4b1fb44a07ca6ed2a0454c0c080ed6f72a6947ce51a8db1cbdc8964",
+        "index.js": "056b70e8904c9677fb22f9ac435780ff77b56e47dd12b8b59c12fc6f26150e66",
         "menu.js": {
             "overwrite": false,
-            "hash": "5fb8d957ebd31d0188093d8c2d952c7e368712a76ccb42e29250fdd3c0712295"
+            "hash": "492b8b60615d68f4b2c9095c44cdbe777031d245eb31543b80f1f7c2d43e2058"
         },
         "menu_ru.js": {
             "overwrite": false,
-            "hash": "8a33898a1797c35abeb90797555d160b0567f1e1ebcd778e9a6004a8415b0297"
+            "hash": "d57b33472d883d361b27e0a7c0bc2965dfbfd42755d24d886c44f11e6aad1721"
         },
-        "module.json": "e097deed9fb1d19a09627ca0eb06af8c0d12d2c69a2c65ec2a4a9eff1017e675",
+        "module.json": "c66e9d1cb394a1d080d39baa445d9b4aff8d3835f0dd8523adf54c302f54fc43",
         "node_modules/moment-timezone/data/meta/latest.json": "1574fc70d8fd2554031aed90b1424371d6775bd9c0cab5cbd20e04753984f501",
         "node_modules/moment-timezone/data/packed/latest.json": "ccdc6aa04df161122e948b89e0629618094a55fe7e03a70cf88952f823273b2b",
         "node_modules/moment-timezone/index.js": "b93bc1a0ab15d56e12f0e281bf005d39166952d9208b828e8d056563f3ff1fd1",
         "node_modules/moment-timezone/moment-timezone.js": "183f03352f1e65da2130b89bced0e02d59bdff8a20eb844d98a803462ec99b4c",
         "node_modules/moment/index.js": "f0075677245792b113c801a56bd36682461596ac3830e1d1eac2499ad1460184",
-        "settings_migrator.js": "d8ac9e1d0851acd681f4e107f5d7c3b58f2772c98b41446ab51e683cab9ee664"
+        "settings_migrator.js": "def04eca9af066e9a8e046f3d25f9c2aa6a83a415ffb7f7e36faf7334cf4daf5"
     }
 }

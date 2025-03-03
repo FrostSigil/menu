@@ -356,28 +356,52 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 
 		return settings;
 	}
-};
 
-function MigrateOption(option, oldoption, excludes = []) {
-	if (oldoption === undefined) {
-		oldoption = option;
-	}
-
-	if (Array.isArray(option)) {
-		for (const key of Object.keys(option)) {
-			option[key] = MigrateOption(option[key], oldoption[key], excludes);
+	function MigrateOption(option, oldoption, excludes = []) {
+		if (oldoption === undefined) {
+			oldoption = option;
 		}
-	} else if (option !== null && Object.getPrototypeOf(option) === Object.prototype) {
-		for (const key of Object.keys(option)) {
-			if (excludes.includes(key)) {
-				option[key] = oldoption[key] || null;
-			} else {
+
+		if (Array.isArray(option)) {
+			for (const key of Object.keys(option)) {
 				option[key] = MigrateOption(option[key], oldoption[key], excludes);
 			}
-		}
-	} else {
-		option = oldoption;
-	}
+		} else if (option !== null && Object.getPrototypeOf(option) === Object.prototype) {
+			if (oldoption.templateId && oldoption.huntingZoneId) {
+				const legacyOpt = {
+					templateId: oldoption.templateId,
+					huntingZoneId: oldoption.huntingZoneId,
+					_value: oldoption.value || (option.opts && option.opts.length > 0 ? option.opts[0]._value : null)
+				};
+				option.opts = option.opts || [];
+				if (!option.opts.some(opt => opt.templateId === legacyOpt.templateId && opt.huntingZoneId === legacyOpt.huntingZoneId)) {
+					option.opts.push(legacyOpt);
+				}
+			} else if (oldoption.opts) {
+				option.opts = option.opts || [];
+				const uniqueOpts = new Map();
+				option.opts.forEach(opt => {
+					const key = `${opt.templateId}-${opt.huntingZoneId}`;
+					uniqueOpts.set(key, opt);
+				});
+				oldoption.opts.forEach(opt => {
+					const key = `${opt.templateId}-${opt.huntingZoneId}`;
+					uniqueOpts.set(key, opt);
+				});
+				option.opts = Array.from(uniqueOpts.values());
+			}
 
-	return option;
-}
+			for (const key of Object.keys(option)) {
+				if (excludes.includes(key)) {
+					option[key] = oldoption[key] || null;
+				} else if (key !== "opts") {
+					option[key] = MigrateOption(option[key], oldoption[key], excludes);
+				}
+			}
+		} else {
+			option = oldoption;
+		}
+
+		return option;
+	}
+};

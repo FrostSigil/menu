@@ -64,6 +64,7 @@ module.exports.categories = {
 		{ command: "m guard", name: "Хранитель", color: c.lb },
 		{ command: "m ffstore", name: "Рыба", color: c.w },
 		{ command: "m vstore", name: "Знаки", color: c.lb },
+		{ command: "m varraz", name: "Варраз", color: c.v },
 		{},
 		{ command: "m acraft", name: "Алхимия", color: c.y },
 		{ command: "m scraft", name: "Оружка", color: c.y },

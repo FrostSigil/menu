@@ -264,7 +264,7 @@ module.exports.pages = {
 			{ command: "m aero normal", name: "Default", color: c.g },
 			{ command: "m aero snow", name: "Snow", color: c.lb },
 			{ command: "m aero night", name: "Night", color: c.o },
-			{ command: "m aero dark", name: "Dark", color: c.v },
+			{ command: "m aero dark", name: "Dark", color: c.v }
 		],
 		Settings: [
 			{ command: "m premium", name: "Add. buttons VIP-panel", color: c.y },

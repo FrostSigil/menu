@@ -822,12 +822,20 @@ module.exports = function ProxyMenu(mod) {
 	// /////////////////////
 
 	function meteo() {
-		const aeroSet = weather[mod.settings.aero] || weather.normal;
-		mod.send("S_AERO", "*", {
-			enabled: true,
-			blendTime: 1,
-			aeroSet: aeroSet
-		});
+		if (mod.settings.aero === "normal") {
+			mod.send("S_START_ACTION_SCRIPT", 3, {
+				gameId: mod.game.me.gameId,
+				script: 105,
+				unk2: 0
+			});
+		} else {
+			const aeroSet = weather[mod.settings.aero] || weather.normal;
+			mod.send("S_AERO", 1, {
+				enabled: true,
+				blendTime: 1,
+				aeroSet: aeroSet
+			});
+		}
 	}
 
 	function openGacha(id) {

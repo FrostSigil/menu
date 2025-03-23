@@ -64,7 +64,7 @@ module.exports.categories = {
 		{ command: "m guard", name: "Хранитель", color: c.lb },
 		{ command: "m ffstore", name: "Рыба", color: c.w },
 		{ command: "m vstore", name: "Знаки", color: c.lb },
-		{ command: "m varraz", name: "Варраз", color: c.v },
+		{ command: "m $viod", name: "NPC VIoD", color: c.v },
 		{},
 		{ command: "m acraft", name: "Алхимия", color: c.y },
 		{ command: "m scraft", name: "Оружка", color: c.y },
@@ -164,23 +164,35 @@ module.exports.pages = {
 		"Телепорт к Данжам": [
 			{ command: "m et 2190 9981", name: "Святилище Велики (Velik's Sanctuary) (Hard)", color: c.p },
 			{},
-			{ command: "m et 2173 3102", name: "Командный Центр (Draakon Arena)", color: c.v },
+			{ command: "m et 2206 3107", name: "RK-9 (RK-9 Kennel) (Hard)", color: c.lp },
 			{},
-			{ command: "m et 2168 3023", name: "Крепость Берарк (Akalath Quarantine)", color: c.b },
+			{ command: "m et 2222 9056", name: "Хроноплоскость (Timescape) (Hard)", color: c.y },
 			{},
-			{ command: "m et 1900 9750", name: "Край Разлома (Rift Edge)", color: c.y },
+			{ command: "m et 2200 3204", name: "Грёзы Лукмии (Lumikan’s Dream) (Hard)", color: c.r },
 			{},
-			{ command: "m et 2166 3101", name: "Гнездо Паркин (Gossamer Vault)", color: c.g },
+			{ command: "m et 2184 9070", name: "Замок Парадоксов (Manglemire)", color: c.bl },
 			{},
-			{ command: "m et 2147 9794", name: "Лаборатория Сайрекса (Thaumetal Refinery)", color: c.o },
+			{ command: "m et 2161 9982", name: "Мастерская Леандра (Grotto of Lost Souls) (Hard)", color: c.r },
 			{},
-			{ command: "m et 2152 9735", name: "RK-9 (RK-9 Kennel)", color: c.g },
+			{ command: "m et 2157 9920", name: "Омут Антароса (Antaroth's Abyss) (Hard)", color: c.lr },
+			{},
+			{ command: "m et 2199 3104", name: "Грёзы Лукмии (Lumikan’s Dream)", color: c.v },
+			{},
+			{ command: "m et 2192 9720", name: "Омут Антароса (Antaroth's Abyss)", color: c.g },
+			{},
+			{ command: "m et 2160 9782", name: "Мастерская Леандра (Grotto of Lost Souls)", color: c.lg },
+			{},
+			{ command: "m et 2220 9059", name: "Остров Мёртвых (Forsaken Island)", color: c.y },
+			{},
+			{ command: "m et 2172 9756", name: "Хроноплоскость (Timescape)", color: c.ly },
+			{},
+			{ command: "m et 2193 9739", name: "Секретный Лагерь повстанцев (Red Refuge)", color: c.o },
 			{},
 			{ command: "m et 2150 9055", name: "Алчное Ущелье (Ravenous Gorge)", color: c.y }
 		],
 		Мелкие: [
-			{ command: "m tohw", name: "Балдерон", color: c.o },
-			{ command: "m et 98311 9069", name: "Балдерон (Краб)", color: c.y },
+			{ command: "m tohw", name: "Город (Авангард)", color: c.o },
+			{ command: "m et 98311 9069", name: "Тренировочный (Краб)", color: c.y },
 			{},
 			{ command: "m et 2101 9809", name: "Мясницкие Катакомбы (Macellarius Catacombs)", color: c.g },
 			{},
@@ -202,6 +214,17 @@ module.exports.pages = {
 			{ command: "m et 7001 230", name: "Фестиваль Солнца (Sun Feslival)", color: c.o },
 			{},
 			{ command: "m et 7003 210", name: "Пляжная Вечеринка (Beach Party)", color: c.o }
+		],
+		Прочие: [
+			{ command: "m et 2173 3102", name: "Командный Центр (Draakon Arena)", color: c.v },
+			{},
+			{ command: "m et 2168 3023", name: "Крепость Берарк (Akalath Quarantine)", color: c.b },
+			{},
+			{ command: "m et 1900 9750", name: "Край Разлома (Rift Edge)", color: c.y },
+			{},
+			{ command: "m et 2166 3101", name: "Гнездо Паркин (Gossamer Vault)", color: c.g },
+			{},
+			{ command: "m et 2147 9794", name: "Лаборатория Сайрекса (Thaumetal Refinery)", color: c.o }
 		]
 	},
 	Loger: {
@@ -257,6 +280,13 @@ module.exports.pages = {
 			{ command: "wb scan", name: "Поиск", color: c.o, ifcmd: "bh" },
 			{ command: "wb stop", name: "Стоп", color: c.r, ifcmd: "bh" },
 			{ command: "wb loc", name: "Позиции", color: c.b, ifcmd: "bh" }
+		]
+	},
+	viod: {
+		"Veiled Island of Dawn NPC": [
+			{ command: "m varraz", name: "Варраз", color: c.v },
+			{ command: "m adria", name: "Андрия", color: c.v },
+			{ command: "m virna", name: "Вирна", color: c.v }
 		]
 	},
 	setting: {

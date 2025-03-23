@@ -64,7 +64,7 @@ module.exports.categories = {
 		{ command: "m guard", name: "Guardian", color: c.lb },
 		{ command: "m ffstore", name: "Fish", color: c.w },
 		{ command: "m vstore", name: "Peddler's", color: c.lb },
-		{ command: "m varraz", name: "Varraz", color: c.v },
+		{ command: "m $viod", name: "NPC VIoD", color: c.v },
 		{},
 		{ command: "m acraft", name: "Alchemy", color: c.y },
 		{ command: "m scraft", name: "Smelting", color: c.y },
@@ -77,7 +77,7 @@ module.exports.categories = {
 		{ command: "tp zone", name: "Teleport", color: c.b, ifcmd: "tp" },
 		{ command: "tp to", name: "Zone", color: c.r, ifcmd: "tp" },
 		{ command: "tp party", name: "Party", color: c.lg, ifcmd: "tp" },
-		{ command: "m tohw", name: "Balderon", color: c.o },
+		{ command: "m tohw", name: "City (Vanguard store)", color: c.o },
 		{ command: "m $dang", name: "Dungeon's (Ctrl+Alt+H)", color: c.y, keybind: "ctrl+alt+h" },
 		{ ifcmd: "tp" },
 		{ command: "clear", name: "Clear chat", color: c.w },
@@ -164,22 +164,34 @@ module.exports.pages = {
 		"Teleport to Dungeons": [
 			{ command: "m et 2190 9981", name: "Velik's Sanctuary (Hard)", color: c.p },
 			{},
-			{ command: "m et 2173 3102", name: "Draakon Arena", color: c.v },
+			{ command: "m et 2206 3107", name: "RK-9 Kennel (Hard)", color: c.lp },
 			{},
-			{ command: "m et 2168 3023", name: "Akalath Quarantine", color: c.b },
+			{ command: "m et 2222 9056", name: "Timescape (Hard)", color: c.y },
 			{},
-			{ command: "m et 1900 9750", name: "Rift Edge", color: c.y },
+			{ command: "m et 2200 3204", name: "Lumikan’s Dream (Hard)", color: c.r },
 			{},
-			{ command: "m et 2166 3101", name: "Gossamer Vault", color: c.g },
+			{ command: "m et 2184 9070", name: "Manglemire", color: c.bl },
 			{},
-			{ command: "m et 2147 9794", name: "Thaumetal Refinery", color: c.o },
+			{ command: "m et 2161 9982", name: "Grotto of Lost Souls (Hard)", color: c.r },
 			{},
-			{ command: "m et 2152 9735", name: "RK-9 Kennel", color: c.g },
+			{ command: "m et 2157 9920", name: "Antaroth's Abyss (Hard)", color: c.lr },
+			{},
+			{ command: "m et 2199 3104", name: "Lumikan’s Dream", color: c.v },
+			{},
+			{ command: "m et 2192 9720", name: "Antaroth's Abyss", color: c.g },
+			{},
+			{ command: "m et 2160 9782", name: "Grotto of Lost Souls", color: c.lg },
+			{},
+			{ command: "m et 2220 9059", name: "Forsaken Island", color: c.y },
+			{},
+			{ command: "m et 2172 9756", name: "Timescape", color: c.ly },
+			{},
+			{ command: "m et 2193 9739", name: "Red Refuge", color: c.o },
 			{},
 			{ command: "m et 2150 9055", name: "Ravenous Gorge", color: c.y }
 		],
 		"Low lvl": [
-			{ command: "m tohw", name: "Balderon", color: c.o },
+			{ command: "m tohw", name: "City (Vanguard store)", color: c.o },
 			{ command: "m et 98311 9069", name: "Training ground(Balderon)", color: c.y },
 			{},
 			{ command: "m et 2101 9809", name: "Macellarius Catacombs", color: c.g },
@@ -257,6 +269,13 @@ module.exports.pages = {
 			{ command: "wb scan", name: "Scan", color: c.g, ifcmd: "bh" },
 			{ command: "wb stop", name: "Stop", color: c.r, ifcmd: "bh" },
 			{ command: "wb loc", name: "Location", color: c.b, ifcmd: "bh" }
+		]
+	},
+	viod: {
+		"Veiled Island of Dawn NPC": [
+			{ command: "m varraz", name: "Varraz", color: c.v },
+			{ command: "m adria", name: "Adria", color: c.g },
+			{ command: "m virna", name: "Virna", color: c.lg }
 		]
 	},
 	setting: {

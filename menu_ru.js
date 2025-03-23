@@ -285,8 +285,9 @@ module.exports.pages = {
 	viod: {
 		"Veiled Island of Dawn NPC": [
 			{ command: "m varraz", name: "Варраз", color: c.v },
-			{ command: "m adria", name: "Андрия", color: c.v },
-			{ command: "m virna", name: "Вирна", color: c.v }
+			{ command: "m adria", name: "Андрия", color: c.lg },
+			{ command: "m virnaq", name: "Вирна", color: c.y },
+			{ command: "m virna", name: "Вирна (II)", color: c.ly }
 		]
 	},
 	setting: {

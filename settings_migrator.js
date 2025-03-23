@@ -307,6 +307,14 @@ const DefaultSettings = {
 				{ templateId: 1389, huntingZoneId: 3051, _value: 2905345 }
 			]
 		},
+		virnaq: {
+			type: 20,
+			value: null,
+			gameId: null,
+			opts: [
+				{ templateId: 1389, huntingZoneId: 3051, _value: 2905345 }
+			]
+		},
 		// --------------------------------------- Merchant -----------------------------------------//
 		// Merchant Velika +
 		veracun: {

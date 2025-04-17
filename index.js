@@ -799,26 +799,6 @@ module.exports = function ProxyMenu(mod) {
 		currentChannel = event;
 	});
 
-	mod.hook("C_USE_ITEM", "*", event => {
-		gachaId = event.id;
-		if (!mod.settings.openbox) return;
-		if (!opening) {
-			mod.hook("S_GACHA_START", "*", () => {
-				opening = true;
-				openGacha(gachaId);
-				if (mod.game.inventory.getTotalAmount(gachaId) >= 5) {
-					mod.command.message("Открываю. Для остановки кликните еще раз на предмет.");
-				}
-				return false;
-			});
-		} else {
-			opening = false;
-			openGacha(gachaId);
-			mod.command.message("Остановка.");
-			return false;
-		}
-	});
-
 	mod.hook("C_USE_ITEM", 3, event => {
 		if (!mod.settings.openbox) return;
 		if (!opening) {

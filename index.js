@@ -126,6 +126,9 @@ module.exports = function ProxyMenu(mod) {
 	mod.dispatch.addDefinition("C_REQUEST_REPUTATION_STORE_TELEPORT", 2, [
 	], true);
 
+	mod.dispatch.addDefinition("S_MERGE_ITEM_EXECUTE_RESULT", 1, [
+	], true);
+
 	mod.dispatch.addDefinition("S_VOTE_DISMISS_PARTY", 1, [
 		["accept", "byte"]
 	], true);
@@ -837,7 +840,7 @@ module.exports = function ProxyMenu(mod) {
 		}
 	});
 
-	mod.hook("S_MERGE_ITEM_EXECUTE_RESULT", "raw", () => {
+	mod.hook("S_MERGE_ITEM_EXECUTE_RESULT", 1, () => {
 		if (!mod.settings.openbox) return;
 		if (opening && gachaId !== null) {
 			mod.setTimeout(() => openGacha(gachaId), mod.settings.boxdelay + 1000);

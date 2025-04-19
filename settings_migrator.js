@@ -291,30 +291,6 @@ const DefaultSettings = {
 				{ templateId: 1000, huntingZoneId: 3038, _value: 3038000 }
 			]
 		},
-		adria: {
-			type: 49,
-			value: null,
-			gameId: null,
-			opts: [
-				{ templateId: 1108, huntingZoneId: 3051, _value: 2851670 }
-			]
-		},
-		virna: {
-			type: 49,
-			value: null,
-			gameId: null,
-			opts: [
-				{ templateId: 1389, huntingZoneId: 3051, _value: 2905345 }
-			]
-		},
-		virnaq: {
-			type: 20,
-			value: null,
-			gameId: null,
-			opts: [
-				{ templateId: 1389, huntingZoneId: 3051, _value: 2905345 }
-			]
-		},
 		// --------------------------------------- Merchant -----------------------------------------//
 		// Merchant Velika +
 		veracun: {

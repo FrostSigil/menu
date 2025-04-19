@@ -64,7 +64,6 @@ module.exports.categories = {
 		{ command: "m guard", name: "Guardian", color: c.lb },
 		{ command: "m ffstore", name: "Fish", color: c.w },
 		{ command: "m vstore", name: "Peddler's", color: c.lb },
-		{ command: "m $viod", name: "NPC VIoD", color: c.v },
 		{},
 		{ command: "m acraft", name: "Alchemy", color: c.y },
 		{ command: "m scraft", name: "Smelting", color: c.y },
@@ -271,14 +270,6 @@ module.exports.pages = {
 			{ command: "wb loc", name: "Location", color: c.b, ifcmd: "bh" }
 		]
 	},
-	viod: {
-		"Veiled Island of Dawn NPC": [
-			{ command: "m varraz", name: "Varraz", color: c.v },
-			{ command: "m adria", name: "Adria", color: c.g },
-			{ command: "m virnaq", name: "Virna", color: c.lg },
-			{ command: "m virna", name: "Virna (II)", color: c.ly }
-		]
-	},
 	setting: {
 		Weather: [
 			{ command: "m aero normal", name: "Default", color: c.g },
@@ -309,8 +300,6 @@ module.exports.pages = {
 			{},
 			{ command: "m autobox", name: "Automatic opening of boxes in one click", color: c.v },
 			{},
-			{ command: "m rebuff", name: "Auto rebuff self-res and buff after reset bomb(priest)", color: c.g },
-			{},
 			{ command: "m backwalk", name: "Walk backwards (only others can see)", color: c.y },
 			{},
 			{ command: "m circlewalk", name: "Walk while spinning (only visible to others)", color: c.o },
@@ -318,8 +307,6 @@ module.exports.pages = {
 			{ command: "cc", name: "Anti-CC", color: c.lp, ifcmd: "cc" },
 			{ command: "ar", name: "Auto-Retaliate", color: c.lp, ifcmd: "ar" },
 			{ command: "tp jaunt", name: "On/Off jaunt", color: c.o, ifcmd: "tp" },
-			{ class: "priest", ifcmd: "fast" },
-			{ command: "m dbe", name: "Автосброс КД эвейда Прист(при наличии фаста)", color: c.p, class: "priest", ifcmd: "fast" },
 			{},
 			{ command: "m $Loger", name: "$$$$$$$$", color: c.r }
 		]

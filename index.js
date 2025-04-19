@@ -103,6 +103,7 @@ module.exports = function ProxyMenu(mod) {
 	let opening = false;
 	let gachaId = null;
 	let gacha = false;
+	let lastLocation = null;
 
 	if (mod.majorPatchVersion >= 94) {
 		// enable padding

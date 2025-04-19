@@ -64,7 +64,6 @@ module.exports.categories = {
 		{ command: "m guard", name: "Хранитель", color: c.lb },
 		{ command: "m ffstore", name: "Рыба", color: c.w },
 		{ command: "m vstore", name: "Знаки", color: c.lb },
-		{ command: "m $viod", name: "NPC VIoD", color: c.v },
 		{},
 		{ command: "m acraft", name: "Алхимия", color: c.y },
 		{ command: "m scraft", name: "Оружка", color: c.y },
@@ -282,14 +281,6 @@ module.exports.pages = {
 			{ command: "wb loc", name: "Позиции", color: c.b, ifcmd: "bh" }
 		]
 	},
-	viod: {
-		"Veiled Island of Dawn NPC": [
-			{ command: "m varraz", name: "Варраз", color: c.v },
-			{ command: "m adria", name: "Андрия", color: c.lg },
-			{ command: "m virnaq", name: "Вирна", color: c.y },
-			{ command: "m virna", name: "Вирна (II)", color: c.ly }
-		]
-	},
 	setting: {
 		Погода: [
 			{ command: "m aero normal", name: "Нормально", color: c.g },
@@ -319,8 +310,6 @@ module.exports.pages = {
 			{ command: "m ggreset", name: "Автосброс Поляны древней", color: c.lp },
 			{},
 			{ command: "m autobox", name: "Авто открытие коробок в один клик", color: c.v },
-			{},
-			{ command: "m rebuff", name: "Авто ребаф самореса и бафа после бомбочки сброса(priest)", color: c.g },
 			{},
 			{ command: "m backwalk", name: "Ходить спиной вперёд (видят только другие)", color: c.y },
 			{},

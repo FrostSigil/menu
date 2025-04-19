@@ -5,12 +5,12 @@
     "options": {
         "cliName": "Proxy Menu Standart",
         "guiName": "Proxy Menu Standart",
-        "settingsVersion": 27,
+        "settingsVersion": 28,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js",
         "reloadable": true
     },
     "servers": ["https://raw.githubusercontent.com/FrostSigil/menu/master/"],
-    "version": "23/3/2024",
+    "version": "19/4/2024",
     "disableAutoUpdate": false
 }

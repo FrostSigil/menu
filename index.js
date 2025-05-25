@@ -49,6 +49,8 @@ module.exports = function ProxyMenu(mod) {
 		night: "EX_Halloween_T42_AEROSet.AERO.EX_Halloween_Inside_Aeroset",
 		dark: "Kubel_Fortress_Pegasus_AERO.AERO.Kubel_Fortress_Pegasus_AERO"
 	};
+	const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
+	const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
 
 	const gui = {
 		parse(array, title, d = "") {
@@ -484,6 +486,7 @@ module.exports = function ProxyMenu(mod) {
 	};
 
 	Object.keys(mod.settings.npc).forEach(name => {
+		if (isAgaia && sanctionedNames.includes(name)) return;
 		commands[name] = () => {
 			const npc = mod.settings.npc[name];
 			const buffer = Buffer.alloc(4);

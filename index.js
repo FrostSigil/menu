@@ -33,6 +33,9 @@ function addOpcodeAndDefinition(mod, name, version = null, definition = null) {
 }
 
 module.exports = function ProxyMenu(mod) {
+	
+	mod.dispatch.addDefinition("S_DIALOG", 10, `${__dirname }/S_DIALOG.def`, true);
+	
 	const cmd = mod.command || mod.require.command;
 	const COMMAND = "m";
 	const { player } = mod.require.library;
@@ -295,7 +298,7 @@ module.exports = function ProxyMenu(mod) {
 		});
 	});
 
-	mod.hook("S_DIALOG", 2, event => {
+	mod.hook("S_DIALOG", 10, event => {
 		if (!debug) return;
 		debugData = [
 			"Detected NPC:",

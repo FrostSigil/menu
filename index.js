@@ -35,7 +35,7 @@ function addOpcodeAndDefinition(mod, name, version = null, definition = null) {
 module.exports = function ProxyMenu(mod) {
 	
 	mod.dispatch.addDefinition("S_DIALOG", 10, `${__dirname }/S_DIALOG.def`, true);
-	
+
 	const cmd = mod.command || mod.require.command;
 	const COMMAND = "m";
 	const { player } = mod.require.library;
@@ -52,8 +52,6 @@ module.exports = function ProxyMenu(mod) {
 		night: "EX_Halloween_T42_AEROSet.AERO.EX_Halloween_Inside_Aeroset",
 		dark: "Kubel_Fortress_Pegasus_AERO.AERO.Kubel_Fortress_Pegasus_AERO"
 	};
-	const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
-	const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
 
 	const gui = {
 		parse(array, title, d = "") {
@@ -489,6 +487,9 @@ module.exports = function ProxyMenu(mod) {
 	};
 
 	Object.keys(mod.settings.npc).forEach(name => {
+		const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
+		const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
+
 		if (isAgaia && sanctionedNames.includes(name)) return;
 		commands[name] = () => {
 			const npc = mod.settings.npc[name];

@@ -33,7 +33,9 @@ function addOpcodeAndDefinition(mod, name, version = null, definition = null) {
 }
 
 module.exports = function ProxyMenu(mod) {
-
+	
+	mod.dispatch.addDefinition("S_DIALOG", 10, `${__dirname }/S_DIALOG.def`, true);
+	
 	const cmd = mod.command || mod.require.command;
 	const COMMAND = "m";
 	const { player } = mod.require.library;
@@ -50,6 +52,8 @@ module.exports = function ProxyMenu(mod) {
 		night: "EX_Halloween_T42_AEROSet.AERO.EX_Halloween_Inside_Aeroset",
 		dark: "Kubel_Fortress_Pegasus_AERO.AERO.Kubel_Fortress_Pegasus_AERO"
 	};
+	const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
+	const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
 
 	const gui = {
 		parse(array, title, d = "") {
@@ -294,6 +298,17 @@ module.exports = function ProxyMenu(mod) {
 		});
 	});
 
+	mod.hook("S_DIALOG", 10, event => {
+		if (!debug) return;
+		debugData = [
+			"Detected NPC:",
+			`   "value": ${event.buttons[0]?.type}`,
+			`   "gameId": ${event.gameId}`,
+			`   "templateId": ${event.templateId}`,
+			`   "huntingZoneId": ${event.huntingZoneId}`
+		];
+	});
+
 	mod.hook("C_PLAYER_LOCATION", 5, event => {
 		if ([0, 1, 5, 6].indexOf(event.type) > -1)
 			lasttimemoved = Date.now();
@@ -474,9 +489,7 @@ module.exports = function ProxyMenu(mod) {
 	};
 
 	Object.keys(mod.settings.npc).forEach(name => {
-		// const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
-		// const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
-		// if (isAgaia && sanctionedNames.includes(name)) return;
+		if (isAgaia && sanctionedNames.includes(name)) return;
 		commands[name] = () => {
 			const npc = mod.settings.npc[name];
 			const buffer = Buffer.alloc(4);
@@ -709,7 +722,7 @@ module.exports = function ProxyMenu(mod) {
 		if (mod.settings.brooch && e.id === 301806) return false; // Отключения эффекта новых брошек
 	});
 
-	mod.hook("S_DIALOG", "*", e => {
+	mod.hook("S_DIALOG", 10, e => {
 		if (!e.buttons.length || !mod.settings.fix) return;
 		for (let i = 0; i < e.buttons.length; i++) {
 			if ([1, 2, 3, 4, 5, 51, 53, 54, 55, 56, 63].includes(e.buttons[i].type)) e.buttons[i].type = 43;

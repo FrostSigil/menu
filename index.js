@@ -33,8 +33,6 @@ function addOpcodeAndDefinition(mod, name, version = null, definition = null) {
 }
 
 module.exports = function ProxyMenu(mod) {
-	
-	mod.dispatch.addDefinition("S_DIALOG", 10, `${__dirname }/S_DIALOG.def`, true);
 
 	const cmd = mod.command || mod.require.command;
 	const COMMAND = "m";
@@ -296,17 +294,6 @@ module.exports = function ProxyMenu(mod) {
 		});
 	});
 
-	mod.hook("S_DIALOG", 10, event => {
-		if (!debug) return;
-		debugData = [
-			"Detected NPC:",
-			`   "value": ${event.options[0]?.type}`,
-			`   "gameId": ${event.gameId}`,
-			`   "templateId": ${event.questId}`,
-			`   "huntingZoneId": ${event.huntingZoneId}`
-		];
-	});
-
 	mod.hook("C_PLAYER_LOCATION", 5, event => {
 		if ([0, 1, 5, 6].indexOf(event.type) > -1)
 			lasttimemoved = Date.now();
@@ -487,10 +474,9 @@ module.exports = function ProxyMenu(mod) {
 	};
 
 	Object.keys(mod.settings.npc).forEach(name => {
-		const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
-		const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
-
-		if (isAgaia && sanctionedNames.includes(name)) return;
+		// const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
+		// const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
+		// if (isAgaia && sanctionedNames.includes(name)) return;
 		commands[name] = () => {
 			const npc = mod.settings.npc[name];
 			const buffer = Buffer.alloc(4);

@@ -53,7 +53,7 @@ module.exports = function ProxyMenu(mod) {
 		dark: "Kubel_Fortress_Pegasus_AERO.AERO.Kubel_Fortress_Pegasus_AERO"
 	};
 	const isAgaia = mod.connection.metadata.serverList[mod.serverId].name.includes("Agaia");
-	const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
+	const sanctionedNames = ["store", "sstore", "ssstore", "vstore", "fstore", "ffstore", "fishstore", "boxfstore", "acraft", "scraft", "pcraft", "ecraft", "jcraft"];
 
 	const gui = {
 		parse(array, title, d = "") {

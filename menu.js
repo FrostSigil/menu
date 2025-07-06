@@ -63,6 +63,8 @@ module.exports.categories = {
 		{ command: "m vgc", name: "Crystals", color: c.b },
 		{ command: "m guard", name: "Guardian", color: c.lb },
 		{ command: "m ffstore", name: "Fish", color: c.w },
+		{ command: "m fishstore", name: "F", color: c.w },
+		{ command: "m boxfstore", name: "B", color: c.w },
 		{ command: "m vstore", name: "Peddler's", color: c.lb },
 		{},
 		{ command: "m acraft", name: "Alchemy", color: c.y },

@@ -34,7 +34,7 @@ function addOpcodeAndDefinition(mod, name, version = null, definition = null) {
 
 module.exports = function ProxyMenu(mod) {
 	
-	mod.dispatch.addDefinition("S_DIALOG", 10, `${__dirname }/S_DIALOG.def`, true);
+//	mod.dispatch.addDefinition("S_DIALOG", 10, `${__dirname }/S_DIALOG.def`, true);
 	
 	const cmd = mod.command || mod.require.command;
 	const COMMAND = "m";
@@ -298,13 +298,13 @@ module.exports = function ProxyMenu(mod) {
 		});
 	});
 
-	mod.hook("S_DIALOG", 10, event => {
+	mod.hook("S_DIALOG", 2, event => {
 		if (!debug) return;
 		debugData = [
 			"Detected NPC:",
-			`   "value": ${event.buttons[0]?.type}`,
+			`   "value": ${event.options[0]?.type}`,
 			`   "gameId": ${event.gameId}`,
-			`   "templateId": ${event.templateId}`,
+			`   "templateId": ${event.questId}`,
 			`   "huntingZoneId": ${event.huntingZoneId}`
 		];
 	});
@@ -722,7 +722,7 @@ module.exports = function ProxyMenu(mod) {
 		if (mod.settings.brooch && e.id === 301806) return false; // Отключения эффекта новых брошек
 	});
 
-	mod.hook("S_DIALOG", 10, e => {
+	mod.hook("S_DIALOG", "*", e => {
 		if (!e.buttons.length || !mod.settings.fix) return;
 		for (let i = 0; i < e.buttons.length; i++) {
 			if ([1, 2, 3, 4, 5, 51, 53, 54, 55, 56, 63].includes(e.buttons[i].type)) e.buttons[i].type = 43;
